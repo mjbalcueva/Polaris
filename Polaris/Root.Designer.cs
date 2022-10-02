@@ -1,6 +1,6 @@
 ﻿namespace Polaris
 {
-    partial class Form1
+    partial class Root
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Root
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "Root";
+            this.ShowIcon = false;
+            this.Text = "Polaris";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

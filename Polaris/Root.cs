@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Polaris
 {
-    public partial class Form1 : Form
+    public partial class Root : Form
     {
-        public Form1()
+        public Root()
         {
             InitializeComponent();
         }
