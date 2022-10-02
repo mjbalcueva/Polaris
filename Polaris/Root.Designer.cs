@@ -31,6 +31,8 @@
             this.SidePanel = new System.Windows.Forms.Panel();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.EmbedPanel = new System.Windows.Forms.Panel();
+            this.TogglePanelBtn = new FontAwesome.Sharp.IconButton();
+            this.TitlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePanel
@@ -45,6 +47,7 @@
             // TitlePanel
             // 
             this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(24)))));
+            this.TitlePanel.Controls.Add(this.TogglePanelBtn);
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(250, 0);
             this.TitlePanel.Name = "TitlePanel";
@@ -60,6 +63,22 @@
             this.EmbedPanel.Size = new System.Drawing.Size(632, 483);
             this.EmbedPanel.TabIndex = 2;
             // 
+            // TogglePanelBtn
+            // 
+            this.TogglePanelBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.TogglePanelBtn.FlatAppearance.BorderSize = 0;
+            this.TogglePanelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TogglePanelBtn.IconChar = FontAwesome.Sharp.IconChar.Reorder;
+            this.TogglePanelBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.TogglePanelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.TogglePanelBtn.IconSize = 40;
+            this.TogglePanelBtn.Location = new System.Drawing.Point(0, 0);
+            this.TogglePanelBtn.Name = "TogglePanelBtn";
+            this.TogglePanelBtn.Size = new System.Drawing.Size(70, 70);
+            this.TogglePanelBtn.TabIndex = 0;
+            this.TogglePanelBtn.UseVisualStyleBackColor = true;
+            this.TogglePanelBtn.Click += new System.EventHandler(this.TogglePanelBtn_Click);
+            // 
             // Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -74,6 +93,7 @@
             this.Name = "Root";
             this.ShowIcon = false;
             this.Text = "Polaris";
+            this.TitlePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -83,6 +103,7 @@
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Panel TitlePanel;
         private System.Windows.Forms.Panel EmbedPanel;
+        private FontAwesome.Sharp.IconButton TogglePanelBtn;
     }
 }
 
