@@ -77,10 +77,10 @@
     <Compile Include="Tasks\Draft_Tasks.Designer.cs">
       <DependentUpon>Draft_Tasks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tasks\Overview.cs">
+    <Compile Include="Misc\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tasks\Overview.Designer.cs">
+    <Compile Include="Misc\Overview.Designer.cs">
       <DependentUpon>Overview.cs</DependentUpon>
     </Compile>
     <Compile Include="Root.cs">
@@ -103,7 +103,7 @@
     <EmbeddedResource Include="Tasks\Draft_Tasks.resx">
       <DependentUpon>Draft_Tasks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tasks\Overview.resx">
+    <EmbeddedResource Include="Misc\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Root.resx">
