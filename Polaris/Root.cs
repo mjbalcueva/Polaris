@@ -40,15 +40,25 @@ namespace Polaris
             childForm.Show();
         }
 
-        private void EmbedPanel_Paint(object sender, PaintEventArgs e)
+        private FontAwesome.Sharp.IconButton activeIconButton = null;
+
+        private void ToggleButtonFontColor(FontAwesome.Sharp.IconButton button)
         {
-            OpenChildForm(new All_Tasks());
+            if (activeIconButton != null)
+            {
+                activeIconButton.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+                activeIconButton.IconColor = ColorTranslator.FromHtml("#6A6A73");
+            }
+            activeIconButton = button;
+            activeIconButton.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+            activeIconButton.IconColor = ColorTranslator.FromHtml("#FDFEFF");
         }
 
         private void LogoBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = "Overview";
             OpenChildForm(new Overview());
+            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -64,30 +74,35 @@ namespace Polaris
         {
             LabelText.Text = "Tasks";
             OpenChildForm(new All_Tasks());
+            ToggleButtonFontColor(AllBtn);
         }
 
         private void AllBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = "Tasks";
             OpenChildForm(new All_Tasks());
+            ToggleButtonFontColor(AllBtn);
         }
 
         private void DraftsBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = "Tasks";
             OpenChildForm(new Drafts_Tasks());
+            ToggleButtonFontColor(DraftsBtn);
         }
 
         private void ArchivesBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = "Tasks";
             OpenChildForm(new Archive_Tasks());
+            ToggleButtonFontColor(ArchivesBtn);
         }
 
         private void DeletedBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = "Tasks";
             OpenChildForm(new Delete_Tasks());
+            ToggleButtonFontColor(DeletedBtn);
         }
     }
 }
