@@ -53,14 +53,62 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="All_Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="All_Tasks.Designer.cs">
+      <DependentUpon>All_Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Archive_Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archive_Tasks.Designer.cs">
+      <DependentUpon>Archive_Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Tasks.Designer.cs">
+      <DependentUpon>Delete_Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Draft_Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Draft_Tasks.Designer.cs">
+      <DependentUpon>Draft_Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Root.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Root.Designer.cs">
+      <DependentUpon>Root.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="All_Tasks.resx">
+      <DependentUpon>All_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archive_Tasks.resx">
+      <DependentUpon>Archive_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Tasks.resx">
+      <DependentUpon>Delete_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Draft_Tasks.resx">
+      <DependentUpon>Draft_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Root.resx">
+      <DependentUpon>Root.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
