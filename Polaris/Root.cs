@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.SymbolStore;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
@@ -16,7 +15,18 @@ namespace Polaris
         #region CustomStyles
 
         // add border to task panels
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void TasksPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        // add border to class panels
+        private void ClassesPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        private static void AddBorder(PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
@@ -120,5 +130,18 @@ namespace Polaris
         }
 
         #endregion Click events for task buttons
+
+        #region Click events for classes section
+
+        private void ClassesBtn_Click(object sender, EventArgs e)
+        {
+            // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
+            if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronDown)
+                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            else
+                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+        }
+
+        #endregion Click events for classes section
     }
 }
