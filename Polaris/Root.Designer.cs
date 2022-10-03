@@ -355,7 +355,6 @@
             this.EmbedPanel.Name = "EmbedPanel";
             this.EmbedPanel.Size = new System.Drawing.Size(882, 573);
             this.EmbedPanel.TabIndex = 2;
-            this.EmbedPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EmbedPanel_Paint);
             // 
             // Root
             // 
