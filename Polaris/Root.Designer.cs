@@ -120,17 +120,17 @@
             // 
             // AddClassesBdg
             // 
+            this.AddClassesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddClassesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.AddClassesBdg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddClassesBdg.FlatAppearance.BorderSize = 0;
             this.AddClassesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddClassesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.AddClassesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddClassesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddClassesBdg.IconSize = 25;
-            this.AddClassesBdg.Location = new System.Drawing.Point(234, 18);
+            this.AddClassesBdg.Location = new System.Drawing.Point(241, 23);
             this.AddClassesBdg.Name = "AddClassesBdg";
-            this.AddClassesBdg.Size = new System.Drawing.Size(48, 44);
+            this.AddClassesBdg.Size = new System.Drawing.Size(33, 33);
             this.AddClassesBdg.TabIndex = 1;
             this.AddClassesBdg.UseVisualStyleBackColor = false;
             // 
@@ -275,24 +275,24 @@
             // 
             // AddNotesBdg
             // 
+            this.AddNotesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddNotesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AddNotesBdg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddNotesBdg.FlatAppearance.BorderSize = 0;
             this.AddNotesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNotesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.AddNotesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddNotesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddNotesBdg.IconSize = 25;
-            this.AddNotesBdg.Location = new System.Drawing.Point(234, 17);
+            this.AddNotesBdg.Location = new System.Drawing.Point(240, 21);
             this.AddNotesBdg.Name = "AddNotesBdg";
-            this.AddNotesBdg.Size = new System.Drawing.Size(48, 44);
+            this.AddNotesBdg.Size = new System.Drawing.Size(35, 35);
             this.AddNotesBdg.TabIndex = 5;
             this.AddNotesBdg.UseVisualStyleBackColor = false;
             // 
             // AllCountBadge
             // 
+            this.AllCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AllCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AllCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AllCountBadge.FlatAppearance.BorderSize = 0;
             this.AllCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AllCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,17 +300,17 @@
             this.AllCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AllCountBadge.IconColor = System.Drawing.Color.Black;
             this.AllCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AllCountBadge.Location = new System.Drawing.Point(234, 67);
+            this.AllCountBadge.Location = new System.Drawing.Point(240, 71);
             this.AllCountBadge.Name = "AllCountBadge";
-            this.AllCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.AllCountBadge.Size = new System.Drawing.Size(35, 35);
             this.AllCountBadge.TabIndex = 6;
             this.AllCountBadge.Text = "0";
             this.AllCountBadge.UseVisualStyleBackColor = false;
             // 
             // DraftsCountBadge
             // 
+            this.DraftsCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DraftsCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DraftsCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DraftsCountBadge.FlatAppearance.BorderSize = 0;
             this.DraftsCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DraftsCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,17 +318,17 @@
             this.DraftsCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DraftsCountBadge.IconColor = System.Drawing.Color.Black;
             this.DraftsCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DraftsCountBadge.Location = new System.Drawing.Point(234, 117);
+            this.DraftsCountBadge.Location = new System.Drawing.Point(240, 121);
             this.DraftsCountBadge.Name = "DraftsCountBadge";
-            this.DraftsCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.DraftsCountBadge.Size = new System.Drawing.Size(35, 35);
             this.DraftsCountBadge.TabIndex = 7;
             this.DraftsCountBadge.Text = "0";
             this.DraftsCountBadge.UseVisualStyleBackColor = false;
             // 
             // ArchivesCountBadge
             // 
+            this.ArchivesCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ArchivesCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.ArchivesCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ArchivesCountBadge.FlatAppearance.BorderSize = 0;
             this.ArchivesCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ArchivesCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,17 +336,17 @@
             this.ArchivesCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ArchivesCountBadge.IconColor = System.Drawing.Color.Black;
             this.ArchivesCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ArchivesCountBadge.Location = new System.Drawing.Point(234, 167);
+            this.ArchivesCountBadge.Location = new System.Drawing.Point(240, 171);
             this.ArchivesCountBadge.Name = "ArchivesCountBadge";
-            this.ArchivesCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.ArchivesCountBadge.Size = new System.Drawing.Size(35, 35);
             this.ArchivesCountBadge.TabIndex = 8;
             this.ArchivesCountBadge.Text = "0";
             this.ArchivesCountBadge.UseVisualStyleBackColor = false;
             // 
             // DeletedCountBadge
             // 
+            this.DeletedCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DeletedCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DeletedCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeletedCountBadge.FlatAppearance.BorderSize = 0;
             this.DeletedCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeletedCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,9 +354,9 @@
             this.DeletedCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeletedCountBadge.IconColor = System.Drawing.Color.Black;
             this.DeletedCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletedCountBadge.Location = new System.Drawing.Point(234, 217);
+            this.DeletedCountBadge.Location = new System.Drawing.Point(240, 222);
             this.DeletedCountBadge.Name = "DeletedCountBadge";
-            this.DeletedCountBadge.Size = new System.Drawing.Size(48, 46);
+            this.DeletedCountBadge.Size = new System.Drawing.Size(35, 35);
             this.DeletedCountBadge.TabIndex = 9;
             this.DeletedCountBadge.Text = "0";
             this.DeletedCountBadge.UseVisualStyleBackColor = false;
