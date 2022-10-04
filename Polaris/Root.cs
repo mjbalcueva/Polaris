@@ -10,6 +10,7 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.Root_Load);
         }
 
         #region CustomStyles
@@ -143,5 +144,38 @@ namespace Polaris
         }
 
         #endregion Click events for classes section
+
+        // sample data
+        private string[] classes = { "  SDF 104", "  CC 104", "  CC 105" };
+
+        private void Root_Load(object sender, EventArgs e)
+        {
+            int buttonCount = classes.Length;
+            var buttons = new FontAwesome.Sharp.IconButton[buttonCount];
+
+            for (int i = 0; i < buttonCount; i++)
+            {
+                var button = new FontAwesome.Sharp.IconButton
+                {
+                    Text = classes[i],
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    IconChar = FontAwesome.Sharp.IconChar.Stop,
+                    IconColor = ColorTranslator.FromHtml("#6A6A73"),
+                    IconSize = 25,
+                    ImageAlign = ContentAlignment.MiddleLeft,
+                    TextImageRelation = TextImageRelation.ImageBeforeText,
+                    FlatStyle = FlatStyle.Flat,
+                };
+                button.FlatAppearance.BorderSize = 0;
+                button.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+                button.BackColor = ColorTranslator.FromHtml("#1B1C21");
+                button.Height = 44;
+                button.Width = 264;
+                button.Padding = new Padding(15, 0, 0, 0);
+                buttons[i] = button;
+            }
+
+            ClassPanel.Controls.AddRange(buttons);
+        }
     }
 }
