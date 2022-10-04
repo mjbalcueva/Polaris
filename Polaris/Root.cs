@@ -148,6 +148,7 @@ namespace Polaris
         // on ClassBtn_Click, set LabelText to ClassBtn text
         private void ClassBtn_Click(object sender, EventArgs e)
         {
+            ToggleButtonFontColor((FontAwesome.Sharp.IconButton)sender);
             LabelText.Text = ((FontAwesome.Sharp.IconButton)sender).Text;
             OpenChildForm(new Classes.NotesView());
         }
