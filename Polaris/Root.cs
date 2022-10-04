@@ -10,7 +10,7 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
-            this.Load += new System.EventHandler(this.Root_Load);
+            Load += new EventHandler(Root_Load);
         }
 
         #region CustomStyles
@@ -158,7 +158,7 @@ namespace Polaris
         #region LoadClassOnClasses
 
         // sample data
-        private string[] classes = { "  SDF 104", "  CC 104", "  CC 105" };
+        private readonly string[] classes = { "SDF 104", "CC 104", "CC 105" };
 
         private void Root_Load(object sender, EventArgs e)
         {
@@ -169,7 +169,7 @@ namespace Polaris
             {
                 var button = new FontAwesome.Sharp.IconButton
                 {
-                    Text = classes[i],
+                    Text = "  " + classes[i],
                     TextAlign = ContentAlignment.MiddleLeft,
                     IconChar = FontAwesome.Sharp.IconChar.Stop,
                     IconColor = ColorTranslator.FromHtml("#6A6A73"),
