@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.SymbolStore;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
@@ -11,12 +10,24 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.Root_Load);
         }
 
         #region CustomStyles
 
         // add border to task panels
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void TasksPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        // add border to class panels
+        private void ClassesPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        private static void AddBorder(PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
@@ -79,46 +90,107 @@ namespace Polaris
 
         private void LogoBtn_Click(object sender, EventArgs e)
         {
+            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
             LabelText.Text = "Overview";
             OpenChildForm(new Overview());
-            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
         }
 
         private void TasksBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(AllBtn);
-            OpenChildForm(new All_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Tasks.All_Tasks());
         }
 
         private void AllBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(AllBtn);
-            OpenChildForm(new All_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Tasks.All_Tasks());
         }
 
         private void DraftsBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(DraftsBtn);
-            OpenChildForm(new Drafts_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Tasks.Drafts_Tasks());
         }
 
         private void ArchivesBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(ArchivesBtn);
-            OpenChildForm(new Archive_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Tasks.Archive_Tasks());
         }
 
         private void DeletedBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(DeletedBtn);
-            OpenChildForm(new Delete_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Tasks.Delete_Tasks());
         }
 
         #endregion Click events for task buttons
+
+        #region Click events for classes section
+
+        // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
+        private void ClassesBtn_Click(object sender, EventArgs e)
+        {
+            if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronUp)
+                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            else
+                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+
+            ClassPanel.Visible = !ClassPanel.Visible;
+        }
+
+        // on ClassBtn_Click, set LabelText to ClassBtn text
+        private void ClassBtn_Click(object sender, EventArgs e)
+        {
+            ToggleButtonFontColor((FontAwesome.Sharp.IconButton)sender);
+            LabelText.Text = ((FontAwesome.Sharp.IconButton)sender).Text;
+            OpenChildForm(new Classes.NotesView());
+        }
+
+        #endregion Click events for classes section
+
+        #region LoadClassOnClasses
+
+        // sample data
+        private string[] classes = { "  SDF 104", "  CC 104", "  CC 105" };
+
+        private void Root_Load(object sender, EventArgs e)
+        {
+            int buttonCount = classes.Length;
+            var buttons = new FontAwesome.Sharp.IconButton[buttonCount];
+
+            for (int i = 0; i < buttonCount; i++)
+            {
+                var button = new FontAwesome.Sharp.IconButton
+                {
+                    Text = classes[i],
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    IconChar = FontAwesome.Sharp.IconChar.Stop,
+                    IconColor = ColorTranslator.FromHtml("#6A6A73"),
+                    IconSize = 25,
+                    ImageAlign = ContentAlignment.MiddleLeft,
+                    TextImageRelation = TextImageRelation.ImageBeforeText,
+                    FlatStyle = FlatStyle.Flat,
+                };
+                button.FlatAppearance.BorderSize = 0;
+                button.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+                button.BackColor = ColorTranslator.FromHtml("#1B1C21");
+                button.Height = 44;
+                button.Width = 264;
+                button.Padding = new Padding(15, 0, 0, 0);
+                button.Click += new EventHandler(ClassBtn_Click);
+                buttons[i] = button;
+            }
+
+            ClassPanel.Controls.AddRange(buttons);
+        }
+
+        #endregion LoadClassOnClasses
     }
 }
