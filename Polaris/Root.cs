@@ -134,9 +134,9 @@ namespace Polaris
 
         #region Click events for classes section
 
+        // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
         private void ClassesBtn_Click(object sender, EventArgs e)
         {
-            // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
             if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronUp)
                 ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
             else
@@ -149,6 +149,7 @@ namespace Polaris
         private void ClassBtn_Click(object sender, EventArgs e)
         {
             LabelText.Text = ((FontAwesome.Sharp.IconButton)sender).Text;
+            OpenChildForm(new Classes.NotesView());
         }
 
         #endregion Click events for classes section
