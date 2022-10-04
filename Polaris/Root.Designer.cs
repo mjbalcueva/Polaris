@@ -49,15 +49,19 @@
             this.LabelText = new System.Windows.Forms.Label();
             this.TogglePanelBtn = new FontAwesome.Sharp.IconButton();
             this.EmbedPanel = new System.Windows.Forms.Panel();
+            this.FTPanel = new System.Windows.Forms.Panel();
+            this.FTBtn = new FontAwesome.Sharp.IconButton();
             this.SidePanel.SuspendLayout();
             this.ClassesPanel.SuspendLayout();
             this.TasksPanel.SuspendLayout();
             this.TitlePanel.SuspendLayout();
+            this.FTPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
+            this.SidePanel.Controls.Add(this.FTPanel);
             this.SidePanel.Controls.Add(this.ClassPanel);
             this.SidePanel.Controls.Add(this.ClassesPanel);
             this.SidePanel.Controls.Add(this.TasksPanel);
@@ -430,10 +434,44 @@
             this.EmbedPanel.Size = new System.Drawing.Size(882, 573);
             this.EmbedPanel.TabIndex = 2;
             // 
+            // FTPanel
+            // 
+            this.FTPanel.Controls.Add(this.FTBtn);
+            this.FTPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FTPanel.Location = new System.Drawing.Point(0, 461);
+            this.FTPanel.Name = "FTPanel";
+            this.FTPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.FTPanel.Size = new System.Drawing.Size(300, 65);
+            this.FTPanel.TabIndex = 4;
+            this.FTPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FTPanel_Paint);
+            // 
+            // FTBtn
+            // 
+            this.FTBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FTBtn.FlatAppearance.BorderSize = 0;
+            this.FTBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FTBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.FTBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.FTBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.FTBtn.IconSize = 35;
+            this.FTBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FTBtn.Location = new System.Drawing.Point(15, 15);
+            this.FTBtn.Name = "FTBtn";
+            this.FTBtn.Size = new System.Drawing.Size(270, 50);
+            this.FTBtn.TabIndex = 0;
+            this.FTBtn.Text = "  Financial Tracker";
+            this.FTBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FTBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FTBtn.UseVisualStyleBackColor = true;
+            this.FTBtn.Click += new System.EventHandler(this.FTBtn_Click);
+            // 
             // Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.EmbedPanel);
             this.Controls.Add(this.TitlePanel);
@@ -450,6 +488,7 @@
             this.TasksPanel.ResumeLayout(false);
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
+            this.FTPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -477,6 +516,8 @@
         private FontAwesome.Sharp.IconButton ClassesBtn;
         private FontAwesome.Sharp.IconButton AddClassesBdg;
         private System.Windows.Forms.FlowLayoutPanel ClassPanel;
+        private System.Windows.Forms.Panel FTPanel;
+        private FontAwesome.Sharp.IconButton FTBtn;
     }
 }
 

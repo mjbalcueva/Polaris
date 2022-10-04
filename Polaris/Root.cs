@@ -15,14 +15,17 @@ namespace Polaris
 
         #region CustomStyles
 
-        // add border to task panels
         private void TasksPanel_Paint(object sender, PaintEventArgs e)
         {
             AddBorder(e);
         }
 
-        // add border to class panels
         private void ClassesPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        private void FTPanel_Paint(object sender, PaintEventArgs e)
         {
             AddBorder(e);
         }
@@ -86,7 +89,7 @@ namespace Polaris
 
         #endregion Functions
 
-        #region Click events for task buttons
+        #region Click events for logo button
 
         private void LogoBtn_Click(object sender, EventArgs e)
         {
@@ -94,6 +97,10 @@ namespace Polaris
             LabelText.Text = "Overview";
             OpenChildForm(new Overview());
         }
+
+        #endregion Click events for logo button
+
+        #region Click events for tasks section
 
         private void TasksBtn_Click(object sender, EventArgs e)
         {
@@ -130,9 +137,9 @@ namespace Polaris
             OpenChildForm(new Tasks.Delete_Tasks());
         }
 
-        #endregion Click events for task buttons
+        #endregion Click events for tasks section
 
-        #region Click events for classes section
+        #region Click events for notes section
 
         // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
         private void ClassesBtn_Click(object sender, EventArgs e)
@@ -153,7 +160,7 @@ namespace Polaris
             OpenChildForm(new Classes.NotesView());
         }
 
-        #endregion Click events for classes section
+        #endregion Click events for notes section
 
         #region LoadClassOnClasses
 
@@ -193,5 +200,16 @@ namespace Polaris
         }
 
         #endregion LoadClassOnClasses
+
+        #region Click events for financial tracker section
+
+        private void FTBtn_Click(object sender, EventArgs e)
+        {
+            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
+            LabelText.Text = "Extra";
+            OpenChildForm(new FTS.FTSView());
+        }
+
+        #endregion Click events for financial tracker section
     }
 }
