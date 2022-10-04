@@ -71,6 +71,12 @@
     <Compile Include="Classes\NotesView.Designer.cs">
       <DependentUpon>NotesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTS\FTSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\FTSView.Designer.cs">
+      <DependentUpon>FTSView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tasks\All_Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\NotesView.resx">
       <DependentUpon>NotesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\FTSView.resx">
+      <DependentUpon>FTSView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tasks\All_Tasks.resx">
       <DependentUpon>All_Tasks.cs</DependentUpon>
