@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.SidePanel = new System.Windows.Forms.Panel();
+            this.FTPanel = new System.Windows.Forms.Panel();
+            this.FTBtn = new FontAwesome.Sharp.IconButton();
             this.ClassPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.ClassesPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ClassesBtn = new FontAwesome.Sharp.IconButton();
@@ -50,6 +52,7 @@
             this.TogglePanelBtn = new FontAwesome.Sharp.IconButton();
             this.EmbedPanel = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
+            this.FTPanel.SuspendLayout();
             this.ClassesPanel.SuspendLayout();
             this.TasksPanel.SuspendLayout();
             this.TitlePanel.SuspendLayout();
@@ -58,6 +61,7 @@
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
+            this.SidePanel.Controls.Add(this.FTPanel);
             this.SidePanel.Controls.Add(this.ClassPanel);
             this.SidePanel.Controls.Add(this.ClassesPanel);
             this.SidePanel.Controls.Add(this.TasksPanel);
@@ -67,6 +71,39 @@
             this.SidePanel.Name = "SidePanel";
             this.SidePanel.Size = new System.Drawing.Size(300, 653);
             this.SidePanel.TabIndex = 0;
+            // 
+            // FTPanel
+            // 
+            this.FTPanel.Controls.Add(this.FTBtn);
+            this.FTPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FTPanel.Location = new System.Drawing.Point(0, 461);
+            this.FTPanel.Name = "FTPanel";
+            this.FTPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.FTPanel.Size = new System.Drawing.Size(300, 65);
+            this.FTPanel.TabIndex = 4;
+            this.FTPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FTPanel_Paint);
+            // 
+            // FTBtn
+            // 
+            this.FTBtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FTBtn.FlatAppearance.BorderSize = 0;
+            this.FTBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FTBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.FTBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.FTBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.FTBtn.IconSize = 35;
+            this.FTBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FTBtn.Location = new System.Drawing.Point(15, 15);
+            this.FTBtn.Name = "FTBtn";
+            this.FTBtn.Size = new System.Drawing.Size(270, 50);
+            this.FTBtn.TabIndex = 0;
+            this.FTBtn.Text = "  Financial Tracker";
+            this.FTBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FTBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FTBtn.UseVisualStyleBackColor = true;
+            this.FTBtn.Click += new System.EventHandler(this.FTBtn_Click);
             // 
             // ClassPanel
             // 
@@ -120,17 +157,17 @@
             // 
             // AddClassesBdg
             // 
+            this.AddClassesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddClassesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.AddClassesBdg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddClassesBdg.FlatAppearance.BorderSize = 0;
             this.AddClassesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddClassesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.AddClassesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddClassesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddClassesBdg.IconSize = 25;
-            this.AddClassesBdg.Location = new System.Drawing.Point(234, 18);
+            this.AddClassesBdg.Location = new System.Drawing.Point(241, 23);
             this.AddClassesBdg.Name = "AddClassesBdg";
-            this.AddClassesBdg.Size = new System.Drawing.Size(48, 44);
+            this.AddClassesBdg.Size = new System.Drawing.Size(33, 33);
             this.AddClassesBdg.TabIndex = 1;
             this.AddClassesBdg.UseVisualStyleBackColor = false;
             // 
@@ -275,24 +312,24 @@
             // 
             // AddNotesBdg
             // 
+            this.AddNotesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddNotesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AddNotesBdg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddNotesBdg.FlatAppearance.BorderSize = 0;
             this.AddNotesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddNotesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.AddNotesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddNotesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddNotesBdg.IconSize = 25;
-            this.AddNotesBdg.Location = new System.Drawing.Point(234, 17);
+            this.AddNotesBdg.Location = new System.Drawing.Point(240, 21);
             this.AddNotesBdg.Name = "AddNotesBdg";
-            this.AddNotesBdg.Size = new System.Drawing.Size(48, 44);
+            this.AddNotesBdg.Size = new System.Drawing.Size(35, 35);
             this.AddNotesBdg.TabIndex = 5;
             this.AddNotesBdg.UseVisualStyleBackColor = false;
             // 
             // AllCountBadge
             // 
+            this.AllCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AllCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AllCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AllCountBadge.FlatAppearance.BorderSize = 0;
             this.AllCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AllCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -300,17 +337,17 @@
             this.AllCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AllCountBadge.IconColor = System.Drawing.Color.Black;
             this.AllCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AllCountBadge.Location = new System.Drawing.Point(234, 67);
+            this.AllCountBadge.Location = new System.Drawing.Point(240, 71);
             this.AllCountBadge.Name = "AllCountBadge";
-            this.AllCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.AllCountBadge.Size = new System.Drawing.Size(35, 35);
             this.AllCountBadge.TabIndex = 6;
             this.AllCountBadge.Text = "0";
             this.AllCountBadge.UseVisualStyleBackColor = false;
             // 
             // DraftsCountBadge
             // 
+            this.DraftsCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DraftsCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DraftsCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DraftsCountBadge.FlatAppearance.BorderSize = 0;
             this.DraftsCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DraftsCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,17 +355,17 @@
             this.DraftsCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DraftsCountBadge.IconColor = System.Drawing.Color.Black;
             this.DraftsCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DraftsCountBadge.Location = new System.Drawing.Point(234, 117);
+            this.DraftsCountBadge.Location = new System.Drawing.Point(240, 121);
             this.DraftsCountBadge.Name = "DraftsCountBadge";
-            this.DraftsCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.DraftsCountBadge.Size = new System.Drawing.Size(35, 35);
             this.DraftsCountBadge.TabIndex = 7;
             this.DraftsCountBadge.Text = "0";
             this.DraftsCountBadge.UseVisualStyleBackColor = false;
             // 
             // ArchivesCountBadge
             // 
+            this.ArchivesCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ArchivesCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.ArchivesCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ArchivesCountBadge.FlatAppearance.BorderSize = 0;
             this.ArchivesCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ArchivesCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -336,17 +373,17 @@
             this.ArchivesCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ArchivesCountBadge.IconColor = System.Drawing.Color.Black;
             this.ArchivesCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ArchivesCountBadge.Location = new System.Drawing.Point(234, 167);
+            this.ArchivesCountBadge.Location = new System.Drawing.Point(240, 171);
             this.ArchivesCountBadge.Name = "ArchivesCountBadge";
-            this.ArchivesCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.ArchivesCountBadge.Size = new System.Drawing.Size(35, 35);
             this.ArchivesCountBadge.TabIndex = 8;
             this.ArchivesCountBadge.Text = "0";
             this.ArchivesCountBadge.UseVisualStyleBackColor = false;
             // 
             // DeletedCountBadge
             // 
+            this.DeletedCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DeletedCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DeletedCountBadge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DeletedCountBadge.FlatAppearance.BorderSize = 0;
             this.DeletedCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeletedCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,9 +391,9 @@
             this.DeletedCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeletedCountBadge.IconColor = System.Drawing.Color.Black;
             this.DeletedCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletedCountBadge.Location = new System.Drawing.Point(234, 217);
+            this.DeletedCountBadge.Location = new System.Drawing.Point(240, 222);
             this.DeletedCountBadge.Name = "DeletedCountBadge";
-            this.DeletedCountBadge.Size = new System.Drawing.Size(48, 46);
+            this.DeletedCountBadge.Size = new System.Drawing.Size(35, 35);
             this.DeletedCountBadge.TabIndex = 9;
             this.DeletedCountBadge.Text = "0";
             this.DeletedCountBadge.UseVisualStyleBackColor = false;
@@ -434,6 +471,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1182, 653);
             this.Controls.Add(this.EmbedPanel);
             this.Controls.Add(this.TitlePanel);
@@ -446,6 +484,7 @@
             this.Text = "Polaris";
             this.SidePanel.ResumeLayout(false);
             this.SidePanel.PerformLayout();
+            this.FTPanel.ResumeLayout(false);
             this.ClassesPanel.ResumeLayout(false);
             this.TasksPanel.ResumeLayout(false);
             this.TitlePanel.ResumeLayout(false);
@@ -477,6 +516,8 @@
         private FontAwesome.Sharp.IconButton ClassesBtn;
         private FontAwesome.Sharp.IconButton AddClassesBdg;
         private System.Windows.Forms.FlowLayoutPanel ClassPanel;
+        private System.Windows.Forms.Panel FTPanel;
+        private FontAwesome.Sharp.IconButton FTBtn;
     }
 }
 

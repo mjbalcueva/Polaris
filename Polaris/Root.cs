@@ -10,19 +10,23 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
-            this.Load += new System.EventHandler(this.Root_Load);
+            Load += new EventHandler(Root_Load);
+            HiddenScroll();
         }
 
         #region CustomStyles
 
-        // add border to task panels
         private void TasksPanel_Paint(object sender, PaintEventArgs e)
         {
             AddBorder(e);
         }
 
-        // add border to class panels
         private void ClassesPanel_Paint(object sender, PaintEventArgs e)
+        {
+            AddBorder(e);
+        }
+
+        private void FTPanel_Paint(object sender, PaintEventArgs e)
         {
             AddBorder(e);
         }
@@ -34,6 +38,23 @@ namespace Polaris
                 ColorTranslator.FromHtml("#27282F"), 2, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid);
+        }
+
+        private void HiddenScroll()
+        {
+            // hide scroll bar in sidebar panel
+            SidePanel.VerticalScroll.Maximum = 0;
+            SidePanel.VerticalScroll.Visible = false;
+            SidePanel.HorizontalScroll.Maximum = 0;
+            SidePanel.HorizontalScroll.Visible = false;
+            SidePanel.AutoScroll = true;
+
+            // hide scroll bar in embedded panel
+            EmbedPanel.VerticalScroll.Maximum = 0;
+            EmbedPanel.VerticalScroll.Visible = false;
+            EmbedPanel.HorizontalScroll.Maximum = 0;
+            EmbedPanel.HorizontalScroll.Visible = false;
+            EmbedPanel.AutoScroll = true;
         }
 
         #endregion CustomStyles
@@ -86,7 +107,7 @@ namespace Polaris
 
         #endregion Functions
 
-        #region Click events for task buttons
+        #region Click events for logo button
 
         private void LogoBtn_Click(object sender, EventArgs e)
         {
@@ -94,6 +115,10 @@ namespace Polaris
             LabelText.Text = "Overview";
             OpenChildForm(new Overview());
         }
+
+        #endregion Click events for logo button
+
+        #region Click events for tasks section
 
         private void TasksBtn_Click(object sender, EventArgs e)
         {
@@ -130,9 +155,9 @@ namespace Polaris
             OpenChildForm(new Tasks.Delete_Tasks());
         }
 
-        #endregion Click events for task buttons
+        #endregion Click events for tasks section
 
-        #region Click events for classes section
+        #region Click events for notes section
 
         // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
         private void ClassesBtn_Click(object sender, EventArgs e)
@@ -153,12 +178,12 @@ namespace Polaris
             OpenChildForm(new Classes.NotesView());
         }
 
-        #endregion Click events for classes section
+        #endregion Click events for notes section
 
         #region LoadClassOnClasses
 
         // sample data
-        private string[] classes = { "  SDF 104", "  CC 104", "  CC 105" };
+        private readonly string[] classes = { "SDF 104", "CC 104", "CC 105" };
 
         private void Root_Load(object sender, EventArgs e)
         {
@@ -169,7 +194,7 @@ namespace Polaris
             {
                 var button = new FontAwesome.Sharp.IconButton
                 {
-                    Text = classes[i],
+                    Text = "  " + classes[i],
                     TextAlign = ContentAlignment.MiddleLeft,
                     IconChar = FontAwesome.Sharp.IconChar.Stop,
                     IconColor = ColorTranslator.FromHtml("#6A6A73"),
@@ -181,6 +206,7 @@ namespace Polaris
                 button.FlatAppearance.BorderSize = 0;
                 button.ForeColor = ColorTranslator.FromHtml("#6A6A73");
                 button.BackColor = ColorTranslator.FromHtml("#1B1C21");
+                button.Font = new Font("Nobile Medium", 12);
                 button.Height = 44;
                 button.Width = 264;
                 button.Padding = new Padding(15, 0, 0, 0);
@@ -192,5 +218,16 @@ namespace Polaris
         }
 
         #endregion LoadClassOnClasses
+
+        #region Click events for financial tracker section
+
+        private void FTBtn_Click(object sender, EventArgs e)
+        {
+            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
+            LabelText.Text = "Extra";
+            OpenChildForm(new FTS.FTSView());
+        }
+
+        #endregion Click events for financial tracker section
     }
 }
