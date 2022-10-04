@@ -1,18 +1,18 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Polaris
+namespace Polaris.Tasks
 {
-    public partial class Archive_Tasks : Form
+    public partial class Delete_Tasks : Form
     {
-        public Archive_Tasks()
+        public Delete_Tasks()
         {
             InitializeComponent();
         }
 
-        private void ViewHeader_Paint(object sender, PaintEventArgs e)
+        private void MenuPanel_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, ViewHeader.ClientRectangle,
+            ControlPaint.DrawBorder(e.Graphics, MenuPanel.ClientRectangle,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 2, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
