@@ -73,7 +73,7 @@
             this.ClassPanel.AutoSize = true;
             this.ClassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
             this.ClassPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClassPanel.Location = new System.Drawing.Point(0, 461);
+            this.ClassPanel.Location = new System.Drawing.Point(0, 446);
             this.ClassPanel.Name = "ClassPanel";
             this.ClassPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 15);
             this.ClassPanel.Size = new System.Drawing.Size(300, 15);
@@ -89,10 +89,10 @@
             this.ClassesPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClassesPanel.Location = new System.Drawing.Point(0, 381);
             this.ClassesPanel.Name = "ClassesPanel";
-            this.ClassesPanel.Padding = new System.Windows.Forms.Padding(15, 15, 0, 15);
+            this.ClassesPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
             this.ClassesPanel.RowCount = 1;
             this.ClassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ClassesPanel.Size = new System.Drawing.Size(300, 80);
+            this.ClassesPanel.Size = new System.Drawing.Size(300, 65);
             this.ClassesPanel.TabIndex = 2;
             this.ClassesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ClassesPanel_Paint);
             // 
@@ -103,14 +103,14 @@
             this.ClassesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ClassesBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.ClassesBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            this.ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
             this.ClassesBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.ClassesBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ClassesBtn.IconSize = 35;
             this.ClassesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ClassesBtn.Location = new System.Drawing.Point(18, 18);
             this.ClassesBtn.Name = "ClassesBtn";
-            this.ClassesBtn.Size = new System.Drawing.Size(222, 44);
+            this.ClassesBtn.Size = new System.Drawing.Size(210, 44);
             this.ClassesBtn.TabIndex = 0;
             this.ClassesBtn.Text = "  Classes";
             this.ClassesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,10 +128,9 @@
             this.AddClassesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddClassesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddClassesBdg.IconSize = 25;
-            this.AddClassesBdg.Location = new System.Drawing.Point(246, 19);
-            this.AddClassesBdg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddClassesBdg.Location = new System.Drawing.Point(234, 18);
             this.AddClassesBdg.Name = "AddClassesBdg";
-            this.AddClassesBdg.Size = new System.Drawing.Size(51, 42);
+            this.AddClassesBdg.Size = new System.Drawing.Size(48, 44);
             this.AddClassesBdg.TabIndex = 1;
             this.AddClassesBdg.UseVisualStyleBackColor = false;
             // 
@@ -284,10 +283,9 @@
             this.AddNotesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.AddNotesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AddNotesBdg.IconSize = 25;
-            this.AddNotesBdg.Location = new System.Drawing.Point(234, 18);
-            this.AddNotesBdg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddNotesBdg.Location = new System.Drawing.Point(234, 17);
             this.AddNotesBdg.Name = "AddNotesBdg";
-            this.AddNotesBdg.Size = new System.Drawing.Size(48, 42);
+            this.AddNotesBdg.Size = new System.Drawing.Size(48, 44);
             this.AddNotesBdg.TabIndex = 5;
             this.AddNotesBdg.UseVisualStyleBackColor = false;
             // 
@@ -302,10 +300,9 @@
             this.AllCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.AllCountBadge.IconColor = System.Drawing.Color.Black;
             this.AllCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AllCountBadge.Location = new System.Drawing.Point(234, 68);
-            this.AllCountBadge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AllCountBadge.Location = new System.Drawing.Point(234, 67);
             this.AllCountBadge.Name = "AllCountBadge";
-            this.AllCountBadge.Size = new System.Drawing.Size(48, 42);
+            this.AllCountBadge.Size = new System.Drawing.Size(48, 44);
             this.AllCountBadge.TabIndex = 6;
             this.AllCountBadge.Text = "0";
             this.AllCountBadge.UseVisualStyleBackColor = false;
@@ -321,10 +318,9 @@
             this.DraftsCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DraftsCountBadge.IconColor = System.Drawing.Color.Black;
             this.DraftsCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DraftsCountBadge.Location = new System.Drawing.Point(234, 118);
-            this.DraftsCountBadge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DraftsCountBadge.Location = new System.Drawing.Point(234, 117);
             this.DraftsCountBadge.Name = "DraftsCountBadge";
-            this.DraftsCountBadge.Size = new System.Drawing.Size(48, 42);
+            this.DraftsCountBadge.Size = new System.Drawing.Size(48, 44);
             this.DraftsCountBadge.TabIndex = 7;
             this.DraftsCountBadge.Text = "0";
             this.DraftsCountBadge.UseVisualStyleBackColor = false;
@@ -340,10 +336,9 @@
             this.ArchivesCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ArchivesCountBadge.IconColor = System.Drawing.Color.Black;
             this.ArchivesCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ArchivesCountBadge.Location = new System.Drawing.Point(234, 168);
-            this.ArchivesCountBadge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ArchivesCountBadge.Location = new System.Drawing.Point(234, 167);
             this.ArchivesCountBadge.Name = "ArchivesCountBadge";
-            this.ArchivesCountBadge.Size = new System.Drawing.Size(48, 42);
+            this.ArchivesCountBadge.Size = new System.Drawing.Size(48, 44);
             this.ArchivesCountBadge.TabIndex = 8;
             this.ArchivesCountBadge.Text = "0";
             this.ArchivesCountBadge.UseVisualStyleBackColor = false;
@@ -359,10 +354,9 @@
             this.DeletedCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeletedCountBadge.IconColor = System.Drawing.Color.Black;
             this.DeletedCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletedCountBadge.Location = new System.Drawing.Point(234, 218);
-            this.DeletedCountBadge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DeletedCountBadge.Location = new System.Drawing.Point(234, 217);
             this.DeletedCountBadge.Name = "DeletedCountBadge";
-            this.DeletedCountBadge.Size = new System.Drawing.Size(48, 44);
+            this.DeletedCountBadge.Size = new System.Drawing.Size(48, 46);
             this.DeletedCountBadge.TabIndex = 9;
             this.DeletedCountBadge.Text = "0";
             this.DeletedCountBadge.UseVisualStyleBackColor = false;
@@ -420,7 +414,6 @@
             this.TogglePanelBtn.IconSize = 40;
             this.TogglePanelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TogglePanelBtn.Location = new System.Drawing.Point(0, 0);
-            this.TogglePanelBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TogglePanelBtn.Name = "TogglePanelBtn";
             this.TogglePanelBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.TogglePanelBtn.Size = new System.Drawing.Size(81, 80);

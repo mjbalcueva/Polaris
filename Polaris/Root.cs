@@ -137,13 +137,23 @@ namespace Polaris
         private void ClassesBtn_Click(object sender, EventArgs e)
         {
             // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
-            if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronDown)
-                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-            else
+            if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronUp)
                 ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            else
+                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+
+            ClassPanel.Visible = !ClassPanel.Visible;
+        }
+
+        // on ClassBtn_Click, set LabelText to ClassBtn text
+        private void ClassBtn_Click(object sender, EventArgs e)
+        {
+            LabelText.Text = ((FontAwesome.Sharp.IconButton)sender).Text;
         }
 
         #endregion Click events for classes section
+
+        #region LoadClassOnClasses
 
         // sample data
         private string[] classes = { "  SDF 104", "  CC 104", "  CC 105" };
@@ -172,10 +182,13 @@ namespace Polaris
                 button.Height = 44;
                 button.Width = 264;
                 button.Padding = new Padding(15, 0, 0, 0);
+                button.Click += new EventHandler(ClassBtn_Click);
                 buttons[i] = button;
             }
 
             ClassPanel.Controls.AddRange(buttons);
         }
+
+        #endregion LoadClassOnClasses
     }
 }
