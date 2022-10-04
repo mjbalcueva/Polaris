@@ -89,44 +89,44 @@ namespace Polaris
 
         private void LogoBtn_Click(object sender, EventArgs e)
         {
+            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
             LabelText.Text = "Overview";
             OpenChildForm(new Overview());
-            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
         }
 
         private void TasksBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(AllBtn);
-            OpenChildForm(new All_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new All_Tasks());
         }
 
         private void AllBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(AllBtn);
-            OpenChildForm(new All_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new All_Tasks());
         }
 
         private void DraftsBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(DraftsBtn);
-            OpenChildForm(new Drafts_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Drafts_Tasks());
         }
 
         private void ArchivesBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(ArchivesBtn);
-            OpenChildForm(new Archive_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Archive_Tasks());
         }
 
         private void DeletedBtn_Click(object sender, EventArgs e)
         {
             ToggleButtonFontColor(DeletedBtn);
-            OpenChildForm(new Delete_Tasks());
             LabelText.Text = "Tasks";
+            OpenChildForm(new Delete_Tasks());
         }
 
         #endregion Click events for task buttons
