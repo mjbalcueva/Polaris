@@ -11,6 +11,7 @@ namespace Polaris
         {
             InitializeComponent();
             Load += new EventHandler(Root_Load);
+            HiddenScroll();
         }
 
         #region CustomStyles
@@ -37,6 +38,23 @@ namespace Polaris
                 ColorTranslator.FromHtml("#27282F"), 2, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
                 ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid);
+        }
+
+        private void HiddenScroll()
+        {
+            // hide scroll bar in sidebar panel
+            SidePanel.VerticalScroll.Maximum = 0;
+            SidePanel.VerticalScroll.Visible = false;
+            SidePanel.HorizontalScroll.Maximum = 0;
+            SidePanel.HorizontalScroll.Visible = false;
+            SidePanel.AutoScroll = true;
+
+            // hide scroll bar in embedded panel
+            EmbedPanel.VerticalScroll.Maximum = 0;
+            EmbedPanel.VerticalScroll.Visible = false;
+            EmbedPanel.HorizontalScroll.Maximum = 0;
+            EmbedPanel.HorizontalScroll.Visible = false;
+            EmbedPanel.AutoScroll = true;
         }
 
         #endregion CustomStyles
