@@ -206,7 +206,7 @@ namespace Polaris
                 button.FlatAppearance.BorderSize = 0;
                 button.ForeColor = ColorTranslator.FromHtml("#6A6A73");
                 button.BackColor = ColorTranslator.FromHtml("#1B1C21");
-                button.Font = new Font("Nobile Medium", 12);
+                button.Font = new Font("Nobile Medium", 14, GraphicsUnit.Pixel);
                 button.Height = 44;
                 button.Width = 264;
                 button.Padding = new Padding(15, 0, 0, 0);

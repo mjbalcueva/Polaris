@@ -42,7 +42,6 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(864, 60);
             this.MenuPanel.TabIndex = 1;
-            this.MenuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_Paint);
             // 
             // FiltersPanel
             // 
