@@ -48,8 +48,9 @@
             this.DeletedCountBadge = new FontAwesome.Sharp.IconButton();
             this.LogoBtn = new FontAwesome.Sharp.IconButton();
             this.TitlePanel = new System.Windows.Forms.Panel();
-            this.LabelText = new System.Windows.Forms.Label();
             this.TogglePanelBtn = new FontAwesome.Sharp.IconButton();
+            this.BorderMisc = new System.Windows.Forms.Panel();
+            this.LabelText = new System.Windows.Forms.Label();
             this.EmbedPanel = new System.Windows.Forms.Panel();
             this.SidePanel.SuspendLayout();
             this.FTPanel.SuspendLayout();
@@ -76,7 +77,7 @@
             // 
             this.FTPanel.Controls.Add(this.FTBtn);
             this.FTPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FTPanel.Location = new System.Drawing.Point(0, 461);
+            this.FTPanel.Location = new System.Drawing.Point(0, 476);
             this.FTPanel.Name = "FTPanel";
             this.FTPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
             this.FTPanel.Size = new System.Drawing.Size(300, 65);
@@ -110,7 +111,7 @@
             this.ClassPanel.AutoSize = true;
             this.ClassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
             this.ClassPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClassPanel.Location = new System.Drawing.Point(0, 446);
+            this.ClassPanel.Location = new System.Drawing.Point(0, 461);
             this.ClassPanel.Name = "ClassPanel";
             this.ClassPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 15);
             this.ClassPanel.Size = new System.Drawing.Size(300, 15);
@@ -126,10 +127,10 @@
             this.ClassesPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ClassesPanel.Location = new System.Drawing.Point(0, 381);
             this.ClassesPanel.Name = "ClassesPanel";
-            this.ClassesPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
+            this.ClassesPanel.Padding = new System.Windows.Forms.Padding(15);
             this.ClassesPanel.RowCount = 1;
             this.ClassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ClassesPanel.Size = new System.Drawing.Size(300, 65);
+            this.ClassesPanel.Size = new System.Drawing.Size(300, 80);
             this.ClassesPanel.TabIndex = 2;
             this.ClassesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ClassesPanel_Paint);
             // 
@@ -421,24 +422,14 @@
             // TitlePanel
             // 
             this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(24)))));
-            this.TitlePanel.Controls.Add(this.LabelText);
             this.TitlePanel.Controls.Add(this.TogglePanelBtn);
+            this.TitlePanel.Controls.Add(this.BorderMisc);
+            this.TitlePanel.Controls.Add(this.LabelText);
             this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitlePanel.Location = new System.Drawing.Point(300, 0);
             this.TitlePanel.Name = "TitlePanel";
             this.TitlePanel.Size = new System.Drawing.Size(882, 80);
             this.TitlePanel.TabIndex = 1;
-            // 
-            // LabelText
-            // 
-            this.LabelText.AutoSize = true;
-            this.LabelText.Font = new System.Drawing.Font("Nobile Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.LabelText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.LabelText.Location = new System.Drawing.Point(86, 30);
-            this.LabelText.Name = "LabelText";
-            this.LabelText.Size = new System.Drawing.Size(103, 23);
-            this.LabelText.TabIndex = 1;
-            this.LabelText.Text = "Overview";
             // 
             // TogglePanelBtn
             // 
@@ -453,10 +444,30 @@
             this.TogglePanelBtn.Location = new System.Drawing.Point(0, 0);
             this.TogglePanelBtn.Name = "TogglePanelBtn";
             this.TogglePanelBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.TogglePanelBtn.Size = new System.Drawing.Size(81, 80);
-            this.TogglePanelBtn.TabIndex = 0;
+            this.TogglePanelBtn.Size = new System.Drawing.Size(78, 78);
+            this.TogglePanelBtn.TabIndex = 3;
             this.TogglePanelBtn.UseVisualStyleBackColor = true;
             this.TogglePanelBtn.Click += new System.EventHandler(this.TogglePanelBtn_Click);
+            // 
+            // BorderMisc
+            // 
+            this.BorderMisc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.BorderMisc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BorderMisc.Location = new System.Drawing.Point(0, 78);
+            this.BorderMisc.Name = "BorderMisc";
+            this.BorderMisc.Size = new System.Drawing.Size(882, 2);
+            this.BorderMisc.TabIndex = 2;
+            // 
+            // LabelText
+            // 
+            this.LabelText.AutoSize = true;
+            this.LabelText.Font = new System.Drawing.Font("Nobile Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.LabelText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.LabelText.Location = new System.Drawing.Point(85, 30);
+            this.LabelText.Name = "LabelText";
+            this.LabelText.Size = new System.Drawing.Size(103, 23);
+            this.LabelText.TabIndex = 1;
+            this.LabelText.Text = "Overview";
             // 
             // EmbedPanel
             // 
@@ -498,7 +509,6 @@
         private System.Windows.Forms.Panel SidePanel;
         private System.Windows.Forms.Panel TitlePanel;
         private System.Windows.Forms.Panel EmbedPanel;
-        private FontAwesome.Sharp.IconButton TogglePanelBtn;
         private System.Windows.Forms.Label LabelText;
         private FontAwesome.Sharp.IconButton LogoBtn;
         private System.Windows.Forms.TableLayoutPanel TasksPanel;
@@ -518,6 +528,8 @@
         private System.Windows.Forms.FlowLayoutPanel ClassPanel;
         private System.Windows.Forms.Panel FTPanel;
         private FontAwesome.Sharp.IconButton FTBtn;
+        private FontAwesome.Sharp.IconButton TogglePanelBtn;
+        private System.Windows.Forms.Panel BorderMisc;
     }
 }
 
