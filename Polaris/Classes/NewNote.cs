@@ -8,21 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Polaris
+namespace Polaris.Classes
 {
-    public partial class Overview : Form
+    public partial class NewNote : Form
     {
-        public Overview()
+        public NewNote()
         {
             InitializeComponent();
         }
 
-        private void OverviewPanel_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void USTMission_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }

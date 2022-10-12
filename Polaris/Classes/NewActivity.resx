@@ -117,27 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>We, the University of Santo Tomas-Legazpi, a Dominican institution of learning under the patronage of St. Thomas Aquinas commit ourselves to:
-
-- the pursuit of excellence in academics and health services through dedicated study;​
-- the strengthening of our moral integrity through fervent prayer and witnessing;
-- the sharing with others the fruits of our endeavor through loving service;
-- the enhancement of our emotional maturity towards an integrated Christian community; and​
-- the promotion of cultural advocacy for a genuine appreciation of Catholic, Filipino, and Bikol identity.</value>
-  </data>
-  <data name="txtVision.Text" xml:space="preserve">
-    <value>We, the University of Santo Tomas-Legazpi, in a life of truth and love out of gratitude, envision the University as a premier Catholic institution of learning for Thomasians whose minds and hearts are nurtured and molded for Christian social transformation. Thus, we work in making the University:
-
-- a Christ-centered educational community;​
-- a respected HEI with consistently high academic standard and​ values-oriented, socially responsive and globally competitive​ academic programs;
-- a reputable leader in Primary and Secondary Science Education, Religious and Teacher Education, Business Management, Accountancy, Engineering, Architecture, Fine Arts, Communication and Liberal Arts, Health Sciences, Law and Graduate Studies;​
-- a prominent teaching hospital in the region;
-- a renowned center for Bikol Studies, community development, environmental protection, and disaster risk management;
-- a leading university for professional development, quality management, innovation, internationalization, and financial sustainability; and
-- a deregulated university by 2025.</value>
-  </data>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
