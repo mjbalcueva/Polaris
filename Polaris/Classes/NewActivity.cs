@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Polaris
+namespace Polaris.Classes
 {
-    public partial class Overview : Form
+    public partial class NewActivity : Form
     {
-        public Overview()
+        public NewActivity()
         {
             InitializeComponent();
         }
 
-        private void OverviewPanel_Paint(object sender, PaintEventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void USTMission_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
