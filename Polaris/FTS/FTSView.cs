@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Polaris.FTS
@@ -9,5 +11,16 @@ namespace Polaris.FTS
         {
             InitializeComponent();
         }
+
+        private void newRecBtn_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new FTS.Cash_Flow());
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            childForm.Show();
+        }
+
     }
 }
