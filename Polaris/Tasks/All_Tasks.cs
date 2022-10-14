@@ -9,5 +9,14 @@ namespace Polaris.Tasks
         {
             InitializeComponent();
         }
+
+        private void newRecBtn_Click(object sender, System.EventArgs e)
+        {
+            OpenChildForm(new Tasks.New_Tasks());
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            childForm.Show();
+        }
     }
 }
