@@ -65,11 +65,29 @@
     <Compile Include="Classes\GradesView.Designer.cs">
       <DependentUpon>GradesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\NewActivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\NewActivity.Designer.cs">
+      <DependentUpon>NewActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\NewNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\NewNote.Designer.cs">
+      <DependentUpon>NewNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\NotesView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\NotesView.Designer.cs">
       <DependentUpon>NotesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTS\Cash_Flow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTS\Cash_Flow.Designer.cs">
+      <DependentUpon>Cash_Flow.cs</DependentUpon>
     </Compile>
     <Compile Include="FTS\FTSView.cs">
       <SubType>Form</SubType>
@@ -115,14 +133,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\New_Tasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tasks\New_Tasks.Designer.cs">
+      <DependentUpon>New_Tasks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Classes\ActivitiesView.resx">
       <DependentUpon>ActivitiesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Classes\GradesView.resx">
       <DependentUpon>GradesView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\NewActivity.resx">
+      <DependentUpon>NewActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\NewNote.resx">
+      <DependentUpon>NewNote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\NotesView.resx">
       <DependentUpon>NotesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTS\Cash_Flow.resx">
+      <DependentUpon>Cash_Flow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTS\FTSView.resx">
       <DependentUpon>FTSView.cs</DependentUpon>
@@ -154,6 +187,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Tasks\New_Tasks.resx">
+      <DependentUpon>New_Tasks.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
