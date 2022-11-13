@@ -39,5 +39,10 @@ namespace Polaris
         }
 
         #endregion Change form color
+
+        private void toggleSidebarButton_Click(object sender, EventArgs e)
+        {
+            sidebarPanel.Visible = !sidebarPanel.Visible;
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.mainHeaderPanel = new System.Windows.Forms.Panel();
-            this.toggleSidebarButton = new FontAwesome.Sharp.IconButton();
+            this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
             this.mainHeaderPanel.SuspendLayout();
@@ -59,19 +59,27 @@
             // 
             // toggleSidebarButton
             // 
+            this.toggleSidebarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderRadius = 15;
+            this.toggleSidebarButton.BorderSize = 0;
             this.toggleSidebarButton.FlatAppearance.BorderSize = 0;
             this.toggleSidebarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.toggleSidebarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.toggleSidebarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleSidebarButton.ForeColor = System.Drawing.Color.White;
             this.toggleSidebarButton.IconChar = FontAwesome.Sharp.IconChar.Reorder;
             this.toggleSidebarButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.toggleSidebarButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.toggleSidebarButton.IconSize = 30;
-            this.toggleSidebarButton.Location = new System.Drawing.Point(25, 25);
+            this.toggleSidebarButton.Location = new System.Drawing.Point(25, 22);
             this.toggleSidebarButton.Name = "toggleSidebarButton";
-            this.toggleSidebarButton.Size = new System.Drawing.Size(44, 44);
-            this.toggleSidebarButton.TabIndex = 1;
-            this.toggleSidebarButton.UseVisualStyleBackColor = true;
+            this.toggleSidebarButton.Size = new System.Drawing.Size(50, 50);
+            this.toggleSidebarButton.TabIndex = 2;
+            this.toggleSidebarButton.TextColor = System.Drawing.Color.White;
+            this.toggleSidebarButton.UseVisualStyleBackColor = false;
+            this.toggleSidebarButton.Click += new System.EventHandler(this.toggleSidebarButton_Click);
             // 
             // border1
             // 
@@ -116,6 +124,6 @@
         private System.Windows.Forms.Panel mainHeaderPanel;
         private System.Windows.Forms.Panel border1;
         private System.Windows.Forms.Panel mainEmbedPanel;
-        private FontAwesome.Sharp.IconButton toggleSidebarButton;
+        private Components.RoundedButton toggleSidebarButton;
     }
 }
