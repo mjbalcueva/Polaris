@@ -1,6 +1,6 @@
-﻿namespace Polaris
+﻿namespace Polaris.Components
 {
-    partial class SubjectsBtn
+    partial class SubjectsButton
     {
         /// <summary> 
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.subjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.subjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.subjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.subjectButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.subjectButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.subjectButton.IconChar = FontAwesome.Sharp.IconChar.Stop;
             this.subjectButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
@@ -49,6 +50,7 @@
             this.subjectButton.IconSize = 30;
             this.subjectButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.subjectButton.Location = new System.Drawing.Point(10, 0);
+            this.subjectButton.Margin = new System.Windows.Forms.Padding(0);
             this.subjectButton.Name = "subjectButton";
             this.subjectButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.subjectButton.Size = new System.Drawing.Size(280, 50);
@@ -59,16 +61,15 @@
             this.subjectButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.subjectButton.UseVisualStyleBackColor = false;
             // 
-            // SubjectsBtn
+            // SubjectsButton
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.Controls.Add(this.subjectButton);
-            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "SubjectsBtn";
+            this.Name = "SubjectsButton";
             this.Size = new System.Drawing.Size(300, 50);
             this.ResumeLayout(false);
 
@@ -76,6 +77,6 @@
 
         #endregion
 
-        private Components.RoundedButton subjectButton;
+        private RoundedButton subjectButton;
     }
 }

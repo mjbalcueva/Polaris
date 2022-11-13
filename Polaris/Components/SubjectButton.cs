@@ -2,11 +2,11 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Polaris
+namespace Polaris.Components
 {
-    public partial class SubjectsBtn : UserControl
+    public partial class SubjectsButton : UserControl
     {
-        public SubjectsBtn()
+        public SubjectsButton()
         {
             InitializeComponent();
         }
