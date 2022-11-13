@@ -33,7 +33,7 @@
             // 
             // subjectButton
             // 
-            this.subjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
+            this.subjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.subjectButton.FlatAppearance.BorderSize = 0;
             this.subjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.subjectButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
@@ -44,8 +44,8 @@
             this.subjectButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.subjectButton.Location = new System.Drawing.Point(0, 0);
             this.subjectButton.Name = "subjectButton";
-            this.subjectButton.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.subjectButton.Size = new System.Drawing.Size(264, 44);
+            this.subjectButton.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.subjectButton.Size = new System.Drawing.Size(300, 50);
             this.subjectButton.TabIndex = 0;
             this.subjectButton.Text = "subjectButton";
             this.subjectButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -54,12 +54,14 @@
             // 
             // SubjectsBtn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.Controls.Add(this.subjectButton);
-            this.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.Name = "SubjectsBtn";
-            this.Size = new System.Drawing.Size(264, 44);
+            this.Size = new System.Drawing.Size(300, 50);
             this.ResumeLayout(false);
 
         }
