@@ -65,6 +65,12 @@
     <Compile Include="Components\SubjectButton.Designer.cs">
       <DependentUpon>SubjectButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\TaskMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\TaskMenu.Designer.cs">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Root.cs">
@@ -75,6 +81,9 @@
     </Compile>
     <EmbeddedResource Include="Components\SubjectButton.resx">
       <DependentUpon>SubjectButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\TaskMenu.resx">
+      <DependentUpon>TaskMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
