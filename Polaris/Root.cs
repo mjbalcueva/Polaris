@@ -109,10 +109,12 @@ namespace Polaris
 
         #endregion ButtonClick Events
 
-        #region Dynamic Subjects
+        // sample data
 
         private readonly string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
         private readonly string[] randColors = { "#F5F17C", "#F25757", "#B699FE" };
+
+        #region Dynamic Subjects
 
         private void GenerateDynamicSubjects()
         {
