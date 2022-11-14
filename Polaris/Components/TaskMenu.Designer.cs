@@ -39,6 +39,7 @@
             this.taskMenuItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.taskMenuItem.BorderRadius = 15;
             this.taskMenuItem.BorderSize = 0;
+            this.taskMenuItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.taskMenuItem.FlatAppearance.BorderSize = 0;
             this.taskMenuItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.taskMenuItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
@@ -53,7 +54,7 @@
             this.taskMenuItem.Location = new System.Drawing.Point(10, 0);
             this.taskMenuItem.Margin = new System.Windows.Forms.Padding(0);
             this.taskMenuItem.Name = "taskMenuItem";
-            this.taskMenuItem.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.taskMenuItem.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.taskMenuItem.Size = new System.Drawing.Size(280, 50);
             this.taskMenuItem.TabIndex = 1;
             this.taskMenuItem.Text = "taskMenuItem";
@@ -69,6 +70,7 @@
             this.badge.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.badge.BorderRadius = 35;
             this.badge.BorderSize = 0;
+            this.badge.Cursor = System.Windows.Forms.Cursors.Hand;
             this.badge.FlatAppearance.BorderSize = 0;
             this.badge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
             this.badge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));

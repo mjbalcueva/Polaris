@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Polaris.Components
 {
-    public partial class SubjectsButton : UserControl
+    public partial class SubjectMenu : UserControl
     {
-        public SubjectsButton()
+        public SubjectMenu()
         {
             InitializeComponent();
         }
@@ -21,21 +21,21 @@ namespace Polaris.Components
         public string ButtonText
         {
             get { return _btnText; }
-            set { _btnText = value; subjectButton.Text = value; }
+            set { _btnText = value; subjectMenuButton.Text = value; }
         }
 
         [Category("Subject Property")]
         public Color ButtonForeColor
         {
             get { return _btnForeColor; }
-            set { _btnForeColor = value; subjectButton.ForeColor = value; }
+            set { _btnForeColor = value; subjectMenuButton.ForeColor = value; }
         }
 
         [Category("Subject Property")]
         public Color IconColor
         {
             get { return _iconColor; }
-            set { _iconColor = value; subjectButton.IconColor = value; }
+            set { _iconColor = value; subjectMenuButton.IconColor = value; }
         }
 
         #endregion Getter, Setter & Constructor

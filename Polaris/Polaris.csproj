@@ -65,11 +65,11 @@
     <Compile Include="Components\SidebarMenu.Designer.cs">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\SubjectButton.cs">
+    <Compile Include="Components\SubjectMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\SubjectButton.Designer.cs">
-      <DependentUpon>SubjectButton.cs</DependentUpon>
+    <Compile Include="Components\SubjectMenu.Designer.cs">
+      <DependentUpon>SubjectMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\TaskMenu.cs">
       <SubType>UserControl</SubType>
@@ -88,8 +88,8 @@
     <EmbeddedResource Include="Components\SidebarMenu.resx">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Components\SubjectButton.resx">
-      <DependentUpon>SubjectButton.cs</DependentUpon>
+    <EmbeddedResource Include="Components\SubjectMenu.resx">
+      <DependentUpon>SubjectMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\TaskMenu.resx">
       <DependentUpon>TaskMenu.cs</DependentUpon>
