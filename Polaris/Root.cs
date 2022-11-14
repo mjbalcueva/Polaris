@@ -13,8 +13,6 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
-            CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
-            OpenChildForm(new Overview());
         }
 
         #region Change form color
@@ -112,9 +110,26 @@ namespace Polaris
 
         #endregion Dynamic Subjects
 
+        #region Hidden Scroll
+
+        private void HiddenScroll()
+        {
+            // Hide the scroll bar
+            sidebarPanel.AutoScroll = false;
+            sidebarPanel.VerticalScroll.Visible = false;
+            sidebarPanel.VerticalScroll.Enabled = false;
+            sidebarPanel.VerticalScroll.Maximum = 0;
+            sidebarPanel.AutoScroll = true;
+        }
+
+        #endregion Hidden Scroll
+
         private void Root_Load(object sender, EventArgs e)
         {
+            CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
+            OpenChildForm(new Overview());
             GenerateDynamicSubjects();
+            HiddenScroll();
         }
     }
 }
