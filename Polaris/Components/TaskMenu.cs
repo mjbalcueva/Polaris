@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Polaris.Forms.Tasks;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -47,5 +48,12 @@ namespace Polaris.Components
         }
 
         #endregion Getter, Setter & Constructor
+
+        private void taskMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Root root = (Root)ParentForm;
+            root.MenuLabel.Text = "Tasks";
+            root.OpenChildForm(new Tasks());
+        }
     }
 }

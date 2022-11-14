@@ -62,6 +62,7 @@
             this.taskMenuItem.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.taskMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.taskMenuItem.UseVisualStyleBackColor = false;
+            this.taskMenuItem.Click += new System.EventHandler(this.taskMenuItem_Click);
             // 
             // badge
             // 

@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Polaris.Components
 {
-    internal class RoundedButton : FontAwesome.Sharp.IconButton
+    public class RoundedButton : FontAwesome.Sharp.IconButton
     {
         #region Getters, Setters and Constructor
 

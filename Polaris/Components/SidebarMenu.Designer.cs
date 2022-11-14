@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.badge = new Polaris.Components.RoundedButton();
-            this.taskMenuItem = new Polaris.Components.RoundedButton();
+            this.sidebarMenuItem = new Polaris.Components.RoundedButton();
             this.SuspendLayout();
             // 
             // badge
@@ -50,7 +50,7 @@
             this.badge.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.badge.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.badge.IconSize = 20;
-            this.badge.Location = new System.Drawing.Point(240, 15);
+            this.badge.Location = new System.Drawing.Point(240, 13);
             this.badge.Margin = new System.Windows.Forms.Padding(0);
             this.badge.Name = "badge";
             this.badge.Padding = new System.Windows.Forms.Padding(3, 3, 0, 0);
@@ -59,36 +59,37 @@
             this.badge.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.badge.UseVisualStyleBackColor = false;
             // 
-            // taskMenuItem
+            // sidebarMenuItem
             // 
-            this.taskMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.taskMenuItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.taskMenuItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.taskMenuItem.BorderRadius = 15;
-            this.taskMenuItem.BorderSize = 0;
-            this.taskMenuItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.taskMenuItem.FlatAppearance.BorderSize = 0;
-            this.taskMenuItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.taskMenuItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.taskMenuItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.taskMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.taskMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.taskMenuItem.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.taskMenuItem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.taskMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.taskMenuItem.IconSize = 30;
-            this.taskMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.taskMenuItem.Location = new System.Drawing.Point(10, 0);
-            this.taskMenuItem.Margin = new System.Windows.Forms.Padding(0);
-            this.taskMenuItem.Name = "taskMenuItem";
-            this.taskMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.taskMenuItem.Size = new System.Drawing.Size(280, 60);
-            this.taskMenuItem.TabIndex = 3;
-            this.taskMenuItem.Text = "sidebarMenu";
-            this.taskMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.taskMenuItem.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.taskMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.taskMenuItem.UseVisualStyleBackColor = false;
+            this.sidebarMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarMenuItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarMenuItem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarMenuItem.BorderRadius = 15;
+            this.sidebarMenuItem.BorderSize = 0;
+            this.sidebarMenuItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sidebarMenuItem.FlatAppearance.BorderSize = 0;
+            this.sidebarMenuItem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarMenuItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarMenuItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sidebarMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.sidebarMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.sidebarMenuItem.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
+            this.sidebarMenuItem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.sidebarMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.sidebarMenuItem.IconSize = 30;
+            this.sidebarMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sidebarMenuItem.Location = new System.Drawing.Point(10, 0);
+            this.sidebarMenuItem.Margin = new System.Windows.Forms.Padding(0);
+            this.sidebarMenuItem.Name = "sidebarMenuItem";
+            this.sidebarMenuItem.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.sidebarMenuItem.Size = new System.Drawing.Size(280, 60);
+            this.sidebarMenuItem.TabIndex = 3;
+            this.sidebarMenuItem.Text = "sidebarMenu";
+            this.sidebarMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.sidebarMenuItem.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.sidebarMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.sidebarMenuItem.UseVisualStyleBackColor = false;
+            this.sidebarMenuItem.Click += new System.EventHandler(this.sidebarMenuItem_Click);
             // 
             // SidebarMenu
             // 
@@ -96,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
             this.Controls.Add(this.badge);
-            this.Controls.Add(this.taskMenuItem);
+            this.Controls.Add(this.sidebarMenuItem);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.Name = "SidebarMenu";
@@ -107,7 +108,7 @@
 
         #endregion
 
-        private RoundedButton badge;
-        private RoundedButton taskMenuItem;
+        public RoundedButton badge;
+        public RoundedButton sidebarMenuItem;
     }
 }

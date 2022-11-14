@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Polaris.Components
 {
-    internal class RoundedPanel : Panel
+    public class RoundedPanel : Panel
     {
         // Fields
 

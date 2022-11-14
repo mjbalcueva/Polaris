@@ -2,6 +2,8 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Drawing;
+using System.Reflection;
+using Polaris.Forms.Misc;
 
 namespace Polaris
 {
@@ -11,6 +13,7 @@ namespace Polaris
         {
             InitializeComponent();
             CustomWindow(Color.FromArgb(9, 10, 11), Color.FromArgb(253, 254, 255), Color.FromArgb(39, 40, 47), Handle);
+            OpenChildForm(new Overview());
         }
 
         #region Change form color
@@ -39,6 +42,38 @@ namespace Polaris
         }
 
         #endregion Change form color
+
+        #region Open Form
+
+        private Form activeForm = null;
+
+        public void OpenChildForm(Form childForm)
+        {
+            _ = typeof(Panel).InvokeMember("DoubleBuffered",
+               BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
+               null, mainEmbedPanel, new object[] { true });
+
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            mainEmbedPanel.Controls.Add(childForm);
+            mainEmbedPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        #endregion Open Form
+
+        private void LogoButton_Click(object sender, EventArgs e)
+        {
+            MenuLabel.Text = "Overview";
+            OpenChildForm(new Overview());
+        }
 
         private void toggleSidebarButton_Click(object sender, EventArgs e)
         {

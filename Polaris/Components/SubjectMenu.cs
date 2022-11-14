@@ -21,21 +21,21 @@ namespace Polaris.Components
         public string ButtonText
         {
             get { return _btnText; }
-            set { _btnText = value; subjectMenuButton.Text = value; }
+            set { _btnText = value; subjectMenuItem.Text = value; }
         }
 
         [Category("Subject Property")]
         public Color ButtonForeColor
         {
             get { return _btnForeColor; }
-            set { _btnForeColor = value; subjectMenuButton.ForeColor = value; }
+            set { _btnForeColor = value; subjectMenuItem.ForeColor = value; }
         }
 
         [Category("Subject Property")]
         public Color IconColor
         {
             get { return _iconColor; }
-            set { _iconColor = value; subjectMenuButton.IconColor = value; }
+            set { _iconColor = value; subjectMenuItem.IconColor = value; }
         }
 
         #endregion Getter, Setter & Constructor
