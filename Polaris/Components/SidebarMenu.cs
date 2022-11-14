@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Polaris.Forms.Extra;
 using Polaris.Forms.Subjects;
 using Polaris.Forms.Tasks;
 using System.ComponentModel;
@@ -83,6 +84,11 @@ namespace Polaris.Components
                     sidebarMenuItem.IconChar = IconChar.ChevronUp;
                     root.subjectsFLP.Visible = false;
                 }
+            }
+            else if (ButtonText == "  Finance Tracker")
+            {
+                root.MenuLabel.Text = "Extra";
+                root.OpenChildForm(new FinanceTracker());
             }
         }
     }

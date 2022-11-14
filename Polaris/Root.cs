@@ -70,6 +70,8 @@ namespace Polaris
 
         #endregion Open Form
 
+        #region ButtonClick Events
+
         private void LogoButton_Click(object sender, EventArgs e)
         {
             MenuLabel.Text = "Overview";
@@ -80,6 +82,8 @@ namespace Polaris
         {
             sidebarPanel.Visible = !sidebarPanel.Visible;
         }
+
+        #endregion ButtonClick Events
 
         #region Dynamic Subjects
 

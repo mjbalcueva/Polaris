@@ -77,6 +77,12 @@
     <Compile Include="Components\TaskMenu.Designer.cs">
       <DependentUpon>TaskMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Extra\FinanceTracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extra\FinanceTracker.Designer.cs">
+      <DependentUpon>FinanceTracker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Misc\Overview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\TaskMenu.resx">
       <DependentUpon>TaskMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extra\FinanceTracker.resx">
+      <DependentUpon>FinanceTracker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Misc\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>

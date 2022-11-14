@@ -32,23 +32,25 @@
             this.border4 = new System.Windows.Forms.Panel();
             this.placeholder3 = new System.Windows.Forms.Panel();
             this.subjectsFLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.SubjectsMenu = new Polaris.Components.SidebarMenu();
             this.placeholder2 = new System.Windows.Forms.Panel();
             this.border3 = new System.Windows.Forms.Panel();
             this.placeholder = new System.Windows.Forms.Panel();
+            this.placeholder1 = new System.Windows.Forms.Panel();
+            this.border2 = new System.Windows.Forms.Panel();
+            this.mainHeaderPanel = new System.Windows.Forms.Panel();
+            this.MenuLabel = new System.Windows.Forms.Label();
+            this.border1 = new System.Windows.Forms.Panel();
+            this.mainEmbedPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toggleSidebarButton = new Polaris.Components.RoundedButton();
+            this.FTMenu = new Polaris.Components.SidebarMenu();
+            this.SubjectsMenu = new Polaris.Components.SidebarMenu();
             this.Deleted = new Polaris.Components.TaskMenu();
             this.Archived = new Polaris.Components.TaskMenu();
             this.Drafts = new Polaris.Components.TaskMenu();
             this.All = new Polaris.Components.TaskMenu();
             this.TasksMenu = new Polaris.Components.SidebarMenu();
-            this.placeholder1 = new System.Windows.Forms.Panel();
-            this.border2 = new System.Windows.Forms.Panel();
             this.LogoButton = new Polaris.Components.RoundedButton();
-            this.mainHeaderPanel = new System.Windows.Forms.Panel();
-            this.MenuLabel = new System.Windows.Forms.Label();
-            this.toggleSidebarButton = new Polaris.Components.RoundedButton();
-            this.border1 = new System.Windows.Forms.Panel();
-            this.mainEmbedPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel.SuspendLayout();
             this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +58,8 @@
             // sidebarPanel
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarPanel.Controls.Add(this.FTMenu);
+            this.sidebarPanel.Controls.Add(this.panel1);
             this.sidebarPanel.Controls.Add(this.border4);
             this.sidebarPanel.Controls.Add(this.placeholder3);
             this.sidebarPanel.Controls.Add(this.subjectsFLP);
@@ -103,22 +107,6 @@
             this.subjectsFLP.Size = new System.Drawing.Size(300, 50);
             this.subjectsFLP.TabIndex = 16;
             // 
-            // SubjectsMenu
-            // 
-            this.SubjectsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.SubjectsMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.SubjectsMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.SubjectsMenu.ButtonText = "  Subjects";
-            this.SubjectsMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SubjectsMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.SubjectsMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.SubjectsMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.SubjectsMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.SubjectsMenu.Location = new System.Drawing.Point(0, 416);
-            this.SubjectsMenu.Name = "SubjectsMenu";
-            this.SubjectsMenu.Size = new System.Drawing.Size(300, 60);
-            this.SubjectsMenu.TabIndex = 15;
-            // 
             // placeholder2
             // 
             this.placeholder2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -143,6 +131,130 @@
             this.placeholder.Name = "placeholder";
             this.placeholder.Size = new System.Drawing.Size(300, 20);
             this.placeholder.TabIndex = 8;
+            // 
+            // placeholder1
+            // 
+            this.placeholder1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.placeholder1.Location = new System.Drawing.Point(0, 113);
+            this.placeholder1.Name = "placeholder1";
+            this.placeholder1.Size = new System.Drawing.Size(300, 10);
+            this.placeholder1.TabIndex = 2;
+            // 
+            // border2
+            // 
+            this.border2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.border2.Location = new System.Drawing.Point(0, 110);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(300, 3);
+            this.border2.TabIndex = 1;
+            // 
+            // mainHeaderPanel
+            // 
+            this.mainHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.mainHeaderPanel.Controls.Add(this.MenuLabel);
+            this.mainHeaderPanel.Controls.Add(this.toggleSidebarButton);
+            this.mainHeaderPanel.Controls.Add(this.border1);
+            this.mainHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainHeaderPanel.Location = new System.Drawing.Point(300, 0);
+            this.mainHeaderPanel.Name = "mainHeaderPanel";
+            this.mainHeaderPanel.Size = new System.Drawing.Size(822, 80);
+            this.mainHeaderPanel.TabIndex = 3;
+            // 
+            // MenuLabel
+            // 
+            this.MenuLabel.AutoSize = true;
+            this.MenuLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.MenuLabel.Location = new System.Drawing.Point(81, 21);
+            this.MenuLabel.Name = "MenuLabel";
+            this.MenuLabel.Size = new System.Drawing.Size(93, 28);
+            this.MenuLabel.TabIndex = 3;
+            this.MenuLabel.Text = "Overview";
+            // 
+            // border1
+            // 
+            this.border1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.border1.Location = new System.Drawing.Point(0, 78);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(822, 2);
+            this.border1.TabIndex = 0;
+            // 
+            // mainEmbedPanel
+            // 
+            this.mainEmbedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.mainEmbedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainEmbedPanel.Location = new System.Drawing.Point(300, 80);
+            this.mainEmbedPanel.Name = "mainEmbedPanel";
+            this.mainEmbedPanel.Size = new System.Drawing.Size(822, 598);
+            this.mainEmbedPanel.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 539);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 10);
+            this.panel1.TabIndex = 19;
+            // 
+            // toggleSidebarButton
+            // 
+            this.toggleSidebarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderRadius = 15;
+            this.toggleSidebarButton.BorderSize = 0;
+            this.toggleSidebarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggleSidebarButton.FlatAppearance.BorderSize = 0;
+            this.toggleSidebarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.toggleSidebarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.toggleSidebarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleSidebarButton.ForeColor = System.Drawing.Color.White;
+            this.toggleSidebarButton.IconChar = FontAwesome.Sharp.IconChar.Reorder;
+            this.toggleSidebarButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.toggleSidebarButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.toggleSidebarButton.IconSize = 30;
+            this.toggleSidebarButton.Location = new System.Drawing.Point(25, 15);
+            this.toggleSidebarButton.Name = "toggleSidebarButton";
+            this.toggleSidebarButton.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.toggleSidebarButton.Size = new System.Drawing.Size(50, 50);
+            this.toggleSidebarButton.TabIndex = 2;
+            this.toggleSidebarButton.TextColor = System.Drawing.Color.White;
+            this.toggleSidebarButton.UseVisualStyleBackColor = false;
+            this.toggleSidebarButton.Click += new System.EventHandler(this.toggleSidebarButton_Click);
+            // 
+            // FTMenu
+            // 
+            this.FTMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.FTMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.ButtonText = "  Finance Tracker";
+            this.FTMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FTMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.FTMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.FTMenu.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.FTMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.Location = new System.Drawing.Point(0, 549);
+            this.FTMenu.Name = "FTMenu";
+            this.FTMenu.Size = new System.Drawing.Size(300, 60);
+            this.FTMenu.TabIndex = 20;
+            // 
+            // SubjectsMenu
+            // 
+            this.SubjectsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.SubjectsMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.ButtonText = "  Subjects";
+            this.SubjectsMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubjectsMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubjectsMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.SubjectsMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.SubjectsMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.Location = new System.Drawing.Point(0, 416);
+            this.SubjectsMenu.Name = "SubjectsMenu";
+            this.SubjectsMenu.Size = new System.Drawing.Size(300, 60);
+            this.SubjectsMenu.TabIndex = 15;
             // 
             // Deleted
             // 
@@ -220,23 +332,6 @@
             this.TasksMenu.Size = new System.Drawing.Size(300, 60);
             this.TasksMenu.TabIndex = 3;
             // 
-            // placeholder1
-            // 
-            this.placeholder1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.placeholder1.Location = new System.Drawing.Point(0, 113);
-            this.placeholder1.Name = "placeholder1";
-            this.placeholder1.Size = new System.Drawing.Size(300, 10);
-            this.placeholder1.TabIndex = 2;
-            // 
-            // border2
-            // 
-            this.border2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.border2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.border2.Location = new System.Drawing.Point(0, 110);
-            this.border2.Name = "border2";
-            this.border2.Size = new System.Drawing.Size(300, 3);
-            this.border2.TabIndex = 1;
-            // 
             // LogoButton
             // 
             this.LogoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
@@ -266,73 +361,6 @@
             this.LogoButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.LogoButton.UseVisualStyleBackColor = false;
             this.LogoButton.Click += new System.EventHandler(this.LogoButton_Click);
-            // 
-            // mainHeaderPanel
-            // 
-            this.mainHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.mainHeaderPanel.Controls.Add(this.MenuLabel);
-            this.mainHeaderPanel.Controls.Add(this.toggleSidebarButton);
-            this.mainHeaderPanel.Controls.Add(this.border1);
-            this.mainHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mainHeaderPanel.Location = new System.Drawing.Point(300, 0);
-            this.mainHeaderPanel.Name = "mainHeaderPanel";
-            this.mainHeaderPanel.Size = new System.Drawing.Size(822, 80);
-            this.mainHeaderPanel.TabIndex = 3;
-            // 
-            // MenuLabel
-            // 
-            this.MenuLabel.AutoSize = true;
-            this.MenuLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.MenuLabel.Location = new System.Drawing.Point(81, 21);
-            this.MenuLabel.Name = "MenuLabel";
-            this.MenuLabel.Size = new System.Drawing.Size(93, 28);
-            this.MenuLabel.TabIndex = 3;
-            this.MenuLabel.Text = "Overview";
-            // 
-            // toggleSidebarButton
-            // 
-            this.toggleSidebarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.toggleSidebarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.toggleSidebarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.toggleSidebarButton.BorderRadius = 15;
-            this.toggleSidebarButton.BorderSize = 0;
-            this.toggleSidebarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.toggleSidebarButton.FlatAppearance.BorderSize = 0;
-            this.toggleSidebarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.toggleSidebarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.toggleSidebarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.toggleSidebarButton.ForeColor = System.Drawing.Color.White;
-            this.toggleSidebarButton.IconChar = FontAwesome.Sharp.IconChar.Reorder;
-            this.toggleSidebarButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.toggleSidebarButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.toggleSidebarButton.IconSize = 30;
-            this.toggleSidebarButton.Location = new System.Drawing.Point(25, 15);
-            this.toggleSidebarButton.Name = "toggleSidebarButton";
-            this.toggleSidebarButton.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
-            this.toggleSidebarButton.Size = new System.Drawing.Size(50, 50);
-            this.toggleSidebarButton.TabIndex = 2;
-            this.toggleSidebarButton.TextColor = System.Drawing.Color.White;
-            this.toggleSidebarButton.UseVisualStyleBackColor = false;
-            this.toggleSidebarButton.Click += new System.EventHandler(this.toggleSidebarButton_Click);
-            // 
-            // border1
-            // 
-            this.border1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.border1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.border1.Location = new System.Drawing.Point(0, 78);
-            this.border1.Name = "border1";
-            this.border1.Size = new System.Drawing.Size(822, 2);
-            this.border1.TabIndex = 0;
-            // 
-            // mainEmbedPanel
-            // 
-            this.mainEmbedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.mainEmbedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainEmbedPanel.Location = new System.Drawing.Point(300, 80);
-            this.mainEmbedPanel.Name = "mainEmbedPanel";
-            this.mainEmbedPanel.Size = new System.Drawing.Size(822, 598);
-            this.mainEmbedPanel.TabIndex = 4;
             // 
             // Root
             // 
@@ -379,5 +407,7 @@
         private System.Windows.Forms.Panel border4;
         private System.Windows.Forms.Panel placeholder3;
         public System.Windows.Forms.FlowLayoutPanel subjectsFLP;
+        private System.Windows.Forms.Panel panel1;
+        private Components.SidebarMenu FTMenu;
     }
 }
