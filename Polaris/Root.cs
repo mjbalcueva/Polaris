@@ -1,4 +1,5 @@
-﻿using Polaris.Components;
+﻿using FontAwesome.Sharp;
+using Polaris.Components;
 using Polaris.Forms.Misc;
 using System;
 using System.Drawing;
@@ -68,11 +69,14 @@ namespace Polaris
 
         #endregion Open Form
 
+        // !TODO: bug
+
         #region Toggle Active Button Font Color
 
-        private FontAwesome.Sharp.IconButton activeFontButton = null;
+        private IconButton activeFontButton = null;
+        private IconButton activeIconButton = null;
 
-        public void ToggleButtonFontColor(FontAwesome.Sharp.IconButton button)
+        public void ToggleButtonFontColor(IconButton button)
         {
             if (activeFontButton != null)
                 activeFontButton.ForeColor = ColorTranslator.FromHtml("#6A6A73");
@@ -81,9 +85,7 @@ namespace Polaris
             activeFontButton.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
         }
 
-        private FontAwesome.Sharp.IconButton activeIconButton = null;
-
-        public void ToggleButtonIconColor(FontAwesome.Sharp.IconButton button)
+        public void ToggleButtonIconColor(IconButton button)
         {
             if (activeIconButton != null)
                 activeIconButton.IconColor = ColorTranslator.FromHtml("#6A6A73");
