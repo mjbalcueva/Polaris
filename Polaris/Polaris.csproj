@@ -59,6 +59,12 @@
     <Compile Include="Components\RoundedPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\SidebarMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SidebarMenu.Designer.cs">
+      <DependentUpon>SidebarMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\SubjectButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Root.Designer.cs">
       <DependentUpon>Root.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\SidebarMenu.resx">
+      <DependentUpon>SidebarMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\SubjectButton.resx">
       <DependentUpon>SubjectButton.cs</DependentUpon>
     </EmbeddedResource>

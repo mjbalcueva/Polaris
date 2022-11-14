@@ -52,7 +52,7 @@
             this.subjectButton.Location = new System.Drawing.Point(10, 0);
             this.subjectButton.Margin = new System.Windows.Forms.Padding(0);
             this.subjectButton.Name = "subjectButton";
-            this.subjectButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.subjectButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.subjectButton.Size = new System.Drawing.Size(280, 50);
             this.subjectButton.TabIndex = 0;
             this.subjectButton.Text = "subjectButton";

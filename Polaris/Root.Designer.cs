@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.roundedButton1 = new Polaris.Components.RoundedButton();
             this.mainHeaderPanel = new System.Windows.Forms.Panel();
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
-            this.roundedButton1 = new Polaris.Components.RoundedButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.sidebarPanel.SuspendLayout();
             this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,43 @@
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(300, 678);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 110);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 3);
+            this.panel1.TabIndex = 1;
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.roundedButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.roundedButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundedButton1.BorderRadius = 0;
+            this.roundedButton1.BorderSize = 0;
+            this.roundedButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.roundedButton1.FlatAppearance.BorderSize = 0;
+            this.roundedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(43)))));
+            this.roundedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.roundedButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.roundedButton1.IconColor = System.Drawing.Color.Black;
+            this.roundedButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.roundedButton1.Location = new System.Drawing.Point(0, 0);
+            this.roundedButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.roundedButton1.Size = new System.Drawing.Size(300, 110);
+            this.roundedButton1.TabIndex = 0;
+            this.roundedButton1.Text = "Polaris";
+            this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.roundedButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.roundedButton1.UseVisualStyleBackColor = false;
             // 
             // mainHeaderPanel
             // 
@@ -104,42 +141,6 @@
             this.mainEmbedPanel.Name = "mainEmbedPanel";
             this.mainEmbedPanel.Size = new System.Drawing.Size(822, 598);
             this.mainEmbedPanel.TabIndex = 4;
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.roundedButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
-            this.roundedButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundedButton1.BorderRadius = 0;
-            this.roundedButton1.BorderSize = 0;
-            this.roundedButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(43)))));
-            this.roundedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.roundedButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.roundedButton1.IconColor = System.Drawing.Color.Black;
-            this.roundedButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundedButton1.Location = new System.Drawing.Point(0, 0);
-            this.roundedButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.roundedButton1.Size = new System.Drawing.Size(300, 110);
-            this.roundedButton1.TabIndex = 0;
-            this.roundedButton1.Text = "Polaris";
-            this.roundedButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.roundedButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 110);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 3);
-            this.panel1.TabIndex = 1;
             // 
             // Root
             // 

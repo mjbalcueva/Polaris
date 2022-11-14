@@ -1,12 +1,13 @@
-﻿using System.ComponentModel;
+﻿using FontAwesome.Sharp;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Components
 {
-    public partial class TaskMenu : UserControl
+    public partial class SidebarMenu : UserControl
     {
-        public TaskMenu()
+        public SidebarMenu()
         {
             InitializeComponent();
         }
@@ -15,8 +16,9 @@ namespace Polaris.Components
 
         private string _btnText;
         private Color _btnForeColor;
+        private IconChar _iconChar;
         private Color _iconColor;
-        private string _badgeText;
+        private Color _badgeIconColor;
 
         [Category("Task Property")]
         public string ButtonText
@@ -40,10 +42,17 @@ namespace Polaris.Components
         }
 
         [Category("Task Property")]
-        public string BadgeText
+        public IconChar IconChar
         {
-            get { return _badgeText; }
-            set { _badgeText = value; badge.Text = value; }
+            get { return _iconChar; }
+            set { _iconChar = value; taskMenuItem.IconChar = value; }
+        }
+
+        [Category("Task Property")]
+        public Color BadgeIconColor
+        {
+            get { return _badgeIconColor; }
+            set { _badgeIconColor = value; badge.IconColor = value; }
         }
 
         #endregion Getter, Setter & Constructor
