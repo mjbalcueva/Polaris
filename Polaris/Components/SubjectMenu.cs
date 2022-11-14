@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Polaris.Forms.Subjects;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -39,5 +40,13 @@ namespace Polaris.Components
         }
 
         #endregion Getter, Setter & Constructor
+
+        private void subjectMenuItem_Click(object sender, System.EventArgs e)
+        {
+            Root root = (Root)ParentForm;
+
+            root.MenuLabel.Text = ButtonText;
+            root.OpenChildForm(new Subjects());
+        }
     }
 }

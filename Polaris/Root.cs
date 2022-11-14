@@ -1,9 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
+﻿using Polaris.Components;
+using Polaris.Forms.Misc;
+using System;
 using System.Drawing;
 using System.Reflection;
-using Polaris.Forms.Misc;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Polaris
 {
@@ -12,7 +13,7 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
-            CustomWindow(Color.FromArgb(9, 10, 11), Color.FromArgb(253, 254, 255), Color.FromArgb(39, 40, 47), Handle);
+            CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
         }
 
@@ -78,6 +79,38 @@ namespace Polaris
         private void toggleSidebarButton_Click(object sender, EventArgs e)
         {
             sidebarPanel.Visible = !sidebarPanel.Visible;
+        }
+
+        #region Dynamic Subjects
+
+        private readonly string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
+        private readonly string[] randColors = { "#F5F17C", "#F25757", "#B699FE" };
+
+        private void GenerateDynamicSubjects()
+        {
+            subjectsFLP.Controls.Clear();
+
+            int subjectsCount = subjectItems.Length;
+            SubjectMenu[] subjectsMenu = new SubjectMenu[subjectItems.Length];
+
+            for (int i = 0; i < subjectsCount; i++)
+            {
+                subjectsMenu[i] = new SubjectMenu
+                {
+                    ButtonText = subjectItems[i],
+                    IconColor = ColorTranslator.FromHtml(randColors[i])
+                };
+
+                subjectsFLP.Controls.Add(subjectsMenu[i]);
+                subjectsFLP.Height = (subjectsMenu[i].Height + 6) * subjectsCount;
+            }
+        }
+
+        #endregion Dynamic Subjects
+
+        private void Root_Load(object sender, EventArgs e)
+        {
+            GenerateDynamicSubjects();
         }
     }
 }

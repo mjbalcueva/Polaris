@@ -61,6 +61,7 @@
             this.subjectMenuItem.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.subjectMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.subjectMenuItem.UseVisualStyleBackColor = false;
+            this.subjectMenuItem.Click += new System.EventHandler(this.subjectMenuItem_Click);
             // 
             // SubjectMenu
             // 

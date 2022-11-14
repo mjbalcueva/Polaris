@@ -62,15 +62,27 @@ namespace Polaris.Components
         private void sidebarMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
-            root.MenuLabel.Text = ButtonText.Substring(2);
 
             if (ButtonText == "  Tasks")
             {
+                root.MenuLabel.Text = "Tasks";
                 root.OpenChildForm(new Tasks());
             }
             else if (ButtonText == "  Subjects")
             {
+                root.MenuLabel.Text = "No Subject Selected";
                 root.OpenChildForm(new Subjects());
+
+                if (sidebarMenuItem.IconChar == IconChar.ChevronUp)
+                {
+                    sidebarMenuItem.IconChar = IconChar.ChevronDown;
+                    root.subjectsFLP.Visible = true;
+                }
+                else
+                {
+                    sidebarMenuItem.IconChar = IconChar.ChevronUp;
+                    root.subjectsFLP.Visible = false;
+                }
             }
         }
     }
