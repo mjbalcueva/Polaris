@@ -68,6 +68,32 @@ namespace Polaris
 
         #endregion Open Form
 
+        #region Toggle Active Button Font Color
+
+        private FontAwesome.Sharp.IconButton activeFontButton = null;
+
+        public void ToggleButtonFontColor(FontAwesome.Sharp.IconButton button)
+        {
+            if (activeFontButton != null)
+                activeFontButton.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+
+            activeFontButton = button;
+            activeFontButton.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+        }
+
+        private FontAwesome.Sharp.IconButton activeIconButton = null;
+
+        public void ToggleButtonIconColor(FontAwesome.Sharp.IconButton button)
+        {
+            if (activeIconButton != null)
+                activeIconButton.IconColor = ColorTranslator.FromHtml("#6A6A73");
+
+            activeIconButton = button;
+            activeIconButton.IconColor = ColorTranslator.FromHtml("#FDFEFF");
+        }
+
+        #endregion Toggle Active Button Font Color
+
         #region ButtonClick Events
 
         private void LogoButton_Click(object sender, EventArgs e)

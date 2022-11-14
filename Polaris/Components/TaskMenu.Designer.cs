@@ -30,6 +30,7 @@
         {
             this.taskMenuItem = new Polaris.Components.RoundedButton();
             this.badge = new Polaris.Components.RoundedButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // taskMenuItem
@@ -111,5 +112,6 @@
 
         private RoundedButton taskMenuItem;
         private RoundedButton badge;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

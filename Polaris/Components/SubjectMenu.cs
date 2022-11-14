@@ -41,12 +41,16 @@ namespace Polaris.Components
 
         #endregion Getter, Setter & Constructor
 
+        #region Button Click Events
+
         private void subjectMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
-
             root.MenuLabel.Text = ButtonText;
+            root.ToggleButtonFontColor(subjectMenuItem);
             root.OpenChildForm(new Subjects());
         }
+
+        #endregion Button Click Events
     }
 }

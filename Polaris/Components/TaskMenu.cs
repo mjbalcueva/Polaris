@@ -49,11 +49,17 @@ namespace Polaris.Components
 
         #endregion Getter, Setter & Constructor
 
+        #region Button Click Events
+
         private void taskMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
             root.MenuLabel.Text = "Tasks";
+            root.ToggleButtonFontColor(taskMenuItem);
+            root.ToggleButtonIconColor(taskMenuItem);
             root.OpenChildForm(new Tasks());
         }
+
+        #endregion Button Click Events
     }
 }
