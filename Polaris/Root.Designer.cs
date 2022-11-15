@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.border4 = new System.Windows.Forms.Panel();
             this.placeholder3 = new System.Windows.Forms.Panel();
             this.subjectsFLP = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,7 +42,6 @@
             this.MenuLabel = new System.Windows.Forms.Label();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.FTMenu = new Polaris.Components.SidebarMenu();
             this.SubjectsMenu = new Polaris.Components.SidebarMenu();
@@ -81,6 +81,14 @@
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(300, 678);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 539);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 10);
+            this.panel1.TabIndex = 19;
             // 
             // border4
             // 
@@ -189,14 +197,6 @@
             this.mainEmbedPanel.Name = "mainEmbedPanel";
             this.mainEmbedPanel.Size = new System.Drawing.Size(822, 598);
             this.mainEmbedPanel.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 539);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 10);
-            this.panel1.TabIndex = 19;
             // 
             // toggleSidebarButton
             // 
@@ -395,7 +395,6 @@
         private Components.RoundedButton LogoButton;
         private System.Windows.Forms.Panel placeholder1;
         private Components.SidebarMenu TasksMenu;
-        private Components.TaskMenu All;
         private Components.TaskMenu Deleted;
         private Components.TaskMenu Archived;
         private Components.TaskMenu Drafts;
@@ -409,5 +408,6 @@
         public System.Windows.Forms.FlowLayoutPanel subjectsFLP;
         private System.Windows.Forms.Panel panel1;
         private Components.SidebarMenu FTMenu;
+        public Components.TaskMenu All;
     }
 }

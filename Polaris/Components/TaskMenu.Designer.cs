@@ -109,9 +109,8 @@
         }
 
         #endregion
-
-        private RoundedButton taskMenuItem;
         private RoundedButton badge;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        public RoundedButton taskMenuItem;
     }
 }

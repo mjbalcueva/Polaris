@@ -60,6 +60,8 @@ namespace Polaris.Components
 
         #endregion Getter, Setter & Constructor
 
+        #region Button Click Events
+
         private void sidebarMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
@@ -67,6 +69,8 @@ namespace Polaris.Components
             if (ButtonText == "  Tasks")
             {
                 root.MenuLabel.Text = "Tasks";
+                root.ToggleButtonFontColor((IconButton)root.All.Controls["taskMenuItem"]);
+                root.ToggleButtonIconColor((IconButton)root.All.Controls["taskMenuItem"]);
                 root.OpenChildForm(new Tasks());
             }
             else if (ButtonText == "  Subjects")
@@ -91,5 +95,7 @@ namespace Polaris.Components
                 root.OpenChildForm(new FinanceTracker());
             }
         }
+
+        #endregion Button Click Events
     }
 }
