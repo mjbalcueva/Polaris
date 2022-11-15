@@ -114,7 +114,7 @@ namespace Polaris
         // sample data
 
         private readonly string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
-        private readonly string[] randColors = { "#E0DC52", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
+        private readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
 
         #region Dynamic Subjects
 
@@ -164,7 +164,6 @@ namespace Polaris
 
         private void HiddenScroll()
         {
-            // Hide the scroll bar
             sidebarPanel.AutoScroll = false;
             sidebarPanel.VerticalScroll.Visible = false;
             sidebarPanel.VerticalScroll.Enabled = false;

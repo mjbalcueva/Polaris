@@ -75,8 +75,8 @@ namespace Polaris.Components
             }
             else if (ButtonText == "  Subjects")
             {
-                root.MenuLabel.Text = "No Subject Selected";
-                root.OpenChildForm(new Subjects());
+                //root.MenuLabel.Text = "No Subject Selected";
+                //root.OpenChildForm(new Subjects());
 
                 if (sidebarMenuItem.IconChar == IconChar.ChevronUp)
                 {

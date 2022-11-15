@@ -54,7 +54,7 @@
             this.subjectMenuItem.Margin = new System.Windows.Forms.Padding(0);
             this.subjectMenuItem.Name = "subjectMenuItem";
             this.subjectMenuItem.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.subjectMenuItem.Size = new System.Drawing.Size(280, 50);
+            this.subjectMenuItem.Size = new System.Drawing.Size(270, 50);
             this.subjectMenuItem.TabIndex = 0;
             this.subjectMenuItem.Text = "subjectMenuItem";
             this.subjectMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
