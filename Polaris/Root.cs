@@ -114,23 +114,43 @@ namespace Polaris
         // sample data
 
         private readonly string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
-        private readonly string[] randColors = { "#F5F17C", "#F25757", "#B699FE" };
+        private readonly string[] randColors = { "#E0DC52", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
 
         #region Dynamic Subjects
+
+        private int[] RandomArray(int length)
+        {
+            int[] arr = new int[length];
+            Random rand = new Random();
+            for (int i = 0; i < length; i++)
+            {
+                arr[i] = rand.Next(0, length);
+                for (int j = 0; j < i; j++)
+                {
+                    if (arr[i] != arr[j])
+                        continue;
+                    i--;
+                    break;
+                }
+            }
+            return arr;
+        }
 
         private void GenerateDynamicSubjects()
         {
             subjectsFLP.Controls.Clear();
 
             int subjectsCount = subjectItems.Length;
+            int[] randomColors = RandomArray(randColors.Length);
+
             SubjectMenu[] subjectsMenu = new SubjectMenu[subjectItems.Length];
 
             for (int i = 0; i < subjectsCount; i++)
             {
                 subjectsMenu[i] = new SubjectMenu
                 {
-                    ButtonText = subjectItems[i],
-                    IconColor = ColorTranslator.FromHtml(randColors[i])
+                    ButtonText = "  " + subjectItems[i],
+                    IconColor = ColorTranslator.FromHtml(randColors[randomColors[i]])
                 };
 
                 subjectsFLP.Controls.Add(subjectsMenu[i]);
