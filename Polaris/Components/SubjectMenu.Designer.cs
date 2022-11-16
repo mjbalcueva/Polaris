@@ -47,7 +47,7 @@
             this.badge.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.badge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.badge.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.badge.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(21)))), ((int)(((byte)(67)))));
+            this.badge.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
             this.badge.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.badge.IconSize = 20;
             this.badge.Location = new System.Drawing.Point(238, 8);

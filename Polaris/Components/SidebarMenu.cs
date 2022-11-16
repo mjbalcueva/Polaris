@@ -90,6 +90,36 @@ namespace Polaris.Components
             }
         }
 
+        private void badge_Click(object sender, System.EventArgs e)
+        {
+            Root root = (Root)ParentForm;
+
+            if (ButtonText == "  Tasks")
+            {
+                root.MenuLabel.Text = "Tasks Badge Clicked";
+            }
+            else if (ButtonText == "  Subjects")
+            {
+                root.subjectsFLP.Visible = true;
+                SubjectAdd subjectAdd = new SubjectAdd();
+
+                Color nextColor = ColorTranslator.FromHtml(root.randColors[new System.Random().Next(0, root.randColors.Length)]);
+                root.color = nextColor;
+
+                subjectAdd.icon.GradientTopColor = nextColor;
+                subjectAdd.icon.GradientBottomColor = nextColor;
+
+                root.subjectsFLP.Controls.Add(subjectAdd);
+                root.subjectsFLP.Controls.SetChildIndex(root.subjectsFLP.Controls[root.subjectsFLP.Controls.Count - 1], 0);
+                root.subjectsFLP.Controls[0].Controls[0].Controls[0].Focus();
+                root.subjectsFLP.Height += 56;
+            }
+            else if (ButtonText == "  Finance Tracker")
+            {
+                root.MenuLabel.Text = "Extra Badge Clicked";
+            }
+        }
+
         #endregion Button Click Events
     }
 }

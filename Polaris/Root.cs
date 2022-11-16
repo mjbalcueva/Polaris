@@ -97,50 +97,25 @@ namespace Polaris
 
         #endregion ButtonClick Events
 
-        #region Colors
-
-        private readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
-
-        private int[] RandomArray(int length)
-        {
-            int[] arr = new int[length];
-            Random rand = new Random();
-            for (int i = 0; i < length; i++)
-            {
-                arr[i] = rand.Next(0, length);
-                for (int j = 0; j < i; j++)
-                {
-                    if (arr[i] != arr[j])
-                        continue;
-                    i--;
-                    break;
-                }
-            }
-            return arr;
-        }
-
-        #endregion Colors
-
-        // sample data
-
-        private string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
-        private ArrayList subjectMenu = new ArrayList();
-
-        public string[] SubjectItems { get => subjectItems; set => subjectItems = value; }
-        public ArrayList SubjectMenu { get => subjectMenu; set => subjectMenu = value; }
+        public readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
+        public Color color;
 
         #region Dynamic Subjects
 
-        private void FillSubjectMenu()
-        {
-            int[] randomColors = RandomArray(randColors.Length);
+        private ArrayList subjectMenu = new ArrayList();
+        public ArrayList SubjectMenu { get => subjectMenu; set => subjectMenu = value; }
+        public Color Color { get => color; set => color = value; }
 
-            for (int i = 0; i < SubjectItems.Length; i++)
-                SubjectMenu.Add(new SubjectMenu
-                {
-                    ButtonText = "  " + SubjectItems[i],
-                    IconColor = ColorTranslator.FromHtml(randColors[randomColors[i]])
-                });
+        internal void AddSubject(string text, Color color)
+        {
+            if (string.IsNullOrEmpty(text))
+                return;
+
+            SubjectMenu.Add(new SubjectMenu
+            {
+                ButtonText = "  " + text,
+                IconColor = color,
+            });
         }
 
         public void GenerateDynamicSubjects()
@@ -154,7 +129,7 @@ namespace Polaris
                 for (int i = 0; i < subjectsCount; i++)
                 {
                     subjectsFLP.Controls.Add((SubjectMenu)SubjectMenu[i]);
-                    subjectsFLP.Height = (((SubjectMenu)SubjectMenu[i]).Height + 6) * subjectsCount;
+                    subjectsFLP.Height = (((SubjectMenu)SubjectMenu[i]).Height + 7) * subjectsCount;
                 }
         }
 
@@ -177,7 +152,6 @@ namespace Polaris
         {
             CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
-            FillSubjectMenu();
             GenerateDynamicSubjects();
             HiddenScroll();
         }

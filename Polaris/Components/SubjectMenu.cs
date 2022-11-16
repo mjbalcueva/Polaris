@@ -1,5 +1,4 @@
-﻿using FontAwesome.Sharp;
-using Polaris.Forms.Misc;
+﻿using Polaris.Forms.Misc;
 using Polaris.Forms.Subjects;
 using System.ComponentModel;
 using System.Drawing;
@@ -71,7 +70,6 @@ namespace Polaris.Components
         {
             Root root = (Root)ParentForm;
 
-            // remove subject from subjectMenu ArrayList and reload subjectsFLP
             root.SubjectMenu.Remove(this);
             root.GenerateDynamicSubjects();
             root.MenuLabel.Text = "Overview";

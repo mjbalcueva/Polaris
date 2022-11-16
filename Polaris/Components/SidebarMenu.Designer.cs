@@ -58,6 +58,7 @@
             this.badge.TabIndex = 4;
             this.badge.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.badge.UseVisualStyleBackColor = false;
+            this.badge.Click += new System.EventHandler(this.badge_Click);
             // 
             // sidebarMenuItem
             // 
