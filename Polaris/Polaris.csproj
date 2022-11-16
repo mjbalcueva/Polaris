@@ -65,6 +65,12 @@
     <Compile Include="Components\SidebarMenu.Designer.cs">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\SubjectAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\SubjectAdd.Designer.cs">
+      <DependentUpon>SubjectAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\SubjectMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +107,7 @@
     <Compile Include="Forms\Tasks\Tasks.Designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Root.cs">
@@ -111,6 +118,9 @@
     </Compile>
     <EmbeddedResource Include="Components\SidebarMenu.resx">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\SubjectAdd.resx">
+      <DependentUpon>SubjectAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\SubjectMenu.resx">
       <DependentUpon>SubjectMenu.cs</DependentUpon>

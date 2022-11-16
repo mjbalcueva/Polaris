@@ -1,4 +1,6 @@
-﻿using Polaris.Forms.Subjects;
+﻿using FontAwesome.Sharp;
+using Polaris.Forms.Misc;
+using Polaris.Forms.Subjects;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -47,10 +49,37 @@ namespace Polaris.Components
         {
             Root root = (Root)ParentForm;
             root.MenuLabel.Text = ButtonText;
-            root.ToggleButtonFontColor(subjectMenuItem);
             root.OpenChildForm(new Subjects());
         }
 
+        private void subjectMenuItem_Enter(object sender, System.EventArgs e)
+        {
+            badge.Visible = true;
+
+            subjectMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+        }
+
+        private void subjectMenuItem_Leave(object sender, System.EventArgs e)
+        {
+            badge.Visible = false;
+            subjectMenuItem.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+        }
+
+        private void badge_Click(object sender, System.EventArgs e)
+        {
+            Root root = (Root)ParentForm;
+
+            // remove subject from subjectMenu ArrayList and reload subjectsFLP
+            root.SubjectMenu.Remove(this);
+            root.GenerateDynamicSubjects();
+            root.OpenChildForm(new Overview());
+        }
+
         #endregion Button Click Events
+
+        private void SubjectMenu_Load(object sender, System.EventArgs e)
+        {
+            badge.Visible = false;
+        }
     }
 }

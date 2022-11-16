@@ -55,9 +55,19 @@ namespace Polaris.Components
         {
             Root root = (Root)ParentForm;
             root.MenuLabel.Text = "Tasks";
-            root.ToggleButtonFontColor(taskMenuItem);
-            root.ToggleButtonIconColor(taskMenuItem);
             root.OpenChildForm(new Tasks());
+        }
+
+        private void taskMenuItem_Enter(object sender, System.EventArgs e)
+        {
+            taskMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+            taskMenuItem.IconColor = ColorTranslator.FromHtml("#FDFEFF");
+        }
+
+        private void taskMenuItem_Leave(object sender, System.EventArgs e)
+        {
+            taskMenuItem.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+            taskMenuItem.IconColor = ColorTranslator.FromHtml("#6A6A73");
         }
 
         #endregion Button Click Events

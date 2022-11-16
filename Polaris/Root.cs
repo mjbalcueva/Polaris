@@ -1,7 +1,7 @@
-﻿using FontAwesome.Sharp;
-using Polaris.Components;
+﻿using Polaris.Components;
 using Polaris.Forms.Misc;
 using System;
+using System.Collections;
 using System.Drawing;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -66,32 +66,21 @@ namespace Polaris
 
         #endregion Open Form
 
-        // !TODO: bug
+        #region Toggle Active Button Font & Icon Color
 
-        #region Toggle Active Button Font Color
-
-        private IconButton activeFontButton = null;
-        private IconButton activeIconButton = null;
-
-        public void ToggleButtonFontColor(IconButton button)
+        private void TasksMenu_Enter(object sender, EventArgs e)
         {
-            if (activeFontButton != null)
-                activeFontButton.ForeColor = ColorTranslator.FromHtml("#6A6A73");
-
-            activeFontButton = button;
-            activeFontButton.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+            All.taskMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+            All.taskMenuItem.IconColor = ColorTranslator.FromHtml("#FDFEFF");
         }
 
-        public void ToggleButtonIconColor(IconButton button)
+        private void TasksMenu_Leave(object sender, EventArgs e)
         {
-            if (activeIconButton != null)
-                activeIconButton.IconColor = ColorTranslator.FromHtml("#6A6A73");
-
-            activeIconButton = button;
-            activeIconButton.IconColor = ColorTranslator.FromHtml("#FDFEFF");
+            All.taskMenuItem.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+            All.taskMenuItem.IconColor = ColorTranslator.FromHtml("#6A6A73");
         }
 
-        #endregion Toggle Active Button Font Color
+        #endregion Toggle Active Button Font & Icon Color
 
         #region ButtonClick Events
 
@@ -108,12 +97,9 @@ namespace Polaris
 
         #endregion ButtonClick Events
 
-        // sample data
+        #region Colors
 
-        private readonly string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
         private readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
-
-        #region Dynamic Subjects
 
         private int[] RandomArray(int length)
         {
@@ -133,26 +119,43 @@ namespace Polaris
             return arr;
         }
 
-        private void GenerateDynamicSubjects()
-        {
-            subjectsFLP.Controls.Clear();
+        #endregion Colors
 
-            int subjectsCount = subjectItems.Length;
+        // sample data
+
+        private string[] subjectItems = { "SDF 104", "CC 104", "CC 105" };
+        private ArrayList subjectMenu = new ArrayList();
+
+        public string[] SubjectItems { get => subjectItems; set => subjectItems = value; }
+        public ArrayList SubjectMenu { get => subjectMenu; set => subjectMenu = value; }
+
+        #region Dynamic Subjects
+
+        private void FillSubjectMenu()
+        {
             int[] randomColors = RandomArray(randColors.Length);
 
-            SubjectMenu[] subjectsMenu = new SubjectMenu[subjectItems.Length];
-
-            for (int i = 0; i < subjectsCount; i++)
-            {
-                subjectsMenu[i] = new SubjectMenu
+            for (int i = 0; i < SubjectItems.Length; i++)
+                SubjectMenu.Add(new SubjectMenu
                 {
-                    ButtonText = "  " + subjectItems[i],
+                    ButtonText = "  " + SubjectItems[i],
                     IconColor = ColorTranslator.FromHtml(randColors[randomColors[i]])
-                };
+                });
+        }
 
-                subjectsFLP.Controls.Add(subjectsMenu[i]);
-                subjectsFLP.Height = (subjectsMenu[i].Height + 6) * subjectsCount;
-            }
+        public void GenerateDynamicSubjects()
+        {
+            subjectsFLP.Controls.Clear();
+            int subjectsCount = SubjectMenu.Count;
+
+            if (subjectsCount == 0)
+                subjectsFLP.Height = 0;
+            else
+                for (int i = 0; i < subjectsCount; i++)
+                {
+                    subjectsFLP.Controls.Add((SubjectMenu)SubjectMenu[i]);
+                    subjectsFLP.Height = (((SubjectMenu)SubjectMenu[i]).Height + 6) * subjectsCount;
+                }
         }
 
         #endregion Dynamic Subjects
@@ -174,6 +177,7 @@ namespace Polaris
         {
             CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
+            FillSubjectMenu();
             GenerateDynamicSubjects();
             HiddenScroll();
         }

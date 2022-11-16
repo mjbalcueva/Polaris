@@ -1,6 +1,5 @@
 ﻿using FontAwesome.Sharp;
 using Polaris.Forms.Extra;
-using Polaris.Forms.Subjects;
 using Polaris.Forms.Tasks;
 using System.ComponentModel;
 using System.Drawing;
@@ -69,15 +68,10 @@ namespace Polaris.Components
             if (ButtonText == "  Tasks")
             {
                 root.MenuLabel.Text = "Tasks";
-                root.ToggleButtonFontColor((IconButton)root.All.Controls["taskMenuItem"]);
-                root.ToggleButtonIconColor((IconButton)root.All.Controls["taskMenuItem"]);
                 root.OpenChildForm(new Tasks());
             }
             else if (ButtonText == "  Subjects")
             {
-                //root.MenuLabel.Text = "No Subject Selected";
-                //root.OpenChildForm(new Subjects());
-
                 if (sidebarMenuItem.IconChar == IconChar.ChevronUp)
                 {
                     sidebarMenuItem.IconChar = IconChar.ChevronDown;

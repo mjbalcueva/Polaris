@@ -64,6 +64,8 @@
             this.taskMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.taskMenuItem.UseVisualStyleBackColor = false;
             this.taskMenuItem.Click += new System.EventHandler(this.taskMenuItem_Click);
+            this.taskMenuItem.Enter += new System.EventHandler(this.taskMenuItem_Enter);
+            this.taskMenuItem.Leave += new System.EventHandler(this.taskMenuItem_Leave);
             // 
             // badge
             // 

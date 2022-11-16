@@ -331,6 +331,8 @@
             this.TasksMenu.Name = "TasksMenu";
             this.TasksMenu.Size = new System.Drawing.Size(300, 60);
             this.TasksMenu.TabIndex = 3;
+            this.TasksMenu.Enter += new System.EventHandler(this.TasksMenu_Enter);
+            this.TasksMenu.Leave += new System.EventHandler(this.TasksMenu_Leave);
             // 
             // LogoButton
             // 
