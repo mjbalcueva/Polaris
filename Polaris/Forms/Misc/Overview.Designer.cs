@@ -104,8 +104,8 @@
             this.label1.Location = new System.Drawing.Point(38, 179);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(361, 21);
+            this.label1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(391, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "•  a Christ-centered educational community;​";
             // 
@@ -116,8 +116,8 @@
             this.label2.Location = new System.Drawing.Point(38, 206);
             this.label2.Margin = new System.Windows.Forms.Padding(3);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(663, 42);
+            this.label2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(693, 42);
             this.label2.TabIndex = 3;
             this.label2.Text = "•  a respected HEI with consistently high academic standard and​ values-oriented," +
     " socially responsive and globally competitive​ academic programs;";
@@ -129,8 +129,8 @@
             this.label3.Location = new System.Drawing.Point(38, 254);
             this.label3.Margin = new System.Windows.Forms.Padding(3);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label3.Size = new System.Drawing.Size(687, 84);
+            this.label3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label3.Size = new System.Drawing.Size(705, 84);
             this.label3.TabIndex = 4;
             this.label3.Text = resources.GetString("label3.Text");
             // 
@@ -141,8 +141,8 @@
             this.label4.Location = new System.Drawing.Point(38, 344);
             this.label4.Margin = new System.Windows.Forms.Padding(3);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label4.Size = new System.Drawing.Size(374, 21);
+            this.label4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label4.Size = new System.Drawing.Size(404, 21);
             this.label4.TabIndex = 5;
             this.label4.Text = "•  a prominent teaching hospital in the region;";
             // 
@@ -153,8 +153,8 @@
             this.label5.Location = new System.Drawing.Point(38, 371);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 50);
             this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(644, 42);
+            this.label5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label5.Size = new System.Drawing.Size(674, 42);
             this.label5.TabIndex = 6;
             this.label5.Text = "•  a renowned center for Bikol Studies, community development, environmental prot" +
     "ection, and disaster risk management;";
@@ -190,8 +190,8 @@
             this.label8.Location = new System.Drawing.Point(38, 575);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label8.Size = new System.Drawing.Size(695, 21);
+            this.label8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label8.Size = new System.Drawing.Size(677, 42);
             this.label8.TabIndex = 9;
             this.label8.Text = "•  the pursuit of excellence in academics and health services through dedicated s" +
     "tudy;​";
@@ -200,11 +200,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(38, 602);
+            this.label9.Location = new System.Drawing.Point(38, 623);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label9.Size = new System.Drawing.Size(649, 21);
+            this.label9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label9.Size = new System.Drawing.Size(679, 21);
             this.label9.TabIndex = 10;
             this.label9.Text = "•  the strengthening of our moral integrity through fervent prayer and witnessing" +
     ";";
@@ -213,11 +213,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(38, 629);
+            this.label10.Location = new System.Drawing.Point(38, 650);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label10.Size = new System.Drawing.Size(602, 21);
+            this.label10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label10.Size = new System.Drawing.Size(632, 21);
             this.label10.TabIndex = 11;
             this.label10.Text = "•  the sharing with others the fruits of our endeavor through loving service;";
             // 
@@ -225,11 +225,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(38, 656);
+            this.label11.Location = new System.Drawing.Point(38, 677);
             this.label11.Margin = new System.Windows.Forms.Padding(3);
             this.label11.Name = "label11";
-            this.label11.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label11.Size = new System.Drawing.Size(629, 42);
+            this.label11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label11.Size = new System.Drawing.Size(659, 42);
             this.label11.TabIndex = 12;
             this.label11.Text = "•  the enhancement of our emotional maturity towards an integrated Christian comm" +
     "unity; and​";
@@ -238,11 +238,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(38, 704);
+            this.label12.Location = new System.Drawing.Point(38, 725);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 3, 3, 75);
             this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label12.Size = new System.Drawing.Size(684, 42);
+            this.label12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.label12.Size = new System.Drawing.Size(647, 42);
             this.label12.TabIndex = 13;
             this.label12.Text = "•  the promotion of cultural advocacy for a genuine appreciation of Catholic, Fil" +
     "ipino, and Bikol identity.";

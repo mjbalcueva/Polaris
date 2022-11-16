@@ -48,7 +48,9 @@ namespace Polaris.Components
         private void subjectMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
-            root.MenuLabel.Text = ButtonText;
+            //root.MenuLabel.Text = ButtonText;
+            // MenuLabel.Text =  ButtonText.trimmed
+            root.MenuLabel.Text = ButtonText.Trim();
             root.OpenChildForm(new Subjects());
         }
 
@@ -72,6 +74,7 @@ namespace Polaris.Components
             // remove subject from subjectMenu ArrayList and reload subjectsFLP
             root.SubjectMenu.Remove(this);
             root.GenerateDynamicSubjects();
+            root.MenuLabel.Text = "Overview";
             root.OpenChildForm(new Overview());
         }
 
