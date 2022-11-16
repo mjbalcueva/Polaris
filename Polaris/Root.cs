@@ -53,10 +53,7 @@ namespace Polaris
                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
                null, mainEmbedPanel, new object[] { true });
 
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
+            activeForm?.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
