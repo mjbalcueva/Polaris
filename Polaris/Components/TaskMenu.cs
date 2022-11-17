@@ -55,7 +55,35 @@ namespace Polaris.Components
         {
             Root root = (Root)ParentForm;
             root.MenuLabel.Text = "Tasks";
-            root.OpenChildForm(new Tasks());
+            Tasks tasks = new Tasks();
+
+            switch (taskMenuItem.Text)
+            {
+                case "  All":
+                    tasks.sectionLabel.Text = "All Section";
+                    tasks.sectionButton.Text = "New Tasks";
+                    break;
+
+                case "  Drafts":
+                    tasks.sectionLabel.Text = "Drafts Section";
+                    tasks.sectionButton.Text = "Clear Drafts";
+                    tasks.sectionButton.BackColor = Color.FromArgb(189, 21, 67);
+                    break;
+
+                case "  Archived":
+                    tasks.sectionLabel.Text = "Archives Section";
+                    tasks.sectionButton.Text = "Clear Archives";
+                    tasks.sectionButton.BackColor = Color.FromArgb(189, 21, 67);
+                    break;
+
+                case "  Deleted":
+                    tasks.sectionLabel.Text = "Deleted Section";
+                    tasks.sectionButton.Text = "Clear Deletes";
+                    tasks.sectionButton.BackColor = Color.FromArgb(189, 21, 67);
+                    break;
+            }
+
+            root.OpenChildForm(tasks);
         }
 
         private void taskMenuItem_Enter(object sender, System.EventArgs e)

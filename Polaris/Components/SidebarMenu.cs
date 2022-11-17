@@ -68,7 +68,10 @@ namespace Polaris.Components
             if (ButtonText == "  Tasks")
             {
                 root.MenuLabel.Text = "Tasks";
-                root.OpenChildForm(new Tasks());
+                Tasks tasks = new Tasks();
+                tasks.sectionLabel.Text = "All Section";
+                tasks.sectionButton.Text = "New Tasks";
+                root.OpenChildForm(tasks);
             }
             else if (ButtonText == "  Subjects")
             {
@@ -101,6 +104,7 @@ namespace Polaris.Components
             else if (ButtonText == "  Subjects")
             {
                 root.subjectsFLP.Visible = true;
+                sidebarMenuItem.IconChar = IconChar.ChevronDown;
                 SubjectAdd subjectAdd = new SubjectAdd();
 
                 Color nextColor = ColorTranslator.FromHtml(root.randColors[new System.Random().Next(0, root.randColors.Length)]);

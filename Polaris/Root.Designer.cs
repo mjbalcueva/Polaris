@@ -391,7 +391,6 @@
         private System.Windows.Forms.Panel sidebarPanel;
         private System.Windows.Forms.Panel mainHeaderPanel;
         private System.Windows.Forms.Panel border1;
-        private System.Windows.Forms.Panel mainEmbedPanel;
         private Components.RoundedButton toggleSidebarButton;
         private System.Windows.Forms.Panel border2;
         private Components.RoundedButton LogoButton;
@@ -411,5 +410,6 @@
         private System.Windows.Forms.Panel panel1;
         private Components.SidebarMenu FTMenu;
         public Components.TaskMenu All;
+        public System.Windows.Forms.Panel mainEmbedPanel;
     }
 }

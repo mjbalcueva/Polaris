@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Polaris.Forms.Extra
+namespace Polaris.Forms.Subjects
 {
-    public partial class FinanceTracker : Form
+    public partial class ActivitiesView : Form
     {
-        public FinanceTracker()
+        public ActivitiesView()
         {
             InitializeComponent();
         }

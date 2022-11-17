@@ -1,6 +1,6 @@
-﻿namespace Polaris.Forms.Extra
+﻿namespace Polaris.Forms.Subjects
 {
-    partial class FinanceTracker
+    partial class ActivitiesView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tag1 = new Polaris.Components.Tag();
             this.TableHeader = new System.Windows.Forms.Panel();
             this.Value = new Polaris.Components.RoundedButton();
             this.Tags = new Polaris.Components.RoundedButton();
             this.Due = new Polaris.Components.RoundedButton();
             this.Created = new Polaris.Components.RoundedButton();
             this.Description = new Polaris.Components.RoundedButton();
-            this.sectionButton = new Polaris.Components.RoundedButton();
-            this.sectionLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tag1 = new Polaris.Components.Tag();
-            this.roundedButton1 = new Polaris.Components.RoundedButton();
-            this.TableHeader.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.TableHeader.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.flowLayoutPanel1.Controls.Add(this.tag1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(711, 39);
+            this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // tag1
+            // 
+            this.tag1.AutoSize = true;
+            this.tag1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tag1.Location = new System.Drawing.Point(3, 3);
+            this.tag1.Name = "tag1";
+            this.tag1.Size = new System.Drawing.Size(112, 33);
+            this.tag1.TabIndex = 0;
             // 
             // TableHeader
             // 
@@ -53,10 +71,10 @@
             this.TableHeader.Controls.Add(this.Due);
             this.TableHeader.Controls.Add(this.Created);
             this.TableHeader.Controls.Add(this.Description);
-            this.TableHeader.Location = new System.Drawing.Point(38, 157);
+            this.TableHeader.Location = new System.Drawing.Point(0, 60);
             this.TableHeader.Name = "TableHeader";
-            this.TableHeader.Size = new System.Drawing.Size(728, 50);
-            this.TableHeader.TabIndex = 8;
+            this.TableHeader.Size = new System.Drawing.Size(711, 50);
+            this.TableHeader.TabIndex = 19;
             // 
             // Value
             // 
@@ -109,7 +127,7 @@
             this.Tags.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Tags.IconSize = 25;
             this.Tags.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tags.Location = new System.Drawing.Point(303, 5);
+            this.Tags.Location = new System.Drawing.Point(286, 5);
             this.Tags.Name = "Tags";
             this.Tags.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Tags.Rotation = 90D;
@@ -141,7 +159,7 @@
             this.Due.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Due.IconSize = 25;
             this.Due.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Due.Location = new System.Drawing.Point(575, 5);
+            this.Due.Location = new System.Drawing.Point(558, 5);
             this.Due.Name = "Due";
             this.Due.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Due.Rotation = 90D;
@@ -173,7 +191,7 @@
             this.Created.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Created.IconSize = 25;
             this.Created.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Created.Location = new System.Drawing.Point(419, 5);
+            this.Created.Location = new System.Drawing.Point(402, 5);
             this.Created.Name = "Created";
             this.Created.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Created.Rotation = 90D;
@@ -216,121 +234,34 @@
             this.Description.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Description.UseVisualStyleBackColor = false;
             // 
-            // sectionButton
-            // 
-            this.sectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.sectionButton.BorderRadius = 15;
-            this.sectionButton.BorderSize = 0;
-            this.sectionButton.FlatAppearance.BorderSize = 0;
-            this.sectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sectionButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.sectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.sectionButton.IconColor = System.Drawing.Color.Black;
-            this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sectionButton.Location = new System.Drawing.Point(566, 28);
-            this.sectionButton.Name = "sectionButton";
-            this.sectionButton.Size = new System.Drawing.Size(200, 48);
-            this.sectionButton.TabIndex = 7;
-            this.sectionButton.Text = "New Record";
-            this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.UseVisualStyleBackColor = false;
-            // 
-            // sectionLabel
-            // 
-            this.sectionLabel.AutoSize = true;
-            this.sectionLabel.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.sectionLabel.Location = new System.Drawing.Point(35, 28);
-            this.sectionLabel.Name = "sectionLabel";
-            this.sectionLabel.Size = new System.Drawing.Size(284, 36);
-            this.sectionLabel.TabIndex = 6;
-            this.sectionLabel.Text = "Finance Tracker Section";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.flowLayoutPanel1.Controls.Add(this.tag1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 97);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(728, 39);
-            this.flowLayoutPanel1.TabIndex = 9;
-            // 
-            // tag1
-            // 
-            this.tag1.AutoSize = true;
-            this.tag1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tag1.Location = new System.Drawing.Point(3, 3);
-            this.tag1.Name = "tag1";
-            this.tag1.Size = new System.Drawing.Size(112, 33);
-            this.tag1.TabIndex = 0;
-            // 
-            // roundedButton1
-            // 
-            this.roundedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.roundedButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.roundedButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.roundedButton1.BorderRadius = 15;
-            this.roundedButton1.BorderSize = 0;
-            this.roundedButton1.FlatAppearance.BorderSize = 0;
-            this.roundedButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.roundedButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButton1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.roundedButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.roundedButton1.IconChar = FontAwesome.Sharp.IconChar.PesoSign;
-            this.roundedButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.roundedButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.roundedButton1.IconSize = 20;
-            this.roundedButton1.Location = new System.Drawing.Point(360, 28);
-            this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(200, 48);
-            this.roundedButton1.TabIndex = 10;
-            this.roundedButton1.Text = "0.00";
-            this.roundedButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.roundedButton1.UseVisualStyleBackColor = false;
-            // 
-            // FinanceTracker
+            // ActivitiesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(804, 551);
-            this.Controls.Add(this.roundedButton1);
+            this.ClientSize = new System.Drawing.Size(710, 395);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.TableHeader);
-            this.Controls.Add(this.sectionButton);
-            this.Controls.Add(this.sectionLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.Name = "FinanceTracker";
-            this.Text = "FinanceTracker";
-            this.TableHeader.ResumeLayout(false);
+            this.Name = "ActivitiesView";
+            this.Text = "ActivitiesView";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.TableHeader.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Components.Tag tag1;
         private System.Windows.Forms.Panel TableHeader;
+        private Components.RoundedButton Value;
         private Components.RoundedButton Tags;
         private Components.RoundedButton Due;
         private Components.RoundedButton Created;
         private Components.RoundedButton Description;
-        public Components.RoundedButton sectionButton;
-        public System.Windows.Forms.Label sectionLabel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Components.Tag tag1;
-        private Components.RoundedButton Value;
-        public Components.RoundedButton roundedButton1;
     }
 }
