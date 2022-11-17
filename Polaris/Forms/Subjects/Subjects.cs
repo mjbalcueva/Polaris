@@ -30,6 +30,25 @@ namespace Polaris.Forms.Subjects
             childForm.Show();
         }
 
+        #region Events
+
+        private void NotesView_Click(object sender, EventArgs e)
+        {
+            sectionLabel.Text = "Notes Section";
+        }
+
+        private void ActivitiesView_Click(object sender, EventArgs e)
+        {
+            sectionLabel.Text = "Activities Section";
+        }
+
+        private void GradesView_Click(object sender, EventArgs e)
+        {
+            sectionLabel.Text = "Grades Section";
+        }
+
+        #endregion Events
+
         private void Subjects_Load(object sender, EventArgs e)
         {
             OpenChildForm(new GradesView());

@@ -32,16 +32,10 @@
             this.sectionLabel = new System.Windows.Forms.Label();
             this.embedPanel = new System.Windows.Forms.Panel();
             this.roundedPanel1 = new Polaris.Components.RoundedPanel();
-            this.NotesView = new Polaris.Components.RoundedPanel();
-            this.ActivitiesView = new Polaris.Components.RoundedPanel();
-            this.GradesView = new Polaris.Components.RoundedPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.GradesView = new Polaris.Components.RoundedButton();
+            this.ActivitiesView = new Polaris.Components.RoundedButton();
+            this.NotesView = new Polaris.Components.RoundedButton();
             this.roundedPanel1.SuspendLayout();
-            this.NotesView.SuspendLayout();
-            this.ActivitiesView.SuspendLayout();
-            this.GradesView.SuspendLayout();
             this.SuspendLayout();
             // 
             // sectionButton
@@ -90,6 +84,8 @@
             // roundedPanel1
             // 
             this.roundedPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.roundedPanel1.AutoSize = true;
+            this.roundedPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
             this.roundedPanel1.BorderRadius = 15;
             this.roundedPanel1.Controls.Add(this.GradesView);
@@ -99,103 +95,86 @@
             this.roundedPanel1.GradientAngle = 90F;
             this.roundedPanel1.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
             this.roundedPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.roundedPanel1.Location = new System.Drawing.Point(109, 28);
+            this.roundedPanel1.Location = new System.Drawing.Point(180, 28);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(440, 48);
+            this.roundedPanel1.Padding = new System.Windows.Forms.Padding(1);
+            this.roundedPanel1.Size = new System.Drawing.Size(380, 47);
             this.roundedPanel1.TabIndex = 18;
-            // 
-            // NotesView
-            // 
-            this.NotesView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NotesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.NotesView.BorderRadius = 15;
-            this.NotesView.Controls.Add(this.label1);
-            this.NotesView.ForeColor = System.Drawing.Color.Black;
-            this.NotesView.GradientAngle = 90F;
-            this.NotesView.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.NotesView.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.NotesView.Location = new System.Drawing.Point(4, 2);
-            this.NotesView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.NotesView.Name = "NotesView";
-            this.NotesView.Padding = new System.Windows.Forms.Padding(8);
-            this.NotesView.Size = new System.Drawing.Size(140, 44);
-            this.NotesView.TabIndex = 1;
-            // 
-            // ActivitiesView
-            // 
-            this.ActivitiesView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ActivitiesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.ActivitiesView.BorderRadius = 15;
-            this.ActivitiesView.Controls.Add(this.label2);
-            this.ActivitiesView.ForeColor = System.Drawing.Color.Black;
-            this.ActivitiesView.GradientAngle = 90F;
-            this.ActivitiesView.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.ActivitiesView.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.ActivitiesView.Location = new System.Drawing.Point(150, 2);
-            this.ActivitiesView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ActivitiesView.Name = "ActivitiesView";
-            this.ActivitiesView.Padding = new System.Windows.Forms.Padding(8);
-            this.ActivitiesView.Size = new System.Drawing.Size(140, 44);
-            this.ActivitiesView.TabIndex = 2;
             // 
             // GradesView
             // 
-            this.GradesView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GradesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.GradesView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.GradesView.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.GradesView.BorderRadius = 15;
-            this.GradesView.Controls.Add(this.label3);
-            this.GradesView.ForeColor = System.Drawing.Color.Black;
-            this.GradesView.GradientAngle = 90F;
-            this.GradesView.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.GradesView.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.GradesView.Location = new System.Drawing.Point(296, 2);
-            this.GradesView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GradesView.BorderSize = 0;
+            this.GradesView.FlatAppearance.BorderSize = 0;
+            this.GradesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.GradesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.GradesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GradesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GradesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.GradesView.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.GradesView.IconColor = System.Drawing.Color.Black;
+            this.GradesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.GradesView.Location = new System.Drawing.Point(256, 5);
             this.GradesView.Name = "GradesView";
-            this.GradesView.Padding = new System.Windows.Forms.Padding(8);
-            this.GradesView.Size = new System.Drawing.Size(140, 44);
+            this.GradesView.Size = new System.Drawing.Size(120, 38);
             this.GradesView.TabIndex = 2;
+            this.GradesView.Text = "Grades View";
+            this.GradesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.GradesView.UseVisualStyleBackColor = false;
+            this.GradesView.Click += new System.EventHandler(this.GradesView_Click);
             // 
-            // label1
+            // ActivitiesView
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(8, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Notes View";
+            this.ActivitiesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.ActivitiesView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.ActivitiesView.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ActivitiesView.BorderRadius = 15;
+            this.ActivitiesView.BorderSize = 0;
+            this.ActivitiesView.FlatAppearance.BorderSize = 0;
+            this.ActivitiesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.ActivitiesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.ActivitiesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ActivitiesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ActivitiesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.ActivitiesView.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ActivitiesView.IconColor = System.Drawing.Color.Black;
+            this.ActivitiesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ActivitiesView.Location = new System.Drawing.Point(130, 5);
+            this.ActivitiesView.Name = "ActivitiesView";
+            this.ActivitiesView.Size = new System.Drawing.Size(120, 38);
+            this.ActivitiesView.TabIndex = 1;
+            this.ActivitiesView.Text = "Activities View";
+            this.ActivitiesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.ActivitiesView.UseVisualStyleBackColor = false;
+            this.ActivitiesView.Click += new System.EventHandler(this.ActivitiesView_Click);
             // 
-            // label2
+            // NotesView
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.label2.Location = new System.Drawing.Point(8, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Activities View";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.label3.Location = new System.Drawing.Point(8, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Grades View";
+            this.NotesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.NotesView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.NotesView.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.NotesView.BorderRadius = 15;
+            this.NotesView.BorderSize = 0;
+            this.NotesView.FlatAppearance.BorderSize = 0;
+            this.NotesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.NotesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.NotesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.NotesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.NotesView.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.NotesView.IconColor = System.Drawing.Color.Black;
+            this.NotesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.NotesView.Location = new System.Drawing.Point(4, 5);
+            this.NotesView.Name = "NotesView";
+            this.NotesView.Size = new System.Drawing.Size(120, 38);
+            this.NotesView.TabIndex = 0;
+            this.NotesView.Text = " Notes View";
+            this.NotesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.NotesView.UseVisualStyleBackColor = false;
+            this.NotesView.Click += new System.EventHandler(this.NotesView_Click);
             // 
             // Subjects
             // 
@@ -213,12 +192,6 @@
             this.Text = "Subjects";
             this.Load += new System.EventHandler(this.Subjects_Load);
             this.roundedPanel1.ResumeLayout(false);
-            this.NotesView.ResumeLayout(false);
-            this.NotesView.PerformLayout();
-            this.ActivitiesView.ResumeLayout(false);
-            this.ActivitiesView.PerformLayout();
-            this.GradesView.ResumeLayout(false);
-            this.GradesView.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,11 +202,8 @@
         public System.Windows.Forms.Label sectionLabel;
         private System.Windows.Forms.Panel embedPanel;
         private Components.RoundedPanel roundedPanel1;
-        private Components.RoundedPanel NotesView;
-        private Components.RoundedPanel GradesView;
-        private Components.RoundedPanel ActivitiesView;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private Components.RoundedButton GradesView;
+        private Components.RoundedButton ActivitiesView;
+        private Components.RoundedButton NotesView;
     }
 }
