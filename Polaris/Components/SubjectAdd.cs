@@ -30,7 +30,7 @@ namespace Polaris.Components
             if (e.KeyCode == Keys.Enter)
             {
                 Root root = (Root)ParentForm;
-                root.AddSubject(textBox1.Text.Trim(), root.color);
+                root.AddSubject(textBox1.Text.Trim(), root.Color);
                 textBox1.Text = "";
                 root.GenerateDynamicSubjects();
             }

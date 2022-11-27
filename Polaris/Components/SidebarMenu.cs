@@ -108,7 +108,7 @@ namespace Polaris.Components
                 SubjectAdd subjectAdd = new SubjectAdd();
 
                 Color nextColor = ColorTranslator.FromHtml(root.randColors[new System.Random().Next(0, root.randColors.Length)]);
-                root.color = nextColor;
+                root.Color = nextColor;
 
                 subjectAdd.icon.GradientTopColor = nextColor;
                 subjectAdd.icon.GradientBottomColor = nextColor;

@@ -98,13 +98,11 @@ namespace Polaris
         #endregion ButtonClick Events
 
         public readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
-        public Color color;
 
         #region Dynamic Subjects
 
-        private ArrayList subjectMenu = new ArrayList();
-        public ArrayList SubjectMenu { get => subjectMenu; set => subjectMenu = value; }
-        public Color Color { get => color; set => color = value; }
+        public ArrayList SubjectMenu { get; set; } = new ArrayList();
+        public Color Color { get; set; }
 
         internal void AddSubject(string text, Color color)
         {

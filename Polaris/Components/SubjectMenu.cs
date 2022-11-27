@@ -56,7 +56,6 @@ namespace Polaris.Components
         private void subjectMenuItem_Enter(object sender, System.EventArgs e)
         {
             badge.Visible = true;
-
             subjectMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
         }
 
