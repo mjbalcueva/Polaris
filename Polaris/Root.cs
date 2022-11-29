@@ -2,6 +2,8 @@
 using Polaris.Forms.Misc;
 using System;
 using System.Collections;
+using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -97,12 +99,38 @@ namespace Polaris
 
         #endregion ButtonClick Events
 
+        #region Colors
+
         public readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
+        public Color Color { get; set; }
+
+        #endregion Colors
 
         #region Dynamic Subjects
 
-        public ArrayList SubjectMenu { get; set; } = new ArrayList();
-        public Color Color { get; set; }
+        private static readonly ArrayList subjects = new ArrayList();
+        public ArrayList SubjectMenu { get; set; } = subjects;
+
+        // method LoadSubject gets data from database and adds it to the list
+        private void LoadSubject()
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("select * from subject", connection);
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                AddSubject(dataReader.GetString(1), ColorTranslator.FromHtml(randColors[new Random().Next(0, randColors.Length)]));
+            }
+
+            connection.Close();
+        }
 
         internal void AddSubject(string text, Color color)
         {
@@ -150,6 +178,7 @@ namespace Polaris
         {
             CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
+            LoadSubject();
             GenerateDynamicSubjects();
             HiddenScroll();
         }
