@@ -148,12 +148,6 @@
     <Compile Include="Root.designer.cs">
       <DependentUpon>Root.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentView.Designer.cs">
-      <DependentUpon>StudentView.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Components\SidebarMenu.resx">
       <DependentUpon>SidebarMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,9 +193,6 @@
     </Compile>
     <EmbeddedResource Include="Root.resx">
       <DependentUpon>Root.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StudentView.resx">
-      <DependentUpon>StudentView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
