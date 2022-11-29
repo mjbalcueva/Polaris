@@ -26,8 +26,8 @@ namespace Polaris.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Driver={MySQL ODBC 8.0 Unicode Driver};server=localhost;database=polaris;user=roo" +
-            "t;password=password;option=3")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Driver={MySQL ODBC 8.0 Unicode Driver};server=localhost;uid=root;database=polaris" +
+            ";port=3306;option=3;pwd=password")]
         public string polarisConnectionString {
             get {
                 return ((string)(this["polarisConnectionString"]));
