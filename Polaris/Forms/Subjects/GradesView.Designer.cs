@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.TableHeader = new System.Windows.Forms.Panel();
             this.tag1 = new Polaris.Components.Tag();
+            this.TableHeader = new System.Windows.Forms.Panel();
             this.Value = new Polaris.Components.RoundedButton();
             this.Tags = new Polaris.Components.RoundedButton();
             this.Due = new Polaris.Components.RoundedButton();
@@ -49,8 +49,17 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(711, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1121, 39);
             this.flowLayoutPanel1.TabIndex = 18;
+            // 
+            // tag1
+            // 
+            this.tag1.AutoSize = true;
+            this.tag1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tag1.Location = new System.Drawing.Point(3, 3);
+            this.tag1.Name = "tag1";
+            this.tag1.Size = new System.Drawing.Size(112, 33);
+            this.tag1.TabIndex = 0;
             // 
             // TableHeader
             // 
@@ -64,17 +73,8 @@
             this.TableHeader.Controls.Add(this.Description);
             this.TableHeader.Location = new System.Drawing.Point(0, 60);
             this.TableHeader.Name = "TableHeader";
-            this.TableHeader.Size = new System.Drawing.Size(711, 50);
+            this.TableHeader.Size = new System.Drawing.Size(1121, 50);
             this.TableHeader.TabIndex = 17;
-            // 
-            // tag1
-            // 
-            this.tag1.AutoSize = true;
-            this.tag1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tag1.Location = new System.Drawing.Point(3, 3);
-            this.tag1.Name = "tag1";
-            this.tag1.Size = new System.Drawing.Size(112, 33);
-            this.tag1.TabIndex = 0;
             // 
             // Value
             // 
@@ -127,7 +127,7 @@
             this.Tags.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Tags.IconSize = 25;
             this.Tags.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tags.Location = new System.Drawing.Point(286, 5);
+            this.Tags.Location = new System.Drawing.Point(696, 5);
             this.Tags.Name = "Tags";
             this.Tags.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Tags.Rotation = 90D;
@@ -159,7 +159,7 @@
             this.Due.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Due.IconSize = 25;
             this.Due.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Due.Location = new System.Drawing.Point(558, 5);
+            this.Due.Location = new System.Drawing.Point(968, 5);
             this.Due.Name = "Due";
             this.Due.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Due.Rotation = 90D;
@@ -191,7 +191,7 @@
             this.Created.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Created.IconSize = 25;
             this.Created.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Created.Location = new System.Drawing.Point(402, 5);
+            this.Created.Location = new System.Drawing.Point(812, 5);
             this.Created.Name = "Created";
             this.Created.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.Created.Rotation = 90D;
@@ -239,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(710, 395);
+            this.ClientSize = new System.Drawing.Size(1120, 570);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.TableHeader);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);

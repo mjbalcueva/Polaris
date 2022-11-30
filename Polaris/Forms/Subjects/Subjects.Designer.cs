@@ -53,7 +53,7 @@
             this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.sectionButton.IconColor = System.Drawing.Color.Black;
             this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sectionButton.Location = new System.Drawing.Point(566, 28);
+            this.sectionButton.Location = new System.Drawing.Point(976, 28);
             this.sectionButton.Name = "sectionButton";
             this.sectionButton.Size = new System.Drawing.Size(200, 48);
             this.sectionButton.TabIndex = 12;
@@ -78,7 +78,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.embedPanel.Location = new System.Drawing.Point(38, 97);
             this.embedPanel.Name = "embedPanel";
-            this.embedPanel.Size = new System.Drawing.Size(728, 442);
+            this.embedPanel.Size = new System.Drawing.Size(1138, 617);
             this.embedPanel.TabIndex = 16;
             // 
             // roundedPanel1
@@ -95,7 +95,7 @@
             this.roundedPanel1.GradientAngle = 90F;
             this.roundedPanel1.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
             this.roundedPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.roundedPanel1.Location = new System.Drawing.Point(180, 28);
+            this.roundedPanel1.Location = new System.Drawing.Point(590, 28);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Padding = new System.Windows.Forms.Padding(1);
             this.roundedPanel1.Size = new System.Drawing.Size(380, 47);
@@ -181,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(804, 551);
+            this.ClientSize = new System.Drawing.Size(1214, 726);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.embedPanel);
             this.Controls.Add(this.sectionButton);
