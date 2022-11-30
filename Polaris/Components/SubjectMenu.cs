@@ -87,9 +87,8 @@ namespace Polaris.Components
             connection.Close();
             connection.Open();
 
-            // TODO: Fix this nonworking code
-            //OdbcCommand cmd = new OdbcCommand("DELETE FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
-            //cmd.ExecuteNonQuery();
+            OdbcCommand cmd = new OdbcCommand("DELETE FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
+            cmd.ExecuteNonQuery();
 
             connection.Close();
         }

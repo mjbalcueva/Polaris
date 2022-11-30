@@ -1,5 +1,5 @@
-﻿using System.Drawing;
-using System.Windows.Documents;
+﻿using System.Data.Odbc;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Components
@@ -31,6 +31,18 @@ namespace Polaris.Components
             {
                 Root root = (Root)ParentForm;
                 root.AddSubject(textBox1.Text.Trim(), root.Color);
+
+                string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+                OdbcConnection connection = new OdbcConnection(connectionString);
+
+                connection.Close();
+                connection.Open();
+
+                OdbcCommand cmd = new OdbcCommand("INSERT INTO subject(subject_title) VALUES('" + textBox1.Text.Trim() + "')", connection);
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+
                 textBox1.Text = "";
                 root.GenerateDynamicSubjects();
             }

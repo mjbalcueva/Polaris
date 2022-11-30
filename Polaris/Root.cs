@@ -2,7 +2,6 @@
 using Polaris.Forms.Misc;
 using System;
 using System.Collections;
-using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Reflection;
@@ -101,7 +100,8 @@ namespace Polaris
 
         #region Colors
 
-        public readonly string[] randColors = { "#E7E250", "#FF4D4D", "#AF70EB", "#22c55e", "#0ea5e9", "#F1904B" };
+        public readonly string[] randColors = { "#FF4D4D", "#F1904B", "#FFC548", "#E7E250", "#22C55E", "#99FF77", "#0EA5E9", "#72ECFF", "#AF70EB", "#FF5AB7" };
+
         public Color Color { get; set; }
 
         #endregion Colors
