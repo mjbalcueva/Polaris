@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Polaris.Forms.Extra
+namespace Polaris.Forms.FinanceTracker
 {
     public partial class FinanceTracker : Form
     {

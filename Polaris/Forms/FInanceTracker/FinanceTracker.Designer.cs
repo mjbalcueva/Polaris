@@ -1,4 +1,4 @@
-﻿namespace Polaris.Forms.Extra
+﻿namespace Polaris.Forms.FinanceTracker
 {
     partial class FinanceTracker
     {
