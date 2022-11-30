@@ -92,12 +92,6 @@
     <Compile Include="Components\SubjectMenu.designer.cs">
       <DependentUpon>SubjectMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\Tag.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Components\Tag.designer.cs">
-      <DependentUpon>Tag.cs</DependentUpon>
-    </Compile>
     <Compile Include="Components\TaskMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,9 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\SubjectMenu.resx">
       <DependentUpon>SubjectMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Tag.resx">
-      <DependentUpon>Tag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\TaskMenu.resx">
       <DependentUpon>TaskMenu.cs</DependentUpon>
