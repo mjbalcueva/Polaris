@@ -61,6 +61,8 @@ namespace Polaris.Forms.Subjects
 
         #endregion Events
 
+        #region Toggle Button
+
         private IconButton activeBtn = null;
 
         private void ToggleActiveButton(IconButton button)
@@ -74,6 +76,8 @@ namespace Polaris.Forms.Subjects
             activeBtn.BackColor = ColorTranslator.FromHtml("#414149");
             activeBtn.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
         }
+
+        #endregion Toggle Button
 
         private void Subjects_Load(object sender, EventArgs e)
         {
