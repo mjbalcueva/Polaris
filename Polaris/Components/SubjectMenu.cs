@@ -71,7 +71,7 @@ namespace Polaris.Components
             root.SubjectMenu.Remove(this);
             RemoveSubjectFromDB();
             root.GenerateDynamicSubjects();
-            //root.MenuLabel.Text = "Overview";
+            root.MenuLabel.Text = "Overview";
             root.OpenChildForm(new Overview());
         }
 
