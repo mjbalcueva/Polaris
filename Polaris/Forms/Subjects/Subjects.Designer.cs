@@ -98,7 +98,7 @@
             this.roundedPanel1.Location = new System.Drawing.Point(590, 28);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.roundedPanel1.Size = new System.Drawing.Size(380, 47);
+            this.roundedPanel1.Size = new System.Drawing.Size(380, 48);
             this.roundedPanel1.TabIndex = 18;
             // 
             // GradesView
@@ -109,8 +109,8 @@
             this.GradesView.BorderRadius = 15;
             this.GradesView.BorderSize = 0;
             this.GradesView.FlatAppearance.BorderSize = 0;
-            this.GradesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
-            this.GradesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.GradesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.GradesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.GradesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GradesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.GradesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
@@ -119,9 +119,9 @@
             this.GradesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.GradesView.Location = new System.Drawing.Point(256, 5);
             this.GradesView.Name = "GradesView";
-            this.GradesView.Size = new System.Drawing.Size(120, 38);
+            this.GradesView.Size = new System.Drawing.Size(120, 39);
             this.GradesView.TabIndex = 2;
-            this.GradesView.Text = "Grades View";
+            this.GradesView.Text = "Grades";
             this.GradesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.GradesView.UseVisualStyleBackColor = false;
             this.GradesView.Click += new System.EventHandler(this.GradesView_Click);
@@ -134,8 +134,8 @@
             this.ActivitiesView.BorderRadius = 15;
             this.ActivitiesView.BorderSize = 0;
             this.ActivitiesView.FlatAppearance.BorderSize = 0;
-            this.ActivitiesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
-            this.ActivitiesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.ActivitiesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.ActivitiesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.ActivitiesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ActivitiesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ActivitiesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
@@ -144,35 +144,35 @@
             this.ActivitiesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ActivitiesView.Location = new System.Drawing.Point(130, 5);
             this.ActivitiesView.Name = "ActivitiesView";
-            this.ActivitiesView.Size = new System.Drawing.Size(120, 38);
+            this.ActivitiesView.Size = new System.Drawing.Size(120, 39);
             this.ActivitiesView.TabIndex = 1;
-            this.ActivitiesView.Text = "Activities View";
+            this.ActivitiesView.Text = "Activities";
             this.ActivitiesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.ActivitiesView.UseVisualStyleBackColor = false;
             this.ActivitiesView.Click += new System.EventHandler(this.ActivitiesView_Click);
             // 
             // NotesView
             // 
-            this.NotesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.NotesView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.NotesView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.NotesView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
             this.NotesView.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.NotesView.BorderRadius = 15;
             this.NotesView.BorderSize = 0;
             this.NotesView.FlatAppearance.BorderSize = 0;
-            this.NotesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
-            this.NotesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.NotesView.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.NotesView.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.NotesView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotesView.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.NotesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.NotesView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.NotesView.IconChar = FontAwesome.Sharp.IconChar.None;
             this.NotesView.IconColor = System.Drawing.Color.Black;
             this.NotesView.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.NotesView.Location = new System.Drawing.Point(4, 5);
             this.NotesView.Name = "NotesView";
-            this.NotesView.Size = new System.Drawing.Size(120, 38);
+            this.NotesView.Size = new System.Drawing.Size(120, 39);
             this.NotesView.TabIndex = 0;
-            this.NotesView.Text = " Notes View";
-            this.NotesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.NotesView.Text = "Notes";
+            this.NotesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.NotesView.UseVisualStyleBackColor = false;
             this.NotesView.Click += new System.EventHandler(this.NotesView_Click);
             // 
