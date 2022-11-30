@@ -1,6 +1,7 @@
 ﻿using Polaris.Forms.Misc;
 using Polaris.Forms.Subjects;
 using System.ComponentModel;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -47,8 +48,6 @@ namespace Polaris.Components
         private void subjectMenuItem_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
-            //root.MenuLabel.Text = ButtonText;
-            // MenuLabel.Text =  ButtonText.trimmed
             root.MenuLabel.Text = ButtonText.Trim();
             root.OpenChildForm(new Subjects());
         }
@@ -70,12 +69,32 @@ namespace Polaris.Components
             Root root = (Root)ParentForm;
 
             root.SubjectMenu.Remove(this);
+            RemoveSubjectFromDB();
             root.GenerateDynamicSubjects();
-            root.MenuLabel.Text = "Overview";
+            //root.MenuLabel.Text = "Overview";
             root.OpenChildForm(new Overview());
         }
 
         #endregion Button Click Events
+
+        #region RemoveSubjectFromDB
+
+        private void RemoveSubjectFromDB()
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+
+            connection.Close();
+            connection.Open();
+
+            // TODO: Fix this nonworking code
+            //OdbcCommand cmd = new OdbcCommand("DELETE FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
+            //cmd.ExecuteNonQuery();
+
+            connection.Close();
+        }
+
+        #endregion RemoveSubjectFromDB
 
         private void SubjectMenu_Load(object sender, System.EventArgs e)
         {

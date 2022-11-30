@@ -121,7 +121,7 @@ namespace Polaris
             connection.Close();
             connection.Open();
 
-            OdbcCommand cmd = new OdbcCommand("select * from subject", connection);
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM subject", connection);
             dataReader = cmd.ExecuteReader();
 
             while (dataReader.Read())
