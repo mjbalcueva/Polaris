@@ -111,7 +111,6 @@ namespace Polaris
         private static readonly ArrayList subjects = new ArrayList();
         public ArrayList SubjectMenu { get; set; } = subjects;
 
-        // method LoadSubject gets data from database and adds it to the list
         private void LoadSubject()
         {
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";

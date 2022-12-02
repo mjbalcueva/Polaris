@@ -36,9 +36,10 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.tableBody = new System.Windows.Forms.FlowLayoutPanel();
             this.roundedButton1 = new Polaris.Components.RoundedButton();
-            this.sectionButton = new Polaris.Components.RoundedButton();
             this.tagControl = new Polaris.Components.RoundedButton();
+            this.sectionButton = new Polaris.Components.RoundedButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -76,7 +77,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Controls.Add(this.iconButton5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton3, 2, 0);
@@ -106,7 +107,7 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 23;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(882, 3);
+            this.iconButton5.Location = new System.Drawing.Point(883, 3);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Rotation = 90D;
@@ -134,7 +135,7 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 23;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(727, 3);
+            this.iconButton4.Location = new System.Drawing.Point(728, 3);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Rotation = 90D;
@@ -162,7 +163,7 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 23;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(572, 3);
+            this.iconButton3.Location = new System.Drawing.Point(573, 3);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Rotation = 90D;
@@ -222,12 +223,25 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton2.Rotation = 90D;
-            this.iconButton2.Size = new System.Drawing.Size(408, 44);
+            this.iconButton2.Size = new System.Drawing.Size(409, 44);
             this.iconButton2.TabIndex = 4;
             this.iconButton2.Text = "Description";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // tableBody
+            // 
+            this.tableBody.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.tableBody.Location = new System.Drawing.Point(38, 207);
+            this.tableBody.Margin = new System.Windows.Forms.Padding(0);
+            this.tableBody.Name = "tableBody";
+            this.tableBody.Size = new System.Drawing.Size(1138, 510);
+            this.tableBody.TabIndex = 12;
+            this.tableBody.Resize += new System.EventHandler(this.tableBody_Resize);
             // 
             // roundedButton1
             // 
@@ -255,29 +269,6 @@
             this.roundedButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.roundedButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.roundedButton1.UseVisualStyleBackColor = false;
-            // 
-            // sectionButton
-            // 
-            this.sectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.sectionButton.BorderRadius = 15;
-            this.sectionButton.BorderSize = 0;
-            this.sectionButton.FlatAppearance.BorderSize = 0;
-            this.sectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sectionButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.sectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.sectionButton.IconColor = System.Drawing.Color.Black;
-            this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sectionButton.Location = new System.Drawing.Point(976, 28);
-            this.sectionButton.Name = "sectionButton";
-            this.sectionButton.Size = new System.Drawing.Size(200, 48);
-            this.sectionButton.TabIndex = 7;
-            this.sectionButton.Text = "New Record";
-            this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.UseVisualStyleBackColor = false;
             // 
             // tagControl
             // 
@@ -307,12 +298,36 @@
             this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.tagControl.UseVisualStyleBackColor = false;
             // 
+            // sectionButton
+            // 
+            this.sectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
+            this.sectionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
+            this.sectionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.sectionButton.BorderRadius = 15;
+            this.sectionButton.BorderSize = 0;
+            this.sectionButton.FlatAppearance.BorderSize = 0;
+            this.sectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sectionButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.sectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.sectionButton.IconColor = System.Drawing.Color.Black;
+            this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.sectionButton.Location = new System.Drawing.Point(976, 28);
+            this.sectionButton.Name = "sectionButton";
+            this.sectionButton.Size = new System.Drawing.Size(200, 48);
+            this.sectionButton.TabIndex = 7;
+            this.sectionButton.Text = "New Record";
+            this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.sectionButton.UseVisualStyleBackColor = false;
+            // 
             // FinanceTracker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1214, 726);
+            this.Controls.Add(this.tableBody);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -343,5 +358,6 @@
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
         private Components.RoundedButton tagControl;
+        private System.Windows.Forms.FlowLayoutPanel tableBody;
     }
 }

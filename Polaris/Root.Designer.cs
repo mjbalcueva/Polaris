@@ -51,6 +51,7 @@
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
+            this.love = new System.Windows.Forms.Label();
             this.sidebarPanel.SuspendLayout();
             this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -300,6 +301,7 @@
             // mainHeaderPanel
             // 
             this.mainHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.mainHeaderPanel.Controls.Add(this.love);
             this.mainHeaderPanel.Controls.Add(this.MenuLabel);
             this.mainHeaderPanel.Controls.Add(this.toggleSidebarButton);
             this.mainHeaderPanel.Controls.Add(this.border1);
@@ -364,6 +366,17 @@
             this.mainEmbedPanel.Size = new System.Drawing.Size(1232, 773);
             this.mainEmbedPanel.TabIndex = 4;
             // 
+            // love
+            // 
+            this.love.AutoSize = true;
+            this.love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.love.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.love.Location = new System.Drawing.Point(570, 26);
+            this.love.Name = "love";
+            this.love.Size = new System.Drawing.Size(93, 28);
+            this.love.TabIndex = 4;
+            this.love.Text = "Overview";
+            // 
             // Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -411,5 +424,6 @@
         private Components.SidebarMenu FTMenu;
         public Components.TaskMenu All;
         public System.Windows.Forms.Panel mainEmbedPanel;
+        public System.Windows.Forms.Label love;
     }
 }

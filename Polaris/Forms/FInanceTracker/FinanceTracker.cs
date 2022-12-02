@@ -8,5 +8,14 @@ namespace Polaris.Forms.FinanceTracker
         {
             InitializeComponent();
         }
+
+        private void tableBody_Resize(object sender, System.EventArgs e)
+        {
+            // resize usercontrol child
+            foreach (Control c in tableBody.Controls)
+            {
+                c.Width = tableBody.Width;
+            }
+        }
     }
 }
