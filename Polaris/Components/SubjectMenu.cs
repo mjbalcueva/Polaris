@@ -89,6 +89,7 @@ namespace Polaris.Components
 
             OdbcCommand cmd = new OdbcCommand("SELECT id FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
             reader = cmd.ExecuteReader();
+
             reader.Read();
             string subject_id = reader["id"].ToString();
             reader.Close();
@@ -112,11 +113,6 @@ namespace Polaris.Components
             // delete the subject
             cmd = new OdbcCommand("DELETE FROM subject WHERE id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
-
-            connection.Close();
-
-            Root root = (Root)ParentForm;
-            root.love.Text = subject_id;
 
             connection.Close();
         }
