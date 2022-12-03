@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -60,18 +59,8 @@ namespace Polaris.Forms.FinanceTracker
 
         #endregion Getter, Setter & Constructor
 
-        private void tableFT_Load(object sender, EventArgs e)
+        private void tableFT_Load(object sender, System.EventArgs e)
         {
-        }
-
-        private void control_MouseEnter(object sender, EventArgs e)
-        {
-            background.BackColor = ColorTranslator.FromHtml("#1B1C22");
-        }
-
-        private void control_MouseLeave(object sender, EventArgs e)
-        {
-            background.BackColor = ColorTranslator.FromHtml("#141519");
         }
     }
 }

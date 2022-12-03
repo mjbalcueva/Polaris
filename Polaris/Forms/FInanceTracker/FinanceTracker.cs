@@ -1,8 +1,6 @@
-﻿using Polaris.Components;
-using System;
+﻿using System;
 using System.Collections;
 using System.Data.Odbc;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.FinanceTracker
@@ -14,6 +12,8 @@ namespace Polaris.Forms.FinanceTracker
             InitializeComponent();
         }
 
+        #region Resize Table
+
         private void tableBody_Resize(object sender, EventArgs e)
         {
             foreach (Control c in tableBodyFLP.Controls)
@@ -21,6 +21,19 @@ namespace Polaris.Forms.FinanceTracker
                 c.Width = tableBodyFLP.Width;
             }
         }
+
+        #endregion Resize Table
+
+        #region Events
+
+        private void sectionButton_Click(object sender, EventArgs e)
+        {
+            // open FTInput form
+            FTInput ftInput = new FTInput();
+            ftInput.Show();
+        }
+
+        #endregion Events
 
         #region Load Data
 
