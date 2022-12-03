@@ -41,6 +41,8 @@ namespace Polaris.Forms.Subjects
         private void NotesView_Click(object sender, EventArgs e)
         {
             sectionLabel.Text = "Notes Section";
+            sectionButton.Text = "Add Note";
+            sectionButton.Enabled = true;
             ToggleActiveButton(NotesView);
             OpenChildForm(new NotesView());
         }
@@ -48,6 +50,8 @@ namespace Polaris.Forms.Subjects
         private void ActivitiesView_Click(object sender, EventArgs e)
         {
             sectionLabel.Text = "Activities Section";
+            sectionButton.Text = "Add Activity";
+            sectionButton.Enabled = true;
             ToggleActiveButton(ActivitiesView);
             OpenChildForm(new ActivitiesView());
         }
@@ -55,6 +59,8 @@ namespace Polaris.Forms.Subjects
         private void GradesView_Click(object sender, EventArgs e)
         {
             sectionLabel.Text = "Grades Section";
+            sectionButton.Text = "Viewing Grades";
+            sectionButton.Enabled = false;
             ToggleActiveButton(GradesView);
             OpenChildForm(new GradesView());
         }
@@ -83,6 +89,7 @@ namespace Polaris.Forms.Subjects
         {
             OpenChildForm(new NotesView());
             sectionLabel.Text = "Notes Section";
+            sectionButton.Text = "Add Note";
             ToggleActiveButton(NotesView);
         }
     }

@@ -28,38 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sectionButton = new Polaris.Components.RoundedButton();
             this.sectionLabel = new System.Windows.Forms.Label();
             this.embedPanel = new System.Windows.Forms.Panel();
             this.roundedPanel1 = new Polaris.Components.RoundedPanel();
             this.GradesView = new Polaris.Components.RoundedButton();
             this.ActivitiesView = new Polaris.Components.RoundedButton();
             this.NotesView = new Polaris.Components.RoundedButton();
+            this.sectionButton = new Polaris.Components.RoundedButton();
             this.roundedPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // sectionButton
-            // 
-            this.sectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.sectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
-            this.sectionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.sectionButton.BorderRadius = 15;
-            this.sectionButton.BorderSize = 0;
-            this.sectionButton.FlatAppearance.BorderSize = 0;
-            this.sectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sectionButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.sectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.sectionButton.IconColor = System.Drawing.Color.Black;
-            this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sectionButton.Location = new System.Drawing.Point(976, 28);
-            this.sectionButton.Name = "sectionButton";
-            this.sectionButton.Size = new System.Drawing.Size(200, 48);
-            this.sectionButton.TabIndex = 12;
-            this.sectionButton.Text = "New Record";
-            this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.sectionButton.UseVisualStyleBackColor = false;
             // 
             // sectionLabel
             // 
@@ -175,6 +152,29 @@
             this.NotesView.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.NotesView.UseVisualStyleBackColor = false;
             this.NotesView.Click += new System.EventHandler(this.NotesView_Click);
+            // 
+            // sectionButton
+            // 
+            this.sectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
+            this.sectionButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(94)))), ((int)(((byte)(216)))));
+            this.sectionButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.sectionButton.BorderRadius = 15;
+            this.sectionButton.BorderSize = 0;
+            this.sectionButton.FlatAppearance.BorderSize = 0;
+            this.sectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sectionButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.sectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.sectionButton.IconColor = System.Drawing.Color.Black;
+            this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.sectionButton.Location = new System.Drawing.Point(976, 28);
+            this.sectionButton.Name = "sectionButton";
+            this.sectionButton.Size = new System.Drawing.Size(200, 48);
+            this.sectionButton.TabIndex = 12;
+            this.sectionButton.Text = "sectionButton";
+            this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.sectionButton.UseVisualStyleBackColor = false;
             // 
             // Subjects
             // 
