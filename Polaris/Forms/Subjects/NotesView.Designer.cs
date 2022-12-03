@@ -1,6 +1,6 @@
 ﻿namespace Polaris.Forms.Subjects
 {
-    partial class ActivitiesView
+    partial class NotesView
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1121, 39);
-            this.flowLayoutPanel1.TabIndex = 20;
+            this.flowLayoutPanel1.TabIndex = 19;
             // 
             // tagControl
             // 
@@ -107,7 +107,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 50);
-            this.tableLayoutPanel1.TabIndex = 21;
+            this.tableLayoutPanel1.TabIndex = 23;
             // 
             // iconButton1
             // 
@@ -132,7 +132,7 @@
             this.iconButton1.Rotation = 90D;
             this.iconButton1.Size = new System.Drawing.Size(140, 44);
             this.iconButton1.TabIndex = 12;
-            this.iconButton1.Text = "Scores";
+            this.iconButton1.Text = "Titles";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.iconButton1.UseVisualStyleBackColor = true;
@@ -286,9 +286,9 @@
             this.tableBodyFLP.Margin = new System.Windows.Forms.Padding(0);
             this.tableBodyFLP.Name = "tableBodyFLP";
             this.tableBodyFLP.Size = new System.Drawing.Size(1138, 451);
-            this.tableBodyFLP.TabIndex = 22;
+            this.tableBodyFLP.TabIndex = 24;
             // 
-            // ActivitiesView
+            // NotesView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -299,8 +299,8 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.Name = "ActivitiesView";
-            this.Text = "ActivitiesView";
+            this.Name = "NotesView";
+            this.Text = "NotesView";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

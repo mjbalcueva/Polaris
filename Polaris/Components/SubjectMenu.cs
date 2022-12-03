@@ -67,7 +67,6 @@ namespace Polaris.Components
         private void badge_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
-
             root.SubjectMenu.Remove(this);
             RemoveSubjectFromDB();
             root.GenerateDynamicSubjects();
@@ -83,11 +82,27 @@ namespace Polaris.Components
         {
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
             OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader reader;
 
             connection.Close();
             connection.Open();
 
-            OdbcCommand cmd = new OdbcCommand("DELETE FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
+            OdbcCommand cmd = new OdbcCommand("SELECT id FROM subject WHERE subject_title = '" + ButtonText.Trim() + "'", connection);
+            reader = cmd.ExecuteReader();
+
+            reader.Read();
+            string subject_id = reader["id"].ToString();
+            reader.Close();
+
+            cmd = new OdbcCommand("DELETE FROM note WHERE subject_id = " + subject_id, connection);
+            cmd.ExecuteNonQuery();
+            cmd = new OdbcCommand("DELETE FROM note_tags WHERE subject_id = " + subject_id, connection);
+            cmd.ExecuteNonQuery();
+            cmd = new OdbcCommand("DELETE FROM activity WHERE subject_id = " + subject_id, connection);
+            cmd.ExecuteNonQuery();
+            cmd = new OdbcCommand("DELETE FROM activity_tags WHERE subject_id = " + subject_id, connection);
+            cmd.ExecuteNonQuery();
+            cmd = new OdbcCommand("DELETE FROM subject WHERE id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
 
             connection.Close();

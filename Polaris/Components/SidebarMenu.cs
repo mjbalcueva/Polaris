@@ -121,6 +121,8 @@ namespace Polaris.Components
             else if (ButtonText == "  Finance Tracker")
             {
                 root.MenuLabel.Text = "Extra Badge Clicked";
+                FTInput ftInput = new FTInput();
+                ftInput.Show();
             }
         }
 

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Polaris.Components
+namespace Polaris.Forms.Subjects
 {
-    public partial class Tag : UserControl
+    public partial class NotesView : Form
     {
-        public Tag()
+        public NotesView()
         {
             InitializeComponent();
         }

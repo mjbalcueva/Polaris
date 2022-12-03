@@ -30,16 +30,18 @@
         {
             this.sectionLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.TableHeader = new System.Windows.Forms.Panel();
-            this.checkBox = new Polaris.Components.RoundedButton();
-            this.tag1 = new Polaris.Components.Tag();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox = new FontAwesome.Sharp.IconButton();
+            this.iconButton0 = new FontAwesome.Sharp.IconButton();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.tableBodyFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.tagControl = new Polaris.Components.RoundedButton();
             this.sectionButton = new Polaris.Components.RoundedButton();
-            this.Description = new Polaris.Components.RoundedButton();
-            this.Created = new Polaris.Components.RoundedButton();
-            this.Due = new Polaris.Components.RoundedButton();
-            this.Tags = new Polaris.Components.RoundedButton();
             this.flowLayoutPanel1.SuspendLayout();
-            this.TableHeader.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // sectionLabel
@@ -57,61 +59,243 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.flowLayoutPanel1.Controls.Add(this.tag1);
+            this.flowLayoutPanel1.Controls.Add(this.tagControl);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 97);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(728, 39);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1138, 39);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // TableHeader
+            // tableLayoutPanel1
             // 
-            this.TableHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TableHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.TableHeader.Controls.Add(this.Tags);
-            this.TableHeader.Controls.Add(this.Due);
-            this.TableHeader.Controls.Add(this.Created);
-            this.TableHeader.Controls.Add(this.Description);
-            this.TableHeader.Controls.Add(this.checkBox);
-            this.TableHeader.Location = new System.Drawing.Point(38, 157);
-            this.TableHeader.Name = "TableHeader";
-            this.TableHeader.Size = new System.Drawing.Size(728, 50);
-            this.TableHeader.TabIndex = 4;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.99999F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.checkBox, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconButton0, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconButton5, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconButton4, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconButton3, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.iconButton2, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 157);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 50);
+            this.tableLayoutPanel1.TabIndex = 12;
             // 
             // checkBox
             // 
-            this.checkBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.checkBox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.checkBox.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.checkBox.BorderRadius = 15;
-            this.checkBox.BorderSize = 0;
+            this.checkBox.AutoSize = true;
+            this.checkBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.checkBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox.FlatAppearance.BorderSize = 0;
             this.checkBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.checkBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
             this.checkBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.checkBox.IconChar = FontAwesome.Sharp.IconChar.Square;
             this.checkBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
             this.checkBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.checkBox.IconSize = 30;
-            this.checkBox.Location = new System.Drawing.Point(10, 5);
+            this.checkBox.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkBox.Location = new System.Drawing.Point(63, 3);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Padding = new System.Windows.Forms.Padding(10);
-            this.checkBox.Size = new System.Drawing.Size(40, 40);
-            this.checkBox.TabIndex = 0;
-            this.checkBox.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.checkBox.UseVisualStyleBackColor = false;
+            this.checkBox.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.checkBox.Size = new System.Drawing.Size(54, 44);
+            this.checkBox.TabIndex = 12;
+            this.checkBox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkBox.UseVisualStyleBackColor = true;
             this.checkBox.Click += new System.EventHandler(this.checkBox_Click);
             // 
-            // tag1
+            // iconButton0
             // 
-            this.tag1.AutoSize = true;
-            this.tag1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tag1.Location = new System.Drawing.Point(3, 3);
-            this.tag1.Name = "tag1";
-            this.tag1.Size = new System.Drawing.Size(112, 33);
-            this.tag1.TabIndex = 0;
+            this.iconButton0.AutoSize = true;
+            this.iconButton0.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton0.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton0.FlatAppearance.BorderSize = 0;
+            this.iconButton0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton0.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.iconButton0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton0.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconButton0.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton0.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton0.IconSize = 23;
+            this.iconButton0.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton0.Location = new System.Drawing.Point(3, 3);
+            this.iconButton0.Name = "iconButton0";
+            this.iconButton0.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton0.Rotation = 90D;
+            this.iconButton0.Size = new System.Drawing.Size(54, 44);
+            this.iconButton0.TabIndex = 11;
+            this.iconButton0.Text = "Id";
+            this.iconButton0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton0.UseVisualStyleBackColor = true;
+            // 
+            // iconButton5
+            // 
+            this.iconButton5.AutoSize = true;
+            this.iconButton5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton5.FlatAppearance.BorderSize = 0;
+            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Exchange;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 23;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(885, 3);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton5.Rotation = 90D;
+            this.iconButton5.Size = new System.Drawing.Size(146, 44);
+            this.iconButton5.TabIndex = 8;
+            this.iconButton5.Text = "Modified";
+            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iconButton5.UseVisualStyleBackColor = true;
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.AutoSize = true;
+            this.iconButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.iconButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Exchange;
+            this.iconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 23;
+            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.Location = new System.Drawing.Point(733, 3);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton4.Rotation = 90D;
+            this.iconButton4.Size = new System.Drawing.Size(146, 44);
+            this.iconButton4.TabIndex = 7;
+            this.iconButton4.Text = "Created";
+            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.AutoSize = true;
+            this.iconButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Exchange;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 23;
+            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.Location = new System.Drawing.Point(581, 3);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton3.Rotation = 90D;
+            this.iconButton3.Size = new System.Drawing.Size(146, 44);
+            this.iconButton3.TabIndex = 6;
+            this.iconButton3.Text = "Tags";
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.AutoSize = true;
+            this.iconButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Exchange;
+            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 23;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(123, 3);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton2.Rotation = 90D;
+            this.iconButton2.Size = new System.Drawing.Size(452, 44);
+            this.iconButton2.TabIndex = 4;
+            this.iconButton2.Text = "Description";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
+            // tableBodyFLP
+            // 
+            this.tableBodyFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableBodyFLP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.tableBodyFLP.Location = new System.Drawing.Point(38, 207);
+            this.tableBodyFLP.Margin = new System.Windows.Forms.Padding(0);
+            this.tableBodyFLP.Name = "tableBodyFLP";
+            this.tableBodyFLP.Size = new System.Drawing.Size(1138, 510);
+            this.tableBodyFLP.TabIndex = 13;
+            // 
+            // tagControl
+            // 
+            this.tagControl.AutoSize = true;
+            this.tagControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderRadius = 15;
+            this.tagControl.BorderSize = 0;
+            this.tagControl.FlatAppearance.BorderSize = 0;
+            this.tagControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tagControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.tagControl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tagControl.IconSize = 20;
+            this.tagControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.Location = new System.Drawing.Point(0, 0);
+            this.tagControl.Margin = new System.Windows.Forms.Padding(0);
+            this.tagControl.Name = "tagControl";
+            this.tagControl.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tagControl.Size = new System.Drawing.Size(114, 35);
+            this.tagControl.TabIndex = 1;
+            this.tagControl.Text = "Add Filter";
+            this.tagControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tagControl.UseVisualStyleBackColor = false;
             // 
             // sectionButton
             // 
@@ -128,7 +312,7 @@
             this.sectionButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.sectionButton.IconColor = System.Drawing.Color.Black;
             this.sectionButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.sectionButton.Location = new System.Drawing.Point(566, 28);
+            this.sectionButton.Location = new System.Drawing.Point(976, 28);
             this.sectionButton.Name = "sectionButton";
             this.sectionButton.Size = new System.Drawing.Size(200, 48);
             this.sectionButton.TabIndex = 2;
@@ -136,140 +320,14 @@
             this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.sectionButton.UseVisualStyleBackColor = false;
             // 
-            // Description
-            // 
-            this.Description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Description.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Description.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Description.BorderRadius = 15;
-            this.Description.BorderSize = 0;
-            this.Description.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Description.FlatAppearance.BorderSize = 0;
-            this.Description.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Description.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Description.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Description.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Description.IconChar = FontAwesome.Sharp.IconChar.Exchange;
-            this.Description.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Description.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Description.IconSize = 25;
-            this.Description.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Description.Location = new System.Drawing.Point(76, 5);
-            this.Description.Name = "Description";
-            this.Description.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.Description.Rotation = 90D;
-            this.Description.Size = new System.Drawing.Size(175, 40);
-            this.Description.TabIndex = 1;
-            this.Description.Text = "Description";
-            this.Description.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Description.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Description.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Description.UseVisualStyleBackColor = false;
-            // 
-            // Created
-            // 
-            this.Created.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Created.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Created.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Created.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Created.BorderRadius = 15;
-            this.Created.BorderSize = 0;
-            this.Created.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Created.FlatAppearance.BorderSize = 0;
-            this.Created.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Created.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Created.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Created.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Created.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Created.IconChar = FontAwesome.Sharp.IconChar.Exchange;
-            this.Created.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Created.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Created.IconSize = 25;
-            this.Created.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Created.Location = new System.Drawing.Point(395, 5);
-            this.Created.Name = "Created";
-            this.Created.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.Created.Rotation = 90D;
-            this.Created.Size = new System.Drawing.Size(150, 40);
-            this.Created.TabIndex = 2;
-            this.Created.Text = "Created";
-            this.Created.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Created.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Created.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Created.UseVisualStyleBackColor = false;
-            // 
-            // Due
-            // 
-            this.Due.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Due.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Due.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Due.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Due.BorderRadius = 15;
-            this.Due.BorderSize = 0;
-            this.Due.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Due.FlatAppearance.BorderSize = 0;
-            this.Due.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Due.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Due.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Due.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Due.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Due.IconChar = FontAwesome.Sharp.IconChar.Exchange;
-            this.Due.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Due.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Due.IconSize = 25;
-            this.Due.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Due.Location = new System.Drawing.Point(573, 5);
-            this.Due.Name = "Due";
-            this.Due.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.Due.Rotation = 90D;
-            this.Due.Size = new System.Drawing.Size(150, 40);
-            this.Due.TabIndex = 3;
-            this.Due.Text = "Updated";
-            this.Due.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Due.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Due.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Due.UseVisualStyleBackColor = false;
-            // 
-            // Tags
-            // 
-            this.Tags.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tags.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Tags.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Tags.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Tags.BorderRadius = 15;
-            this.Tags.BorderSize = 0;
-            this.Tags.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Tags.FlatAppearance.BorderSize = 0;
-            this.Tags.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Tags.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
-            this.Tags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Tags.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Tags.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Tags.IconChar = FontAwesome.Sharp.IconChar.Exchange;
-            this.Tags.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Tags.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Tags.IconSize = 25;
-            this.Tags.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tags.Location = new System.Drawing.Point(257, 5);
-            this.Tags.Name = "Tags";
-            this.Tags.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.Tags.Rotation = 90D;
-            this.Tags.Size = new System.Drawing.Size(110, 40);
-            this.Tags.TabIndex = 4;
-            this.Tags.Text = "Tags";
-            this.Tags.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Tags.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.Tags.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Tags.UseVisualStyleBackColor = false;
-            // 
             // Tasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(804, 551);
-            this.Controls.Add(this.TableHeader);
+            this.ClientSize = new System.Drawing.Size(1214, 726);
+            this.Controls.Add(this.tableBodyFLP);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.sectionButton);
             this.Controls.Add(this.sectionLabel);
@@ -278,10 +336,10 @@
             this.Name = "Tasks";
             this.Padding = new System.Windows.Forms.Padding(35, 25, 35, 25);
             this.Text = "Tasks";
-            this.Load += new System.EventHandler(this.Tasks_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            this.TableHeader.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,12 +350,14 @@
         public System.Windows.Forms.Label sectionLabel;
         public Components.RoundedButton sectionButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private Components.Tag tag1;
-        private System.Windows.Forms.Panel TableHeader;
-        private Components.RoundedButton checkBox;
-        private Components.RoundedButton Description;
-        private Components.RoundedButton Due;
-        private Components.RoundedButton Created;
-        private Components.RoundedButton Tags;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private Components.RoundedButton tagControl;
+        private FontAwesome.Sharp.IconButton checkBox;
+        private FontAwesome.Sharp.IconButton iconButton0;
+        private System.Windows.Forms.FlowLayoutPanel tableBodyFLP;
     }
 }
