@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Data.Odbc;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.FinanceTracker
@@ -54,6 +55,7 @@ namespace Polaris.Forms.FinanceTracker
 
             while (dataReader.Read())
             {
+                string id = dataReader.GetString(0);
                 string value = dataReader.GetString(1);
                 string description = dataReader.GetString(2);
                 string createdDate = dataReader.GetString(3);
@@ -62,21 +64,20 @@ namespace Polaris.Forms.FinanceTracker
                 string[] date;
                 date = createdDate.Split(' ');
                 createdDate = date[0].Split('-')[0] + " / " + date[0].Split('-')[1] + " / " + date[0].Split('-')[2];
-
                 date = modifiedDate.Split(' ');
                 modifiedDate = date[0].Split('-')[0] + " / " + date[0].Split('-')[1] + " / " + date[0].Split('-')[2];
 
-                //AddRecord(dataReader.GetString(1), dataReader.GetString(2), dataReader.GetString(3), dataReader.GetString(4));
-                AddRecord(value, description, createdDate, modifiedDate);
+                AddRecord(id, value, description, createdDate, modifiedDate);
             }
 
             connection.Close();
         }
 
-        internal void AddRecord(string value, string description, string created, string modified)
+        internal void AddRecord(string id, string value, string description, string created, string modified)
         {
             TableRecord.Add(new tableFT
             {
+                ID = id,
                 Value = value,
                 Description = description,
                 CreatedDate = created,
@@ -95,7 +96,6 @@ namespace Polaris.Forms.FinanceTracker
                 tableBodyFLP.Controls.Add((tableFT)TableRecord[i]);
                 totalValue += Convert.ToDouble(((tableFT)TableRecord[i]).Value);
             }
-
             totalValueLabel.Text = totalValue.ToString();
         }
 
