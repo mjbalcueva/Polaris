@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.border = new System.Windows.Forms.Panel();
+            this.background = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,6 +42,8 @@
             this.CreatedLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.border.SuspendLayout();
+            this.background.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -47,8 +51,30 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // border
+            // 
+            this.border.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(44)))));
+            this.border.Controls.Add(this.background);
+            this.border.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.border.Location = new System.Drawing.Point(0, 0);
+            this.border.Name = "border";
+            this.border.Padding = new System.Windows.Forms.Padding(0, 0, 2, 2);
+            this.border.Size = new System.Drawing.Size(1138, 50);
+            this.border.TabIndex = 0;
+            // 
+            // background
+            // 
+            this.background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.background.Controls.Add(this.tableLayoutPanel1);
+            this.background.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.background.Location = new System.Drawing.Point(0, 0);
+            this.background.Name = "background";
+            this.background.Size = new System.Drawing.Size(1136, 48);
+            this.background.TabIndex = 0;
+            // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
@@ -65,13 +91,14 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton1, 5, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1138, 50);
-            this.tableLayoutPanel1.TabIndex = 14;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1136, 48);
+            this.tableLayoutPanel1.TabIndex = 21;
             // 
             // iconButton2
             // 
@@ -85,9 +112,9 @@
             this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(1088, 3);
+            this.iconButton2.Location = new System.Drawing.Point(1087, 3);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(47, 44);
+            this.iconButton2.Size = new System.Drawing.Size(46, 42);
             this.iconButton2.TabIndex = 7;
             this.iconButton2.UseVisualStyleBackColor = true;
             // 
@@ -98,14 +125,14 @@
             this.panel2.Location = new System.Drawing.Point(158, 3);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(409, 44);
+            this.panel2.Size = new System.Drawing.Size(408, 42);
             this.panel2.TabIndex = 2;
             // 
             // DescriptionLabel
             // 
             this.DescriptionLabel.AutoSize = true;
             this.DescriptionLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.DescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.DescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.DescriptionLabel.Location = new System.Drawing.Point(13, 12);
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.Size = new System.Drawing.Size(121, 20);
@@ -119,13 +146,14 @@
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(149, 44);
+            this.panel1.Size = new System.Drawing.Size(149, 42);
             this.panel1.TabIndex = 1;
             // 
             // ValueLabel
             // 
             this.ValueLabel.AutoSize = true;
             this.ValueLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ValueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.ValueLabel.Location = new System.Drawing.Point(13, 12);
             this.ValueLabel.Name = "ValueLabel";
             this.ValueLabel.Size = new System.Drawing.Size(81, 20);
@@ -136,16 +164,17 @@
             // 
             this.panel4.Controls.Add(this.ModifiedLabel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(883, 3);
+            this.panel4.Location = new System.Drawing.Point(882, 3);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel4.Size = new System.Drawing.Size(149, 44);
+            this.panel4.Size = new System.Drawing.Size(149, 42);
             this.panel4.TabIndex = 4;
             // 
             // ModifiedLabel
             // 
             this.ModifiedLabel.AutoSize = true;
             this.ModifiedLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ModifiedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.ModifiedLabel.Location = new System.Drawing.Point(13, 12);
             this.ModifiedLabel.Name = "ModifiedLabel";
             this.ModifiedLabel.Size = new System.Drawing.Size(106, 20);
@@ -156,16 +185,17 @@
             // 
             this.panel3.Controls.Add(this.CreatedLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(728, 3);
+            this.panel3.Location = new System.Drawing.Point(727, 3);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel3.Size = new System.Drawing.Size(149, 44);
+            this.panel3.Size = new System.Drawing.Size(149, 42);
             this.panel3.TabIndex = 3;
             // 
             // CreatedLabel
             // 
             this.CreatedLabel.AutoSize = true;
             this.CreatedLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.CreatedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.CreatedLabel.Location = new System.Drawing.Point(13, 12);
             this.CreatedLabel.Name = "CreatedLabel";
             this.CreatedLabel.Size = new System.Drawing.Size(97, 20);
@@ -174,10 +204,10 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(573, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(572, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 44);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(148, 42);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // iconButton1
@@ -192,9 +222,9 @@
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(197)))), ((int)(((byte)(94)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(1038, 3);
+            this.iconButton1.Location = new System.Drawing.Point(1037, 3);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(44, 44);
+            this.iconButton1.Size = new System.Drawing.Size(44, 42);
             this.iconButton1.TabIndex = 6;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
@@ -203,13 +233,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.border);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "tableFT";
             this.Size = new System.Drawing.Size(1138, 50);
             this.Load += new System.EventHandler(this.tableFT_Load);
+            this.border.ResumeLayout(false);
+            this.background.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -224,18 +256,19 @@
         }
 
         #endregion
-
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label DescriptionLabel;
         public System.Windows.Forms.Label ValueLabel;
+        private System.Windows.Forms.Panel panel4;
         public System.Windows.Forms.Label ModifiedLabel;
+        private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label CreatedLabel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton iconButton1;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel border;
+        public System.Windows.Forms.Panel background;
     }
 }

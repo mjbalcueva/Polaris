@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.FinanceTracker
@@ -13,10 +14,11 @@ namespace Polaris.Forms.FinanceTracker
 
         #region Getter, Setter & Constructor
 
-        private string _value;
-        private string _description;
-        private string _createdDate;
-        private string _modifiedDate;
+        private string _value = "0";
+        private string _description = "Description";
+        private string _createdDate = "Created Date";
+        private string _modifiedDate = "Modified Date";
+        private Color _color = ColorTranslator.FromHtml("#141519");
 
         [Category("Record Property")]
         public string Value
@@ -49,13 +51,27 @@ namespace Polaris.Forms.FinanceTracker
             set { _modifiedDate = value; ModifiedLabel.Text = value; }
         }
 
+        [Category("Record Property")]
+        public Color Color
+        {
+            get { return _color; }
+            set { _color = value; background.BackColor = value; }
+        }
+
         #endregion Getter, Setter & Constructor
 
         private void tableFT_Load(object sender, EventArgs e)
         {
-            // hide iconbutton
-            iconButton1.Visible = false;
-            iconButton2.Visible = false;
+        }
+
+        private void control_MouseEnter(object sender, EventArgs e)
+        {
+            background.BackColor = ColorTranslator.FromHtml("#1B1C22");
+        }
+
+        private void control_MouseLeave(object sender, EventArgs e)
+        {
+            background.BackColor = ColorTranslator.FromHtml("#141519");
         }
     }
 }

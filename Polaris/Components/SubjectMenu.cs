@@ -94,23 +94,14 @@ namespace Polaris.Components
             string subject_id = reader["id"].ToString();
             reader.Close();
 
-            // delete all notes with the subject_id
             cmd = new OdbcCommand("DELETE FROM note WHERE subject_id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
-
-            // delete all note_tags with the subject_id
             cmd = new OdbcCommand("DELETE FROM note_tags WHERE subject_id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
-
-            // delete all activity with the subject_id
             cmd = new OdbcCommand("DELETE FROM activity WHERE subject_id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
-
-            // delete all activity_tags with the subject_id
             cmd = new OdbcCommand("DELETE FROM activity_tags WHERE subject_id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
-
-            // delete the subject
             cmd = new OdbcCommand("DELETE FROM subject WHERE id = " + subject_id, connection);
             cmd.ExecuteNonQuery();
 

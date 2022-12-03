@@ -111,7 +111,7 @@ namespace Polaris
         private static readonly ArrayList subjects = new ArrayList();
         public ArrayList SubjectMenu { get; set; } = subjects;
 
-        private void LoadSubject()
+        private void GetSubject()
         {
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
             OdbcConnection connection = new OdbcConnection(connectionString);
@@ -177,7 +177,7 @@ namespace Polaris
         {
             CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
-            LoadSubject();
+            GetSubject();
             GenerateDynamicSubjects();
             HiddenScroll();
         }
