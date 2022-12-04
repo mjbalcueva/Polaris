@@ -47,11 +47,11 @@
             this.border2 = new System.Windows.Forms.Panel();
             this.LogoButton = new Polaris.Components.RoundedButton();
             this.mainHeaderPanel = new System.Windows.Forms.Panel();
+            this.love = new System.Windows.Forms.Label();
             this.MenuLabel = new System.Windows.Forms.Label();
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
-            this.love = new System.Windows.Forms.Label();
             this.sidebarPanel.SuspendLayout();
             this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -311,6 +311,17 @@
             this.mainHeaderPanel.Size = new System.Drawing.Size(1232, 80);
             this.mainHeaderPanel.TabIndex = 3;
             // 
+            // love
+            // 
+            this.love.AutoSize = true;
+            this.love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.love.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.love.Location = new System.Drawing.Point(570, 26);
+            this.love.Name = "love";
+            this.love.Size = new System.Drawing.Size(93, 28);
+            this.love.TabIndex = 4;
+            this.love.Text = "Overview";
+            // 
             // MenuLabel
             // 
             this.MenuLabel.AutoSize = true;
@@ -365,17 +376,6 @@
             this.mainEmbedPanel.Name = "mainEmbedPanel";
             this.mainEmbedPanel.Size = new System.Drawing.Size(1232, 773);
             this.mainEmbedPanel.TabIndex = 4;
-            // 
-            // love
-            // 
-            this.love.AutoSize = true;
-            this.love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.love.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.love.Location = new System.Drawing.Point(570, 26);
-            this.love.Name = "love";
-            this.love.Size = new System.Drawing.Size(93, 28);
-            this.love.TabIndex = 4;
-            this.love.Text = "Overview";
             // 
             // Root
             // 

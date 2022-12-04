@@ -8,8 +8,17 @@ namespace Polaris.Forms.Subjects
 {
     public partial class Subjects : Form
     {
+        private string subText;
+        private static Subjects subject = new Subjects();
+
         public Subjects()
         {
+            InitializeComponent();
+        }
+
+        public Subjects(string text)
+        {
+            subject.subText = text;
             InitializeComponent();
         }
 
@@ -42,14 +51,14 @@ namespace Polaris.Forms.Subjects
         {
             sectionLabel.Text = "Notes Section";
             ToggleActiveButton(NotesView);
-            OpenChildForm(new NotesView());
+            OpenChildForm(new NotesView(subject.subText));
         }
 
         private void ActivitiesView_Click(object sender, EventArgs e)
         {
             sectionLabel.Text = "Activities Section";
             ToggleActiveButton(ActivitiesView);
-            OpenChildForm(new ActivitiesView());
+            OpenChildForm(new ActivitiesView(subject.subText));
         }
 
         private void GradesView_Click(object sender, EventArgs e)
@@ -81,7 +90,7 @@ namespace Polaris.Forms.Subjects
 
         private void Subjects_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new NotesView());
+            OpenChildForm(new NotesView(subject.subText));
             sectionLabel.Text = "Notes Section";
             ToggleActiveButton(NotesView);
         }

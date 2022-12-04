@@ -1,5 +1,6 @@
 ﻿using System.Data.Odbc;
 using System.Drawing;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace Polaris.Components
@@ -50,14 +51,12 @@ namespace Polaris.Components
                 textBox1.Text = "";
                 root.GenerateDynamicSubjects();
             }
-        }
-
+        }             
+        #endregion Events
         private void badge_Click(object sender, System.EventArgs e)
         {
             Root root = (Root)ParentForm;
             root.GenerateDynamicSubjects();
         }
-
-        #endregion Events
     }
 }

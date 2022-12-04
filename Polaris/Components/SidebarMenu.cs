@@ -71,7 +71,7 @@ namespace Polaris.Components
                 Tasks tasks = new Tasks();
                 tasks.sectionLabel.Text = "All Section";
                 tasks.sectionButton.Text = "New Tasks";
-                root.OpenChildForm(tasks);
+                root.OpenChildForm(tasks);              
             }
             else if (ButtonText == "  Subjects")
             {

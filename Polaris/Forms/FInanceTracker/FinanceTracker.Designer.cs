@@ -30,7 +30,6 @@
         {
             this.sectionLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tagControl = new Polaris.Components.RoundedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -39,6 +38,7 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.tableBodyFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.totalValueLabel = new Polaris.Components.RoundedButton();
+            this.tagControl = new Polaris.Components.RoundedButton();
             this.sectionButton = new Polaris.Components.RoundedButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -65,34 +65,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1138, 39);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // tagControl
-            // 
-            this.tagControl.AutoSize = true;
-            this.tagControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BorderRadius = 15;
-            this.tagControl.BorderSize = 0;
-            this.tagControl.FlatAppearance.BorderSize = 0;
-            this.tagControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tagControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.tagControl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tagControl.IconSize = 20;
-            this.tagControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tagControl.Location = new System.Drawing.Point(0, 0);
-            this.tagControl.Margin = new System.Windows.Forms.Padding(0);
-            this.tagControl.Name = "tagControl";
-            this.tagControl.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.tagControl.Size = new System.Drawing.Size(114, 35);
-            this.tagControl.TabIndex = 1;
-            this.tagControl.Text = "Add Filter";
-            this.tagControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tagControl.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.tagControl.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -105,7 +77,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.Controls.Add(this.iconButton5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton3, 2, 0);
@@ -135,7 +107,7 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 23;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(883, 3);
+            this.iconButton5.Location = new System.Drawing.Point(881, 3);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Rotation = 90D;
@@ -163,7 +135,7 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 23;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(728, 3);
+            this.iconButton4.Location = new System.Drawing.Point(726, 3);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Rotation = 90D;
@@ -191,7 +163,7 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 23;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(573, 3);
+            this.iconButton3.Location = new System.Drawing.Point(571, 3);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Rotation = 90D;
@@ -251,7 +223,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton2.Rotation = 90D;
-            this.iconButton2.Size = new System.Drawing.Size(409, 44);
+            this.iconButton2.Size = new System.Drawing.Size(407, 44);
             this.iconButton2.TabIndex = 4;
             this.iconButton2.Text = "Description";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,6 +270,34 @@
             this.totalValueLabel.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.totalValueLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.totalValueLabel.UseVisualStyleBackColor = false;
+            // 
+            // tagControl
+            // 
+            this.tagControl.AutoSize = true;
+            this.tagControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderRadius = 15;
+            this.tagControl.BorderSize = 0;
+            this.tagControl.FlatAppearance.BorderSize = 0;
+            this.tagControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tagControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.tagControl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tagControl.IconSize = 20;
+            this.tagControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.Location = new System.Drawing.Point(0, 0);
+            this.tagControl.Margin = new System.Windows.Forms.Padding(0);
+            this.tagControl.Name = "tagControl";
+            this.tagControl.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tagControl.Size = new System.Drawing.Size(114, 35);
+            this.tagControl.TabIndex = 1;
+            this.tagControl.Text = "Add Filter";
+            this.tagControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tagControl.UseVisualStyleBackColor = false;
             // 
             // sectionButton
             // 

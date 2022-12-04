@@ -113,7 +113,7 @@ namespace Polaris
 
         private void GetSubject()
         {
-            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=root;Option=3;";
             OdbcConnection connection = new OdbcConnection(connectionString);
             OdbcDataReader dataReader;
 

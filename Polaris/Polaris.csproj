@@ -140,6 +140,24 @@
     <Compile Include="Forms\Subjects\Subjects.designer.cs">
       <DependentUpon>Subjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Subjects\tableAV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableAV.Designer.cs">
+      <DependentUpon>tableAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableNV.Designer.cs">
+      <DependentUpon>tableNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tasks\tableTasks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tasks\tableTasks.Designer.cs">
+      <DependentUpon>tableTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tasks\Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Subjects\Subjects.resx">
       <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\tableAV.resx">
+      <DependentUpon>tableAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\tableNV.resx">
+      <DependentUpon>tableNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tasks\tableTasks.resx">
+      <DependentUpon>tableTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
