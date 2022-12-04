@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Data.Odbc;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.FinanceTracker
@@ -101,11 +100,25 @@ namespace Polaris.Forms.FinanceTracker
 
         #endregion Load Data
 
+        #region Hidden Scroll
+
+        private void HiddenScroll()
+        {
+            tableBodyFLP.AutoScroll = false;
+            tableBodyFLP.VerticalScroll.Visible = false;
+            tableBodyFLP.VerticalScroll.Enabled = false;
+            tableBodyFLP.VerticalScroll.Maximum = 0;
+            tableBodyFLP.AutoScroll = true;
+        }
+
+        #endregion Hidden Scroll
+
         private void FinanceTracker_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             GetData();
             GenerateDynamicRecords();
+            HiddenScroll();
         }
     }
 }

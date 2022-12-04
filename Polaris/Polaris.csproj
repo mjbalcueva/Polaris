@@ -92,6 +92,12 @@
     <Compile Include="Components\SubjectMenu.designer.cs">
       <DependentUpon>SubjectMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\Tag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Tag.Designer.cs">
+      <DependentUpon>Tag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\TaskMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>

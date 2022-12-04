@@ -74,6 +74,11 @@ namespace Polaris.Forms.FinanceTracker
         private void editButton_Click(object sender, EventArgs e)
         {
             FTInput inputForm = new FTInput();
+            inputForm.valueLabel.Text = Value;
+            inputForm.descriptionLabel.Text = Description;
+            inputForm.editing = true;
+            inputForm.recordID = ID;
+            inputForm.Show();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -86,7 +91,7 @@ namespace Polaris.Forms.FinanceTracker
 
         public void mouse_Enter(object sender, EventArgs e)
         {
-            background.BackColor = ColorTranslator.FromHtml("#1E2126");
+            background.BackColor = ColorTranslator.FromHtml("#1E2125");
         }
 
         public void mouse_Leave(object sender, EventArgs e)

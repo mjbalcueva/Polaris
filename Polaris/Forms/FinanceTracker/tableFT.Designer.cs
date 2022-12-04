@@ -31,6 +31,9 @@
             this.border = new System.Windows.Forms.Panel();
             this.background = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ValueLabel = new System.Windows.Forms.Label();
+            this.deleteButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DescriptionLabel = new System.Windows.Forms.Label();
             this.panel0 = new System.Windows.Forms.Panel();
@@ -41,17 +44,14 @@
             this.CreatedLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.editButton = new FontAwesome.Sharp.IconButton();
-            this.deleteButton = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ValueLabel = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
             this.background.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel0.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // border
@@ -106,6 +106,52 @@
             this.tableLayoutPanel1.TabIndex = 21;
             this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.mouse_Enter);
             this.tableLayoutPanel1.MouseLeave += new System.EventHandler(this.mouse_Leave);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ValueLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(63, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.panel1.Size = new System.Drawing.Size(140, 42);
+            this.panel1.TabIndex = 8;
+            this.panel1.MouseEnter += new System.EventHandler(this.mouse_Enter);
+            this.panel1.MouseLeave += new System.EventHandler(this.mouse_Leave);
+            // 
+            // ValueLabel
+            // 
+            this.ValueLabel.AutoSize = true;
+            this.ValueLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ValueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
+            this.ValueLabel.Location = new System.Drawing.Point(13, 12);
+            this.ValueLabel.Name = "ValueLabel";
+            this.ValueLabel.Size = new System.Drawing.Size(81, 20);
+            this.ValueLabel.TabIndex = 0;
+            this.ValueLabel.Text = "ValueLabel";
+            this.ValueLabel.MouseEnter += new System.EventHandler(this.mouse_Enter);
+            this.ValueLabel.MouseLeave += new System.EventHandler(this.mouse_Leave);
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.deleteButton.FlatAppearance.BorderSize = 0;
+            this.deleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.deleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.deleteButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
+            this.deleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.deleteButton.IconSize = 25;
+            this.deleteButton.Location = new System.Drawing.Point(1087, 3);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(46, 42);
+            this.deleteButton.TabIndex = 7;
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.deleteButton.MouseEnter += new System.EventHandler(this.mouse_Enter);
+            this.deleteButton.MouseLeave += new System.EventHandler(this.mouse_Leave);
             // 
             // panel2
             // 
@@ -222,8 +268,8 @@
             this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.editButton.FlatAppearance.BorderSize = 0;
-            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(33)))), ((int)(((byte)(37)))));
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editButton.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.editButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(197)))), ((int)(((byte)(94)))));
@@ -235,46 +281,8 @@
             this.editButton.TabIndex = 6;
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.deleteButton.FlatAppearance.BorderSize = 0;
-            this.deleteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.deleteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteButton.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.deleteButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
-            this.deleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.deleteButton.IconSize = 25;
-            this.deleteButton.Location = new System.Drawing.Point(1087, 3);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(46, 42);
-            this.deleteButton.TabIndex = 7;
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.ValueLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(63, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(140, 42);
-            this.panel1.TabIndex = 8;
-            // 
-            // ValueLabel
-            // 
-            this.ValueLabel.AutoSize = true;
-            this.ValueLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ValueLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
-            this.ValueLabel.Location = new System.Drawing.Point(13, 12);
-            this.ValueLabel.Name = "ValueLabel";
-            this.ValueLabel.Size = new System.Drawing.Size(81, 20);
-            this.ValueLabel.TabIndex = 0;
-            this.ValueLabel.Text = "ValueLabel";
+            this.editButton.MouseEnter += new System.EventHandler(this.mouse_Enter);
+            this.editButton.MouseLeave += new System.EventHandler(this.mouse_Leave);
             // 
             // tableFT
             // 
@@ -291,6 +299,8 @@
             this.border.ResumeLayout(false);
             this.background.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel0.ResumeLayout(false);
@@ -299,8 +309,6 @@
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
