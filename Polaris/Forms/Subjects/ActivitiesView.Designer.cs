@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel1.Controls.Add(this.iconButton5, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton4, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton3, 2, 0);
@@ -123,11 +123,11 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 23;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(881, 3);
+            this.iconButton5.Location = new System.Drawing.Point(878, 3);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Rotation = 90D;
-            this.iconButton5.Size = new System.Drawing.Size(149, 44);
+            this.iconButton5.Size = new System.Drawing.Size(148, 44);
             this.iconButton5.TabIndex = 8;
             this.iconButton5.Text = "Modified";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,11 +151,11 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 23;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(726, 3);
+            this.iconButton4.Location = new System.Drawing.Point(724, 3);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Rotation = 90D;
-            this.iconButton4.Size = new System.Drawing.Size(149, 44);
+            this.iconButton4.Size = new System.Drawing.Size(148, 44);
             this.iconButton4.TabIndex = 7;
             this.iconButton4.Text = "Created";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,11 +179,11 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 23;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(571, 3);
+            this.iconButton3.Location = new System.Drawing.Point(570, 3);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Rotation = 90D;
-            this.iconButton3.Size = new System.Drawing.Size(149, 44);
+            this.iconButton3.Size = new System.Drawing.Size(148, 44);
             this.iconButton3.TabIndex = 6;
             this.iconButton3.Text = "Tags";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +211,7 @@
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton1.Rotation = 90D;
-            this.iconButton1.Size = new System.Drawing.Size(149, 44);
+            this.iconButton1.Size = new System.Drawing.Size(148, 44);
             this.iconButton1.TabIndex = 5;
             this.iconButton1.Text = "Scores";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +235,7 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 23;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(158, 3);
+            this.iconButton2.Location = new System.Drawing.Point(157, 3);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton2.Rotation = 90D;
@@ -251,10 +251,10 @@
             this.tableBodyFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableBodyFLP.Location = new System.Drawing.Point(0, 113);
+            this.tableBodyFLP.Location = new System.Drawing.Point(0, 110);
             this.tableBodyFLP.Margin = new System.Windows.Forms.Padding(0);
             this.tableBodyFLP.Name = "tableBodyFLP";
-            this.tableBodyFLP.Size = new System.Drawing.Size(1138, 510);
+            this.tableBodyFLP.Size = new System.Drawing.Size(1121, 462);
             this.tableBodyFLP.TabIndex = 25;
             this.tableBodyFLP.Resize += new System.EventHandler(this.tableBodyFLP_Resize);
             // 

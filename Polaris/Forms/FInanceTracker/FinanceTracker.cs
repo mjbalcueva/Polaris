@@ -14,6 +14,8 @@ namespace Polaris.Forms.FinanceTracker
             InitializeComponent();
         }
 
+        #region Resize Table
+        
         private void tableBody_Resize(object sender, EventArgs e)
         {
             foreach (Control c in tableBodyFLP.Controls)
@@ -22,6 +24,17 @@ namespace Polaris.Forms.FinanceTracker
             }
         }
 
+        #endregion Resize Table
+
+        #region Events
+        private void sectionButton_Click(object sender, EventArgs e)
+        {
+            FTInput ftInput = new FTInput();
+            ftInput.Show();
+        }
+
+        #endregion Events
+        
         #region Load Data
 
         private static readonly ArrayList records = new ArrayList();
@@ -53,7 +66,6 @@ namespace Polaris.Forms.FinanceTracker
                 date = modifiedDate.Split(' ');
                 modifiedDate = date[0].Split('-')[0] + " / " + date[0].Split('-')[1] + " / " + date[0].Split('-')[2];
 
-                //AddRecord(dataReader.GetString(1), dataReader.GetString(2), dataReader.GetString(3), dataReader.GetString(4));
                 AddRecord(value, description, createdDate, modifiedDate);
             }
 
@@ -88,11 +100,25 @@ namespace Polaris.Forms.FinanceTracker
 
         #endregion Load Data
 
+        #region Hidden Scroll
+
+        private void HiddenScroll()
+        {
+            tableBodyFLP.AutoScroll = false;
+            tableBodyFLP.VerticalScroll.Visible = false;
+            tableBodyFLP.VerticalScroll.Enabled = false;
+            tableBodyFLP.VerticalScroll.Maximum = 0;
+            tableBodyFLP.AutoScroll = true;
+        }
+
+        #endregion Hidden Scroll
+
         private void FinanceTracker_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             GetData();
             GenerateDynamicRecords();
-        }
+            HiddenScroll();
+        } 
     }
 }

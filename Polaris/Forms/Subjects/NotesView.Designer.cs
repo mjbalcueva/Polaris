@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tagControl = new Polaris.Components.RoundedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -37,6 +36,7 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.tableBodyFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.tagControl = new Polaris.Components.RoundedButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,34 +52,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1121, 39);
             this.flowLayoutPanel1.TabIndex = 19;
-            // 
-            // tagControl
-            // 
-            this.tagControl.AutoSize = true;
-            this.tagControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.tagControl.BorderRadius = 15;
-            this.tagControl.BorderSize = 0;
-            this.tagControl.FlatAppearance.BorderSize = 0;
-            this.tagControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tagControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.tagControl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tagControl.IconSize = 20;
-            this.tagControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tagControl.Location = new System.Drawing.Point(0, 0);
-            this.tagControl.Margin = new System.Windows.Forms.Padding(0);
-            this.tagControl.Name = "tagControl";
-            this.tagControl.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.tagControl.Size = new System.Drawing.Size(114, 35);
-            this.tagControl.TabIndex = 1;
-            this.tagControl.Text = "Add Filter";
-            this.tagControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tagControl.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.tagControl.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -251,12 +223,40 @@
             this.tableBodyFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableBodyFLP.Location = new System.Drawing.Point(0, 113);
+            this.tableBodyFLP.Location = new System.Drawing.Point(0, 110);
             this.tableBodyFLP.Margin = new System.Windows.Forms.Padding(0);
             this.tableBodyFLP.Name = "tableBodyFLP";
-            this.tableBodyFLP.Size = new System.Drawing.Size(1138, 510);
+            this.tableBodyFLP.Size = new System.Drawing.Size(1121, 460);
             this.tableBodyFLP.TabIndex = 24;
             this.tableBodyFLP.Resize += new System.EventHandler(this.tableBodyFLP_Resize_1);
+            // 
+            // tagControl
+            // 
+            this.tagControl.AutoSize = true;
+            this.tagControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
+            this.tagControl.BorderRadius = 15;
+            this.tagControl.BorderSize = 0;
+            this.tagControl.FlatAppearance.BorderSize = 0;
+            this.tagControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tagControl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.tagControl.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tagControl.IconSize = 20;
+            this.tagControl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.Location = new System.Drawing.Point(0, 0);
+            this.tagControl.Margin = new System.Windows.Forms.Padding(0);
+            this.tagControl.Name = "tagControl";
+            this.tagControl.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tagControl.Size = new System.Drawing.Size(114, 35);
+            this.tagControl.TabIndex = 1;
+            this.tagControl.Text = "Add Filter";
+            this.tagControl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tagControl.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.tagControl.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tagControl.UseVisualStyleBackColor = false;
             // 
             // NotesView
             // 
