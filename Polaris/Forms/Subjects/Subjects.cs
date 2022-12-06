@@ -65,9 +65,22 @@ namespace Polaris.Forms.Subjects
         {
             sectionLabel.Text = "Grades Section";
             ToggleActiveButton(GradesView);
-            OpenChildForm(new GradesView());
+            OpenChildForm(new GradesView(subject.subText));
         }
 
+        private void sectionButton_Click(object sender, EventArgs e)
+        {
+            if (sectionLabel.Text == "Notes Section")
+            {
+                NVInput nvInput = new NVInput(subject.subText);
+                nvInput.Show();
+            }
+            else if(sectionLabel.Text == "Activities Section")
+            {
+                AVInput avInput = new AVInput(subject.subText);
+                avInput.Show();
+            }
+        }
         #endregion Events
 
         #region Toggle Button

@@ -103,5 +103,11 @@ namespace Polaris.Forms.Tasks
                 c.Width = tableBodyFLP.Width;
             }
         }
+
+        private void sectionButton_Click(object sender, EventArgs e)
+        {
+            TasksInput tasksInput = new TasksInput();
+            tasksInput.Show();
+        }
     }
 }
