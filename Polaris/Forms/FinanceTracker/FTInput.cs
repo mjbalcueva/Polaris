@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Data.Odbc;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.FinanceTracker
@@ -11,6 +12,8 @@ namespace Polaris.Forms.FinanceTracker
         {
             InitializeComponent();
         }
+
+        #region Events
 
         private void Header_MouseDown(object sender, MouseEventArgs e)
         {
@@ -32,5 +35,36 @@ namespace Polaris.Forms.FinanceTracker
         {
             Close();
         }
+
+        public bool editing = false;
+        public string recordID = "";
+
+        private void SaveButton_Click(object sender, System.EventArgs e)
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+
+            connection.Close();
+            connection.Open();
+
+            if (editing)
+            {
+                OdbcCommand cmd = new OdbcCommand($"UPDATE finance SET value = '{valueLabel.Text}', description = '{descriptionLabel.Text}', modified = NOW() WHERE id = {recordID}",
+                    connection);
+                cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                OdbcCommand cmd = new OdbcCommand($"INSERT INTO finance (value, description) VALUES ('{valueLabel.Text}', '{descriptionLabel.Text}')", connection);
+                cmd.ExecuteNonQuery();
+            }
+            connection.Close();
+            Close();
+
+            Root root = (Root)Application.OpenForms["Root"];
+            root.OpenChildForm(new FinanceTracker());
+        }
+
+        #endregion Events
     }
 }

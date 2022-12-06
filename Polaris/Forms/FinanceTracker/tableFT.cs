@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Polaris.Components;
+using System;
+using System.Collections;
 using System.ComponentModel;
 using System.Data.Odbc;
 using System.Drawing;
@@ -74,6 +76,11 @@ namespace Polaris.Forms.FinanceTracker
         private void editButton_Click(object sender, EventArgs e)
         {
             FTInput inputForm = new FTInput();
+            inputForm.valueLabel.Text = Value;
+            inputForm.descriptionLabel.Text = Description;
+            inputForm.editing = true;
+            inputForm.recordID = ID;
+            inputForm.Show();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -86,7 +93,7 @@ namespace Polaris.Forms.FinanceTracker
 
         public void mouse_Enter(object sender, EventArgs e)
         {
-            background.BackColor = ColorTranslator.FromHtml("#1E2126");
+            background.BackColor = ColorTranslator.FromHtml("#1E2125");
         }
 
         public void mouse_Leave(object sender, EventArgs e)
@@ -114,10 +121,67 @@ namespace Polaris.Forms.FinanceTracker
             connection.Close();
         }
 
+        private static readonly ArrayList tags = new ArrayList();
+        public ArrayList TableTags { get; set; } = tags;
+
+        private void LoadTags()
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM finance_tags WHERE finance_id = " + ID, connection);
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                Tag tag = new Tag()
+                {
+                    TagName = dataReader.GetString(1),
+                    TagID = dataReader.GetString(2),
+                };
+                TableTags.Add(tag);
+            }
+
+            connection.Close();
+        }
+
+        private void GenerateDynamicTags()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            for (int i = 0; i < TableTags.Count; i++)
+            {
+                Tag tag = (Tag)TableTags[i];
+                if (tag.TagID == ID)
+                {
+                    flowLayoutPanel1.Controls.Add(tag);
+                }
+            }
+        }
+
         #endregion DB functions
+
+        #region Hidden Scroll
+
+        private void HiddenScroll()
+        {
+            flowLayoutPanel1.AutoScroll = false;
+            flowLayoutPanel1.VerticalScroll.Visible = false;
+            flowLayoutPanel1.VerticalScroll.Enabled = false;
+            flowLayoutPanel1.VerticalScroll.Maximum = 0;
+            flowLayoutPanel1.AutoScroll = true;
+        }
+
+        #endregion Hidden Scroll
 
         private void tableFT_Load(object sender, EventArgs e)
         {
+            LoadTags();
+            GenerateDynamicTags();
+            HiddenScroll();
         }
     }
 }

@@ -39,14 +39,14 @@
             // 
             // roundedPanel1
             // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
             this.roundedPanel1.BorderRadius = 15;
             this.roundedPanel1.Controls.Add(this.textBox1);
             this.roundedPanel1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.roundedPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.roundedPanel1.GradientAngle = 90F;
-            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.roundedPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
+            this.roundedPanel1.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
             this.roundedPanel1.Location = new System.Drawing.Point(90, 6);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Padding = new System.Windows.Forms.Padding(9);
@@ -56,13 +56,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.textBox1.Location = new System.Drawing.Point(9, 9);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 19);
+            this.textBox1.Size = new System.Drawing.Size(122, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.MouseEnter += new System.EventHandler(this.bgHover_MouseEnter);
@@ -70,14 +71,14 @@
             // icon
             // 
             this.icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.icon.BorderRadius = 15;
+            this.icon.BorderRadius = 10;
             this.icon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
             this.icon.GradientAngle = 90F;
-            this.icon.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.icon.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(10)))), ((int)(((byte)(11)))));
-            this.icon.Location = new System.Drawing.Point(58, 12);
+            this.icon.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
+            this.icon.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(18)))), ((int)(((byte)(21)))));
+            this.icon.Location = new System.Drawing.Point(58, 14);
             this.icon.Name = "icon";
-            this.icon.Size = new System.Drawing.Size(26, 26);
+            this.icon.Size = new System.Drawing.Size(22, 22);
             this.icon.TabIndex = 8;
             this.icon.MouseEnter += new System.EventHandler(this.bgHover_MouseEnter);
             // 
