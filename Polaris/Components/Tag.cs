@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Polaris.Components
@@ -16,5 +9,24 @@ namespace Polaris.Components
         {
             InitializeComponent();
         }
+
+        #region Getter, Setter & Constructor
+
+        private string _tagName = "Tag";
+
+        [Category("Tag Property")]
+        public string TagName
+        {
+            get { return _tagName; }
+            set { _tagName = value; tagLabel.Text = value; }
+        }
+
+        [Category("Tag Property")]
+        public string TagID { get; set; } = "0";
+
+        [Category("Tag Property")]
+        public string TagParentID { get; set; } = "-1";
+
+        #endregion Getter, Setter & Constructor
     }
 }

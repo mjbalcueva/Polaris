@@ -64,6 +64,8 @@
             this.border.Padding = new System.Windows.Forms.Padding(0, 0, 2, 2);
             this.border.Size = new System.Drawing.Size(1138, 50);
             this.border.TabIndex = 0;
+            this.border.MouseEnter += new System.EventHandler(this.mouse_Enter);
+            this.border.MouseLeave += new System.EventHandler(this.mouse_Leave);
             // 
             // background
             // 
@@ -255,6 +257,8 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(599, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -322,7 +326,6 @@
         public System.Windows.Forms.Label ModifiedLabel;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label CreatedLabel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton editButton;
         public System.Windows.Forms.Panel panel0;
         public System.Windows.Forms.Panel border;
@@ -330,5 +333,6 @@
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label ValueLabel;
         public FontAwesome.Sharp.IconButton deleteButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

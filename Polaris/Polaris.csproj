@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Components\SubjectMenu.resx">
       <DependentUpon>SubjectMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\Tag.resx">
+      <DependentUpon>Tag.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\TaskMenu.resx">
       <DependentUpon>TaskMenu.cs</DependentUpon>
     </EmbeddedResource>
