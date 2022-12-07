@@ -12,8 +12,16 @@ namespace Polaris.Forms.Subjects
 {
     public partial class GradesView : Form
     {
+        private string subText;
+        private static GradesView grades = new GradesView();
         public GradesView()
         {
+            InitializeComponent();
+        }
+
+        public GradesView(string text)
+        {
+            grades.subText = text;
             InitializeComponent();
         }
     }

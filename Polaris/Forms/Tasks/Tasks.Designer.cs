@@ -78,7 +78,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel1.Controls.Add(this.checkBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton0, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.iconButton5, 4, 0);
@@ -162,7 +162,7 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 23;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(885, 3);
+            this.iconButton5.Location = new System.Drawing.Point(883, 3);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Rotation = 90D;
@@ -190,7 +190,7 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 23;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(733, 3);
+            this.iconButton4.Location = new System.Drawing.Point(731, 3);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Rotation = 90D;
@@ -218,7 +218,7 @@
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 23;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(581, 3);
+            this.iconButton3.Location = new System.Drawing.Point(579, 3);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Rotation = 90D;
@@ -250,7 +250,7 @@
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton2.Rotation = 90D;
-            this.iconButton2.Size = new System.Drawing.Size(452, 44);
+            this.iconButton2.Size = new System.Drawing.Size(450, 44);
             this.iconButton2.TabIndex = 4;
             this.iconButton2.Text = "Description";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,6 +268,7 @@
             this.tableBodyFLP.Name = "tableBodyFLP";
             this.tableBodyFLP.Size = new System.Drawing.Size(1138, 510);
             this.tableBodyFLP.TabIndex = 13;
+            this.tableBodyFLP.Resize += new System.EventHandler(this.tableBodyFLP_Resize_1);
             // 
             // tagControl
             // 
@@ -319,6 +320,7 @@
             this.sectionButton.Text = "Button";
             this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.sectionButton.UseVisualStyleBackColor = false;
+            this.sectionButton.Click += new System.EventHandler(this.sectionButton_Click_1);
             // 
             // Tasks
             // 
@@ -336,6 +338,7 @@
             this.Name = "Tasks";
             this.Padding = new System.Windows.Forms.Padding(35, 25, 35, 25);
             this.Text = "Tasks";
+            this.Load += new System.EventHandler(this.Tasks_Load_1);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
