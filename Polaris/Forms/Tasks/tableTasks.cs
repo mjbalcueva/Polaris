@@ -1,16 +1,10 @@
-﻿using Polaris.Components;
-using Polaris.Forms.FinanceTracker;
-using Polaris.Forms.Subjects;
+﻿using FontAwesome.Sharp;
+using Polaris.Components;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Tasks
@@ -37,11 +31,16 @@ namespace Polaris.Forms.Tasks
             get { return _id; }
             set { _id = value; idLabel.Text = value; }
         }
+
         [Category("Record Property")]
         public string Completed
         {
             get { return _value; }
-            set { _value = value; CompletedLabel.Text = value; }
+            set
+            {
+                _value = value;
+                CompletedLabel.IconChar = value == "1" ? IconChar.CheckSquare : IconChar.Square;
+            }
         }
 
         [Category("Record Property")]
@@ -78,6 +77,7 @@ namespace Polaris.Forms.Tasks
         #endregion Getter, Setter & Constructor
 
         #region Events
+
         private void editButton_Click(object sender, EventArgs e)
         {
             TasksInput tasksinput = new TasksInput();
@@ -94,7 +94,7 @@ namespace Polaris.Forms.Tasks
             tasks.TableRecord.Remove(this);
             tasks.GenerateDynamicRecords();
         }
-        
+
         private void border_MouseEnter(object sender, EventArgs e)
         {
             background.BackColor = ColorTranslator.FromHtml("#1E2125");
@@ -104,10 +104,11 @@ namespace Polaris.Forms.Tasks
         {
             background.BackColor = Color;
         }
-        
+
         #endregion Events
 
         #region DB Functions
+
         private void RemoveTaskFromDB()
         {
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
@@ -161,7 +162,7 @@ namespace Polaris.Forms.Tasks
                 {
                     flowLayoutPanel1.Controls.Add(tag);
                 }
-            } 
+            }
         }
 
         #endregion DB Functions

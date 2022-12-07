@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Tasks
 {
     public partial class TasksInput : Form
     {
-
         private bool mouseDown = false;
 
         public TasksInput()
@@ -21,7 +14,7 @@ namespace Polaris.Forms.Tasks
             InitializeComponent();
         }
 
-        #region Events 
+        #region Events
 
         private void Header_MouseDown(object sender, MouseEventArgs e)
         {
@@ -30,8 +23,8 @@ namespace Polaris.Forms.Tasks
 
         private void Header_MouseMove(object sender, MouseEventArgs e)
         {
-            if(mouseDown)
-            Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
+            if (mouseDown)
+                Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
         }
 
         private void Header_MouseUp(object sender, MouseEventArgs e)
@@ -42,9 +35,8 @@ namespace Polaris.Forms.Tasks
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
 
-        }        
-        
         public bool editing = false;
         public string recordID = "";
 
