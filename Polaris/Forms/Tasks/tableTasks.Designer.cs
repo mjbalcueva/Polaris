@@ -32,6 +32,7 @@
             this.background = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CompletedLabel = new FontAwesome.Sharp.IconButton();
             this.deleteButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DescriptionLabel = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.CreatedLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.editButton = new FontAwesome.Sharp.IconButton();
-            this.CompletedLabel = new FontAwesome.Sharp.IconButton();
             this.border.SuspendLayout();
             this.background.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -121,6 +121,34 @@
             this.panel1.TabIndex = 8;
             this.panel1.MouseEnter += new System.EventHandler(this.border_MouseEnter);
             this.panel1.MouseLeave += new System.EventHandler(this.border_MouseLeave);
+            // 
+            // CompletedLabel
+            // 
+            this.CompletedLabel.AutoSize = true;
+            this.CompletedLabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CompletedLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CompletedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CompletedLabel.FlatAppearance.BorderSize = 0;
+            this.CompletedLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.CompletedLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.CompletedLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CompletedLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.CompletedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.CompletedLabel.IconChar = FontAwesome.Sharp.IconChar.Square;
+            this.CompletedLabel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.CompletedLabel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CompletedLabel.IconSize = 30;
+            this.CompletedLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CompletedLabel.Location = new System.Drawing.Point(0, 0);
+            this.CompletedLabel.Name = "CompletedLabel";
+            this.CompletedLabel.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.CompletedLabel.Size = new System.Drawing.Size(54, 42);
+            this.CompletedLabel.TabIndex = 13;
+            this.CompletedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CompletedLabel.UseVisualStyleBackColor = true;
+            this.CompletedLabel.Click += new System.EventHandler(this.CompletedLabel_Click);
+            this.CompletedLabel.MouseEnter += new System.EventHandler(this.border_MouseEnter);
+            this.CompletedLabel.MouseLeave += new System.EventHandler(this.border_MouseLeave);
             // 
             // deleteButton
             // 
@@ -275,33 +303,6 @@
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             this.editButton.MouseEnter += new System.EventHandler(this.border_MouseEnter);
             this.editButton.MouseLeave += new System.EventHandler(this.border_MouseLeave);
-            // 
-            // CompletedLabel
-            // 
-            this.CompletedLabel.AutoSize = true;
-            this.CompletedLabel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.CompletedLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CompletedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CompletedLabel.FlatAppearance.BorderSize = 0;
-            this.CompletedLabel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.CompletedLabel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.CompletedLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CompletedLabel.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CompletedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.CompletedLabel.IconChar = FontAwesome.Sharp.IconChar.Square;
-            this.CompletedLabel.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.CompletedLabel.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CompletedLabel.IconSize = 30;
-            this.CompletedLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CompletedLabel.Location = new System.Drawing.Point(0, 0);
-            this.CompletedLabel.Name = "CompletedLabel";
-            this.CompletedLabel.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.CompletedLabel.Size = new System.Drawing.Size(54, 42);
-            this.CompletedLabel.TabIndex = 13;
-            this.CompletedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CompletedLabel.UseVisualStyleBackColor = true;
-            this.CompletedLabel.MouseEnter += new System.EventHandler(this.border_MouseEnter);
-            this.CompletedLabel.MouseLeave += new System.EventHandler(this.border_MouseLeave);
             // 
             // tableTasks
             // 
