@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Root));
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.FTMenu = new Polaris.Components.SidebarMenu();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,14 +52,18 @@
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
-            this.love = new System.Windows.Forms.Label();
+            this.roundedPanel1 = new Polaris.Components.RoundedPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebarPanel.SuspendLayout();
             this.mainHeaderPanel.SuspendLayout();
+            this.roundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarPanel
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarPanel.Controls.Add(this.roundedPanel1);
             this.sidebarPanel.Controls.Add(this.FTMenu);
             this.sidebarPanel.Controls.Add(this.panel1);
             this.sidebarPanel.Controls.Add(this.border4);
@@ -281,7 +286,7 @@
             this.LogoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(43)))));
             this.LogoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
             this.LogoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoButton.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.LogoButton.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.LogoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.LogoButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.LogoButton.IconColor = System.Drawing.Color.Black;
@@ -289,10 +294,10 @@
             this.LogoButton.Location = new System.Drawing.Point(0, 0);
             this.LogoButton.Margin = new System.Windows.Forms.Padding(0);
             this.LogoButton.Name = "LogoButton";
-            this.LogoButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.LogoButton.Padding = new System.Windows.Forms.Padding(72, 0, 0, 0);
             this.LogoButton.Size = new System.Drawing.Size(300, 110);
             this.LogoButton.TabIndex = 0;
-            this.LogoButton.Text = "Polaris";
+            this.LogoButton.Text = "olaris";
             this.LogoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogoButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.LogoButton.UseVisualStyleBackColor = false;
@@ -301,7 +306,6 @@
             // mainHeaderPanel
             // 
             this.mainHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.mainHeaderPanel.Controls.Add(this.love);
             this.mainHeaderPanel.Controls.Add(this.MenuLabel);
             this.mainHeaderPanel.Controls.Add(this.toggleSidebarButton);
             this.mainHeaderPanel.Controls.Add(this.border1);
@@ -366,16 +370,30 @@
             this.mainEmbedPanel.Size = new System.Drawing.Size(1232, 773);
             this.mainEmbedPanel.TabIndex = 4;
             // 
-            // love
+            // roundedPanel1
             // 
-            this.love.AutoSize = true;
-            this.love.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.love.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.love.Location = new System.Drawing.Point(570, 26);
-            this.love.Name = "love";
-            this.love.Size = new System.Drawing.Size(93, 28);
-            this.love.TabIndex = 4;
-            this.love.Text = "Overview";
+            this.roundedPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.BorderRadius = 15;
+            this.roundedPanel1.Controls.Add(this.pictureBox1);
+            this.roundedPanel1.ForeColor = System.Drawing.Color.Black;
+            this.roundedPanel1.GradientAngle = 90F;
+            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.GradientTopColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.Location = new System.Drawing.Point(28, 22);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(58, 58);
+            this.roundedPanel1.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Polaris.Properties.Resources.PolarisIcon2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // Root
             // 
@@ -387,6 +405,7 @@
             this.Controls.Add(this.sidebarPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1140, 725);
             this.Name = "Root";
@@ -396,6 +415,8 @@
             this.sidebarPanel.ResumeLayout(false);
             this.mainHeaderPanel.ResumeLayout(false);
             this.mainHeaderPanel.PerformLayout();
+            this.roundedPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -424,6 +445,7 @@
         private Components.SidebarMenu FTMenu;
         public Components.TaskMenu All;
         public System.Windows.Forms.Panel mainEmbedPanel;
-        public System.Windows.Forms.Label love;
+        private Components.RoundedPanel roundedPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
