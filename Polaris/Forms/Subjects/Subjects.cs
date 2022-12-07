@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Polaris.Forms.FinanceTracker;
 using System;
 using System.Drawing;
 using System.Reflection;
@@ -8,8 +9,17 @@ namespace Polaris.Forms.Subjects
 {
     public partial class Subjects : Form
     {
+        private string subText;
+        private static Subjects subject = new Subjects();
+
         public Subjects()
         {
+            InitializeComponent();
+        }
+
+        public Subjects(string text)
+        {
+            subject.subText = text;
             InitializeComponent();
         }
 
@@ -44,7 +54,7 @@ namespace Polaris.Forms.Subjects
             sectionButton.Text = "Add Note";
             sectionButton.Enabled = true;
             ToggleActiveButton(NotesView);
-            OpenChildForm(new NotesView());
+            OpenChildForm(new NotesView(subject.subText));
         }
 
         private void ActivitiesView_Click(object sender, EventArgs e)
@@ -53,7 +63,7 @@ namespace Polaris.Forms.Subjects
             sectionButton.Text = "Add Activity";
             sectionButton.Enabled = true;
             ToggleActiveButton(ActivitiesView);
-            OpenChildForm(new ActivitiesView());
+            OpenChildForm(new ActivitiesView(subject.subText));
         }
 
         private void GradesView_Click(object sender, EventArgs e)
@@ -62,7 +72,7 @@ namespace Polaris.Forms.Subjects
             sectionButton.Text = "Viewing Grades";
             sectionButton.Enabled = false;
             ToggleActiveButton(GradesView);
-            OpenChildForm(new GradesView());
+            OpenChildForm(new GradesView(subject.subText));
         }
 
         #endregion Events
@@ -87,10 +97,24 @@ namespace Polaris.Forms.Subjects
 
         private void Subjects_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new NotesView());
+            OpenChildForm(new NotesView(subject.subText));
             sectionLabel.Text = "Notes Section";
             sectionButton.Text = "Add Note";
             ToggleActiveButton(NotesView);
+        }
+
+        private void sectionButton_Click(object sender, EventArgs e)
+        {
+            if (sectionLabel.Text == "Notes Section")
+            {
+                NVInput nvInput = new NVInput(subject.subText);
+                nvInput.Show();
+            }
+            else if (sectionLabel.Text == "Activities Section")
+            {
+                AVInput avInput = new AVInput(subject.subText);
+                avInput.Show();
+            }
         }
     }
 }

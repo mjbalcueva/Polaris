@@ -49,7 +49,7 @@ namespace Polaris.Components
         {
             Root root = (Root)ParentForm;
             root.MenuLabel.Text = ButtonText.Trim();
-            root.OpenChildForm(new Subjects());
+            root.OpenChildForm(new Subjects(ButtonText.Trim()));
         }
 
         private void subjectMenuItem_Enter(object sender, System.EventArgs e)

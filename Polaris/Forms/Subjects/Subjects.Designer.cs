@@ -175,6 +175,7 @@
             this.sectionButton.Text = "sectionButton";
             this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.sectionButton.UseVisualStyleBackColor = false;
+            this.sectionButton.Click += new System.EventHandler(this.sectionButton_Click);
             // 
             // Subjects
             // 

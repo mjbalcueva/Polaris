@@ -134,6 +134,12 @@
     <Compile Include="Forms\Subjects\ActivitiesView.designer.cs">
       <DependentUpon>ActivitiesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Subjects\AVInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\AVInput.Designer.cs">
+      <DependentUpon>AVInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Subjects\GradesView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,17 +152,47 @@
     <Compile Include="Forms\Subjects\NotesView.Designer.cs">
       <DependentUpon>NotesView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Subjects\NVInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\NVInput.Designer.cs">
+      <DependentUpon>NVInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Subjects\Subjects.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Subjects\Subjects.designer.cs">
       <DependentUpon>Subjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Subjects\tableAV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableAV.Designer.cs">
+      <DependentUpon>tableAV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Subjects\tableNV.Designer.cs">
+      <DependentUpon>tableNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tasks\tableTasks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Tasks\tableTasks.Designer.cs">
+      <DependentUpon>tableTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tasks\Tasks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tasks\Tasks.designer.cs">
       <DependentUpon>Tasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tasks\TasksInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tasks\TasksInput.Designer.cs">
+      <DependentUpon>TasksInput.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,17 +232,35 @@
     <EmbeddedResource Include="Forms\Subjects\ActivitiesView.resx">
       <DependentUpon>ActivitiesView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\AVInput.resx">
+      <DependentUpon>AVInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Subjects\GradesView.resx">
       <DependentUpon>GradesView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Subjects\NotesView.resx">
       <DependentUpon>NotesView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\NVInput.resx">
+      <DependentUpon>NVInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Subjects\Subjects.resx">
       <DependentUpon>Subjects.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\tableAV.resx">
+      <DependentUpon>tableAV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Subjects\tableNV.resx">
+      <DependentUpon>tableNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tasks\tableTasks.resx">
+      <DependentUpon>tableTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tasks\Tasks.resx">
       <DependentUpon>Tasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tasks\TasksInput.resx">
+      <DependentUpon>TasksInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
