@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Data.Odbc;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Tasks
@@ -79,7 +80,28 @@ namespace Polaris.Forms.Tasks
         private void sectionButton_Click_1(object sender, EventArgs e)
         {
             TasksInput tasksInput = new TasksInput();
-            tasksInput.Show();
+            ClearTask clearTask = new ClearTask();
+
+            if (sectionButton.Text == "Clear Drafts")
+            {
+                clearTask.DeleteLabel.Text = "Delete all records in Drafts Section?";
+                clearTask.Show();
+            }else if (sectionButton.Text == "Clear Archives")
+            {
+                clearTask.DeleteLabel.Text = "Delete all records in Archived Section?";
+                clearTask.Show();
+            }
+            else if (sectionButton.Text == "Clear Deletes")
+            {
+                clearTask.DeleteLabel.Text = "Delete all records in Deleted Section?";
+                clearTask.Show();
+            }
+            else 
+            { 
+                tasksInput.Show();
+            }
+            
+            
         }
 
         private void tableBodyFLP_Resize_1(object sender, EventArgs e)

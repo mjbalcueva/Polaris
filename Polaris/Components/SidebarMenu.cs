@@ -99,7 +99,8 @@ namespace Polaris.Components
 
             if (ButtonText == "  Tasks")
             {
-                root.MenuLabel.Text = "Tasks Badge Clicked";
+                TasksInput tasksinput = new TasksInput();
+                tasksinput.Show();
             }
             else if (ButtonText == "  Subjects")
             {
@@ -119,8 +120,7 @@ namespace Polaris.Components
                 root.subjectsFLP.Height += 56;
             }
             else if (ButtonText == "  Finance Tracker")
-            {
-                root.MenuLabel.Text = "Extra Badge Clicked";
+            {   
                 FTInput ftInput = new FTInput();
                 ftInput.Show();
             }

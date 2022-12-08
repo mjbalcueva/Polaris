@@ -42,6 +42,7 @@ namespace Polaris.Forms.Tasks
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            Root root = (Root)Application.OpenForms["Root"];
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
             OdbcConnection connection = new OdbcConnection(connectionString);
 
@@ -62,8 +63,15 @@ namespace Polaris.Forms.Tasks
             connection.Close();
             Close();
 
-            Root root = (Root)Application.OpenForms["Root"];
-            root.OpenChildForm(new Tasks());
+            if (root.MenuLabel.Text == "Tasks")
+            {
+                root.OpenChildForm(new Tasks());
+            }
+            else
+            {
+                MessageBox.Show("Saved");
+            }
+            
         }
 
         #endregion Events
