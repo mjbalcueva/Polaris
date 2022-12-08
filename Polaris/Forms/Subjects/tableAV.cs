@@ -24,8 +24,6 @@ namespace Polaris.Forms.Subjects
         #region Getter, Setter & Constructor
 
         private string _id;
-        private string _value = "0";
-        private string _outOf = "0";
         private string _description = "Description";
         private string _createdDate = "Created Date";
         private string _modifiedDate = "Modified Date";
@@ -37,18 +35,13 @@ namespace Polaris.Forms.Subjects
             get { return _id; }
             set { _id = value; idLabel.Text = value; }
         }
+
         [Category("Record Property")]
-        public string Score
-        {
-            get { return _value; }
-            set { _value = value; ScoreLabel.Text = value; }
-        }
+        public string Score { get; set; } = "0";
+
         [Category("Record Property")]
-        public string OutOf
-        {
-            get { return _outOf; }
-            set { _outOf = value; outOfLabel.Text = value; }
-        }
+        public string OutOf { get; set; } = "0";
+
         [Category("Record Property")]
         public string ActDesc
         {
@@ -80,10 +73,10 @@ namespace Polaris.Forms.Subjects
             set { _color = value; background.BackColor = value; }
         }
 
-
         #endregion Getter, Setter & Constructor
 
         #region Events
+
         private void editButton_Click(object sender, EventArgs e)
         {
             AVInput avinput = new AVInput();
@@ -173,7 +166,7 @@ namespace Polaris.Forms.Subjects
             }
         }
 
-        #endregion DB Functions
+        #endregion DB Functons
 
         #region Hidden Scroll
 
@@ -186,9 +179,6 @@ namespace Polaris.Forms.Subjects
             flowLayoutPanel1.AutoScroll = true;
         }
 
-
-
-
         #endregion Hidden Scroll
 
         private void tableAV_Load(object sender, EventArgs e)
@@ -196,6 +186,7 @@ namespace Polaris.Forms.Subjects
             LoadTags();
             GenerateDynamicTags();
             HiddenScroll();
+            ScoreLabel.Text = Score + " / " + OutOf;
         }
     }
 }

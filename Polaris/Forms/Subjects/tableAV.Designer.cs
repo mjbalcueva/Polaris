@@ -33,7 +33,6 @@
             this.background = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.outOfLabel = new System.Windows.Forms.Label();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.deleteButton = new FontAwesome.Sharp.IconButton();
             this.panel0 = new System.Windows.Forms.Panel();
@@ -45,7 +44,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.editButton = new FontAwesome.Sharp.IconButton();
             this.border = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.background.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -63,7 +61,7 @@
             this.panel2.Location = new System.Drawing.Point(209, 3);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(383, 42);
+            this.panel2.Size = new System.Drawing.Size(384, 42);
             this.panel2.TabIndex = 2;
             this.panel2.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
             this.panel2.MouseLeave += new System.EventHandler(this.deleteButton_MouseLeave);
@@ -75,7 +73,7 @@
             this.DescriptionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.DescriptionLabel.Location = new System.Drawing.Point(13, 12);
             this.DescriptionLabel.Name = "DescriptionLabel";
-            this.DescriptionLabel.Size = new System.Drawing.Size(110, 19);
+            this.DescriptionLabel.Size = new System.Drawing.Size(121, 20);
             this.DescriptionLabel.TabIndex = 1;
             this.DescriptionLabel.Text = "DescriptionLabel";
             this.DescriptionLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
@@ -104,7 +102,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.deleteButton, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
@@ -127,8 +125,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.outOfLabel);
             this.panel1.Controls.Add(this.ScoreLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(63, 3);
@@ -139,29 +135,16 @@
             this.panel1.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
             this.panel1.MouseLeave += new System.EventHandler(this.deleteButton_MouseLeave);
             // 
-            // outOfLabel
-            // 
-            this.outOfLabel.AutoSize = true;
-            this.outOfLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.outOfLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
-            this.outOfLabel.Location = new System.Drawing.Point(55, 12);
-            this.outOfLabel.Name = "outOfLabel";
-            this.outOfLabel.Size = new System.Drawing.Size(33, 19);
-            this.outOfLabel.TabIndex = 0;
-            this.outOfLabel.Text = "100";
-            this.outOfLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
-            this.outOfLabel.MouseLeave += new System.EventHandler(this.deleteButton_MouseLeave);
-            // 
             // ScoreLabel
             // 
             this.ScoreLabel.AutoSize = true;
             this.ScoreLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ScoreLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
-            this.ScoreLabel.Location = new System.Drawing.Point(24, 12);
+            this.ScoreLabel.Location = new System.Drawing.Point(13, 12);
             this.ScoreLabel.Name = "ScoreLabel";
-            this.ScoreLabel.Size = new System.Drawing.Size(25, 19);
+            this.ScoreLabel.Size = new System.Drawing.Size(82, 20);
             this.ScoreLabel.TabIndex = 0;
-            this.ScoreLabel.Text = "99";
+            this.ScoreLabel.Text = "ScoreLabel";
             this.ScoreLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
             this.ScoreLabel.MouseLeave += new System.EventHandler(this.deleteButton_MouseLeave);
             // 
@@ -177,9 +160,9 @@
             this.deleteButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
             this.deleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.deleteButton.IconSize = 25;
-            this.deleteButton.Location = new System.Drawing.Point(1086, 3);
+            this.deleteButton.Location = new System.Drawing.Point(1087, 3);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(47, 42);
+            this.deleteButton.Size = new System.Drawing.Size(46, 42);
             this.deleteButton.TabIndex = 7;
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
@@ -205,7 +188,7 @@
             this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.idLabel.Location = new System.Drawing.Point(13, 12);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(23, 19);
+            this.idLabel.Size = new System.Drawing.Size(24, 20);
             this.idLabel.TabIndex = 0;
             this.idLabel.Text = "ID";
             this.idLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
@@ -215,7 +198,7 @@
             // 
             this.panel4.Controls.Add(this.ModifiedLabel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(890, 3);
+            this.panel4.Location = new System.Drawing.Point(891, 3);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panel4.Size = new System.Drawing.Size(140, 42);
@@ -230,7 +213,7 @@
             this.ModifiedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.ModifiedLabel.Location = new System.Drawing.Point(13, 12);
             this.ModifiedLabel.Name = "ModifiedLabel";
-            this.ModifiedLabel.Size = new System.Drawing.Size(95, 19);
+            this.ModifiedLabel.Size = new System.Drawing.Size(106, 20);
             this.ModifiedLabel.TabIndex = 1;
             this.ModifiedLabel.Text = "ModifiedLabel";
             this.ModifiedLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
@@ -240,7 +223,7 @@
             // 
             this.panel3.Controls.Add(this.CreatedLabel);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(744, 3);
+            this.panel3.Location = new System.Drawing.Point(745, 3);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panel3.Size = new System.Drawing.Size(140, 42);
@@ -255,7 +238,7 @@
             this.CreatedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
             this.CreatedLabel.Location = new System.Drawing.Point(13, 12);
             this.CreatedLabel.Name = "CreatedLabel";
-            this.CreatedLabel.Size = new System.Drawing.Size(89, 19);
+            this.CreatedLabel.Size = new System.Drawing.Size(97, 20);
             this.CreatedLabel.TabIndex = 1;
             this.CreatedLabel.Text = "CreatedLabel";
             this.CreatedLabel.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
@@ -265,7 +248,7 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(598, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(599, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(140, 42);
@@ -285,7 +268,7 @@
             this.editButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(197)))), ((int)(((byte)(94)))));
             this.editButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.editButton.IconSize = 30;
-            this.editButton.Location = new System.Drawing.Point(1036, 3);
+            this.editButton.Location = new System.Drawing.Point(1037, 3);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(44, 42);
             this.editButton.TabIndex = 6;
@@ -306,17 +289,6 @@
             this.border.TabIndex = 2;
             this.border.MouseEnter += new System.EventHandler(this.deleteButton_MouseEnter);
             this.border.MouseLeave += new System.EventHandler(this.deleteButton_MouseLeave);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
-            this.label1.Location = new System.Drawing.Point(45, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "/";
             // 
             // tableAV
             // 
@@ -354,7 +326,6 @@
         public System.Windows.Forms.Panel background;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label outOfLabel;
         public System.Windows.Forms.Label ScoreLabel;
         public FontAwesome.Sharp.IconButton deleteButton;
         public System.Windows.Forms.Panel panel0;
@@ -366,6 +337,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public FontAwesome.Sharp.IconButton editButton;
         public System.Windows.Forms.Panel border;
-        private System.Windows.Forms.Label label1;
     }
 }
