@@ -224,8 +224,11 @@ namespace Polaris.Forms.Tasks
 
             connection.Close();
 
-            Root root = (Root)Application.OpenForms["Root"];
-            root.OpenChildForm(new Tasks());
+            //Root root = (Root)Application.OpenForms["Root"];
+            //root.OpenChildForm(new Tasks());
+
+            Tasks tasks = (Tasks)ParentForm;
+            tasks.Tasks_Load(sender, e);
         }
     }
 }

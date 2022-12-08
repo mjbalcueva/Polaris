@@ -72,7 +72,13 @@ namespace Polaris.Forms.Tasks
 
             for (int i = 0; i < recordCount; i++)
             {
-                tableBodyFLP.Controls.Add((tableTasks)TableRecord[i]);
+                if (((tableTasks)TableRecord[i]).Completed == "0")
+                    tableBodyFLP.Controls.Add((tableTasks)TableRecord[i]);
+            }
+            for (int i = 0; i < recordCount; i++)
+            {
+                if (((tableTasks)TableRecord[i]).Completed == "1")
+                    tableBodyFLP.Controls.Add((tableTasks)TableRecord[i]);
             }
         }
 
