@@ -57,7 +57,7 @@
             this.Main.Location = new System.Drawing.Point(0, 0);
             this.Main.Name = "Main";
             this.Main.Padding = new System.Windows.Forms.Padding(3);
-            this.Main.Size = new System.Drawing.Size(600, 168);
+            this.Main.Size = new System.Drawing.Size(700, 168);
             this.Main.TabIndex = 1;
             // 
             // border3
@@ -66,7 +66,7 @@
             this.border3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.border3.Location = new System.Drawing.Point(3, 83);
             this.border3.Name = "border3";
-            this.border3.Size = new System.Drawing.Size(594, 2);
+            this.border3.Size = new System.Drawing.Size(694, 2);
             this.border3.TabIndex = 3;
             // 
             // Footer
@@ -79,7 +79,7 @@
             this.Footer.Location = new System.Drawing.Point(3, 85);
             this.Footer.Name = "Footer";
             this.Footer.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.Footer.Size = new System.Drawing.Size(594, 80);
+            this.Footer.Size = new System.Drawing.Size(694, 80);
             this.Footer.TabIndex = 4;
             // 
             // CancelButton
@@ -97,7 +97,7 @@
             this.CancelButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.CancelButton.IconColor = System.Drawing.Color.Black;
             this.CancelButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.CancelButton.Location = new System.Drawing.Point(267, 16);
+            this.CancelButton.Location = new System.Drawing.Point(367, 16);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(150, 48);
             this.CancelButton.TabIndex = 9;
@@ -121,7 +121,7 @@
             this.DeleteButton.IconChar = FontAwesome.Sharp.IconChar.None;
             this.DeleteButton.IconColor = System.Drawing.Color.Black;
             this.DeleteButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeleteButton.Location = new System.Drawing.Point(423, 16);
+            this.DeleteButton.Location = new System.Drawing.Point(523, 16);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(150, 48);
             this.DeleteButton.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.border2.Dock = System.Windows.Forms.DockStyle.Top;
             this.border2.Location = new System.Drawing.Point(3, 83);
             this.border2.Name = "border2";
-            this.border2.Size = new System.Drawing.Size(594, 2);
+            this.border2.Size = new System.Drawing.Size(694, 2);
             this.border2.TabIndex = 1;
             // 
             // Header
@@ -148,7 +148,7 @@
             this.Header.Location = new System.Drawing.Point(3, 3);
             this.Header.Name = "Header";
             this.Header.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.Header.Size = new System.Drawing.Size(594, 80);
+            this.Header.Size = new System.Drawing.Size(694, 80);
             this.Header.TabIndex = 0;
             this.Header.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Header_MouseDown);
             this.Header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Header_MouseMove);
@@ -170,7 +170,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(600, 168);
+            this.ClientSize = new System.Drawing.Size(700, 168);
             this.Controls.Add(this.Main);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));

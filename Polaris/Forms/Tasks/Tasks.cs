@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Data.Odbc;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Tasks
@@ -77,7 +76,7 @@ namespace Polaris.Forms.Tasks
             }
         }
 
-        private void sectionButton_Click_1(object sender, EventArgs e)
+        private void sectionButton_Click(object sender, EventArgs e)
         {
             TasksInput tasksInput = new TasksInput();
             ClearTask clearTask = new ClearTask();
@@ -86,7 +85,8 @@ namespace Polaris.Forms.Tasks
             {
                 clearTask.DeleteLabel.Text = "Delete all records in Drafts Section?";
                 clearTask.Show();
-            }else if (sectionButton.Text == "Clear Archives")
+            }
+            else if (sectionButton.Text == "Clear Archives")
             {
                 clearTask.DeleteLabel.Text = "Delete all records in Archived Section?";
                 clearTask.Show();
@@ -96,15 +96,13 @@ namespace Polaris.Forms.Tasks
                 clearTask.DeleteLabel.Text = "Delete all records in Deleted Section?";
                 clearTask.Show();
             }
-            else 
-            { 
+            else
+            {
                 tasksInput.Show();
             }
-            
-            
         }
 
-        private void tableBodyFLP_Resize_1(object sender, EventArgs e)
+        private void tableBodyFLP_Resize(object sender, EventArgs e)
         {
             foreach (Control c in tableBodyFLP.Controls)
             {
@@ -112,7 +110,7 @@ namespace Polaris.Forms.Tasks
             }
         }
 
-        private void Tasks_Load_1(object sender, EventArgs e)
+        private void Tasks_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             if (sectionLabel.Text == "Drafts Section")

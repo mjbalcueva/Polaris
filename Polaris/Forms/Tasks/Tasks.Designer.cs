@@ -296,7 +296,7 @@
             this.tableBodyFLP.Name = "tableBodyFLP";
             this.tableBodyFLP.Size = new System.Drawing.Size(1138, 510);
             this.tableBodyFLP.TabIndex = 13;
-            this.tableBodyFLP.Resize += new System.EventHandler(this.tableBodyFLP_Resize_1);
+            this.tableBodyFLP.Resize += new System.EventHandler(this.tableBodyFLP_Resize);
             // 
             // sectionButton
             // 
@@ -320,7 +320,7 @@
             this.sectionButton.Text = "Button";
             this.sectionButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
             this.sectionButton.UseVisualStyleBackColor = false;
-            this.sectionButton.Click += new System.EventHandler(this.sectionButton_Click_1);
+            this.sectionButton.Click += new System.EventHandler(this.sectionButton_Click);
             // 
             // Tasks
             // 
@@ -338,7 +338,7 @@
             this.Name = "Tasks";
             this.Padding = new System.Windows.Forms.Padding(35, 25, 35, 25);
             this.Text = "Tasks";
-            this.Load += new System.EventHandler(this.Tasks_Load_1);
+            this.Load += new System.EventHandler(this.Tasks_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

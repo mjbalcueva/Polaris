@@ -90,7 +90,14 @@ namespace Polaris.Forms.Tasks
         private void deleteButton_Click(object sender, EventArgs e)
         {
             Tasks tasks = (Tasks)ParentForm;
-            RemoveTaskFromDB();
+            if (tasks.sectionLabel.Text != "Deleted Section")
+            {
+                MoveTaskToDeleted();
+            }
+            else
+            {
+                RemoveTaskFromDB();
+            }
             tasks.TableRecord.Remove(this);
             tasks.GenerateDynamicRecords();
         }
@@ -108,6 +115,20 @@ namespace Polaris.Forms.Tasks
         #endregion Events
 
         #region DB Functions
+
+        private void MoveTaskToDeleted()
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("UPDATE task SET group_id = 3 WHERE id = " + ID, connection);
+            cmd.ExecuteNonQuery();
+
+            connection.Close();
+        }
 
         private void RemoveTaskFromDB()
         {
