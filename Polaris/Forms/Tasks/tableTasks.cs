@@ -100,6 +100,9 @@ namespace Polaris.Forms.Tasks
             }
             tasks.TableRecord.Remove(this);
             tasks.GenerateDynamicRecords();
+
+            Root root = (Root)tasks.ParentForm;
+            root.UpdateTaskCount();
         }
 
         private void border_MouseEnter(object sender, EventArgs e)

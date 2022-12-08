@@ -174,8 +174,50 @@ namespace Polaris
 
         #endregion Hidden Scroll
 
+        #region Count Tasks
+
+        public void UpdateTaskCount()
+        {
+            int allTasksCount = 0;
+            int draftsTaskCount = 0;
+            int archivesTasksCount = 0;
+            int deletedTasksCount = 0;
+
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM task", connection);
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                if (dataReader.GetString(5) == "3")
+                    deletedTasksCount++;
+                else if (dataReader.GetString(5) == "2")
+                    archivesTasksCount++;
+                else if (dataReader.GetString(5) == "1")
+                    draftsTaskCount++;
+                else
+                    allTasksCount++;
+            }
+
+            connection.Close();
+
+            All.BadgeText = allTasksCount.ToString();
+            Drafts.BadgeText = draftsTaskCount.ToString();
+            Archived.BadgeText = archivesTasksCount.ToString();
+            Deleted.BadgeText = deletedTasksCount.ToString();
+        }
+
+        #endregion Count Tasks
+
         private void Root_Load(object sender, EventArgs e)
         {
+            UpdateTaskCount();
             CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
             OpenChildForm(new Overview());
             GetSubject();

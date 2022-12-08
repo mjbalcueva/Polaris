@@ -52,6 +52,9 @@ namespace Polaris.Forms.Tasks
                 connection.Close();
                 Close();
             }
+
+            Root root = (Root)Application.OpenForms["Root"];
+            root.UpdateTaskCount();
         }
 
         public bool editing = false;
@@ -78,6 +81,9 @@ namespace Polaris.Forms.Tasks
             }
             connection.Close();
             Close();
+
+            Root root = (Root)Application.OpenForms["Root"];
+            root.UpdateTaskCount();
         }
 
         #endregion Events

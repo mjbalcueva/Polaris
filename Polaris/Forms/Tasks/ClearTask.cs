@@ -33,6 +33,9 @@ namespace Polaris.Forms.Tasks
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Close();
+
+            Root root = (Root)Application.OpenForms["Root"];
+            root.UpdateTaskCount();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -64,6 +67,9 @@ namespace Polaris.Forms.Tasks
 
             tasks.TableRecord.Clear();
             tasks.GenerateDynamicRecords();
+
+            Root root = (Root)Application.OpenForms["Root"];
+            root.UpdateTaskCount();
         }
 
         private static void DeleteAll(OdbcConnection connection)

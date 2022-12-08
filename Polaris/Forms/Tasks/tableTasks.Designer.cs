@@ -213,7 +213,7 @@
             this.idLabel.AutoSize = true;
             this.idLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.idLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(168)))));
-            this.idLabel.Location = new System.Drawing.Point(13, 12);
+            this.idLabel.Location = new System.Drawing.Point(13, 11);
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(24, 20);
             this.idLabel.TabIndex = 0;

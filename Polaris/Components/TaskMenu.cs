@@ -90,12 +90,20 @@ namespace Polaris.Components
         {
             taskMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
             taskMenuItem.IconColor = ColorTranslator.FromHtml("#FDFEFF");
+            badge.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
+            badge.BackColor = ColorTranslator.FromHtml("#414149");
+            badge.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#414149");
+            badge.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#414149");
         }
 
         private void taskMenuItem_Leave(object sender, System.EventArgs e)
         {
             taskMenuItem.ForeColor = ColorTranslator.FromHtml("#6A6A73");
             taskMenuItem.IconColor = ColorTranslator.FromHtml("#6A6A73");
+            badge.ForeColor = ColorTranslator.FromHtml("#6A6A73");
+            badge.BackColor = ColorTranslator.FromHtml("#2B2B31");
+            badge.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#2B2B31");
+            badge.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#2B2B31");
         }
 
         #endregion Button Click Events

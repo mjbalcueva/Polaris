@@ -30,7 +30,6 @@
         {
             this.taskMenuItem = new Polaris.Components.RoundedButton();
             this.badge = new Polaris.Components.RoundedButton();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // taskMenuItem
@@ -76,8 +75,8 @@
             this.badge.BorderSize = 0;
             this.badge.Cursor = System.Windows.Forms.Cursors.Hand;
             this.badge.FlatAppearance.BorderSize = 0;
-            this.badge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.badge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.badge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
+            this.badge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(49)))));
             this.badge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.badge.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.badge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
@@ -112,7 +111,6 @@
 
         #endregion
         private RoundedButton badge;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         public RoundedButton taskMenuItem;
     }
 }
