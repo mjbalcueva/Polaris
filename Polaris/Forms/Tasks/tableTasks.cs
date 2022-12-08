@@ -115,6 +115,23 @@ namespace Polaris.Forms.Tasks
             background.BackColor = Color;
         }
 
+        private void CompletedLabel_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand command = new OdbcCommand("UPDATE task SET completed = " + (Completed == "1" ? "0" : "1") + " WHERE id = " + ID, connection);
+            command.ExecuteNonQuery();
+
+            connection.Close();
+
+            Tasks tasks = (Tasks)ParentForm;
+            tasks.Tasks_Load(sender, e);
+        }
+
         #endregion Events
 
         #region DB Functions
@@ -209,26 +226,6 @@ namespace Polaris.Forms.Tasks
             LoadTags();
             GenerateDynamicTags();
             HiddenScroll();
-        }
-
-        private void CompletedLabel_Click(object sender, EventArgs e)
-        {
-            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
-            OdbcConnection connection = new OdbcConnection(connectionString);
-
-            connection.Close();
-            connection.Open();
-
-            OdbcCommand command = new OdbcCommand("UPDATE task SET completed = " + (Completed == "1" ? "0" : "1") + " WHERE id = " + ID, connection);
-            command.ExecuteNonQuery();
-
-            connection.Close();
-
-            //Root root = (Root)Application.OpenForms["Root"];
-            //root.OpenChildForm(new Tasks());
-
-            Tasks tasks = (Tasks)ParentForm;
-            tasks.Tasks_Load(sender, e);
         }
     }
 }
