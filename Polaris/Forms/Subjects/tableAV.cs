@@ -87,6 +87,8 @@ namespace Polaris.Forms.Subjects
         private void editButton_Click(object sender, EventArgs e)
         {
             AVInput avinput = new AVInput();
+            avinput.scoreLabel.Text = Score;
+            avinput.outOfLabel.Text = OutOf;
             avinput.descriptionLabel.Text = ActDesc;
             avinput.editing = true;
             avinput.recordID = ID;
