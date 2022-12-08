@@ -34,7 +34,24 @@ namespace Polaris.Forms.Tasks
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            if (descriptionLabel.Text.Trim() == "")
+            {
+                Close();
+            }
+            else
+            {
+                string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+                OdbcConnection connection = new OdbcConnection(connectionString);
+
+                connection.Close();
+                connection.Open();
+
+                OdbcCommand cmd = new OdbcCommand($"INSERT INTO task (description, group_id) VALUES ('{descriptionLabel.Text}', 1)", connection);
+                cmd.ExecuteNonQuery();
+
+                connection.Close();
+                Close();
+            }
         }
 
         public bool editing = false;
@@ -42,7 +59,6 @@ namespace Polaris.Forms.Tasks
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            Root root = (Root)Application.OpenForms["Root"];
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
             OdbcConnection connection = new OdbcConnection(connectionString);
 
