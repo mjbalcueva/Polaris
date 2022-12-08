@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Root));
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.roundedPanel1 = new Polaris.Components.RoundedPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.FTMenu = new Polaris.Components.SidebarMenu();
             this.panel1 = new System.Windows.Forms.Panel();
             this.border4 = new System.Windows.Forms.Panel();
@@ -52,12 +54,10 @@
             this.toggleSidebarButton = new Polaris.Components.RoundedButton();
             this.border1 = new System.Windows.Forms.Panel();
             this.mainEmbedPanel = new System.Windows.Forms.Panel();
-            this.roundedPanel1 = new Polaris.Components.RoundedPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebarPanel.SuspendLayout();
-            this.mainHeaderPanel.SuspendLayout();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebarPanel
@@ -87,6 +87,31 @@
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(300, 853);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // roundedPanel1
+            // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.BorderRadius = 15;
+            this.roundedPanel1.Controls.Add(this.pictureBox1);
+            this.roundedPanel1.ForeColor = System.Drawing.Color.Black;
+            this.roundedPanel1.GradientAngle = 90F;
+            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.GradientTopColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.Location = new System.Drawing.Point(28, 22);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(58, 58);
+            this.roundedPanel1.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Polaris.Properties.Resources.PolarisIcon2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // FTMenu
             // 
@@ -253,8 +278,6 @@
             this.TasksMenu.Name = "TasksMenu";
             this.TasksMenu.Size = new System.Drawing.Size(300, 60);
             this.TasksMenu.TabIndex = 3;
-            this.TasksMenu.Enter += new System.EventHandler(this.TasksMenu_Enter);
-            this.TasksMenu.Leave += new System.EventHandler(this.TasksMenu_Leave);
             // 
             // placeholder1
             // 
@@ -370,31 +393,6 @@
             this.mainEmbedPanel.Size = new System.Drawing.Size(1232, 773);
             this.mainEmbedPanel.TabIndex = 4;
             // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.roundedPanel1.BorderRadius = 15;
-            this.roundedPanel1.Controls.Add(this.pictureBox1);
-            this.roundedPanel1.ForeColor = System.Drawing.Color.Black;
-            this.roundedPanel1.GradientAngle = 90F;
-            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.Transparent;
-            this.roundedPanel1.GradientTopColor = System.Drawing.Color.Transparent;
-            this.roundedPanel1.Location = new System.Drawing.Point(28, 22);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(58, 58);
-            this.roundedPanel1.TabIndex = 21;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Polaris.Properties.Resources.PolarisIcon2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // Root
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -413,10 +411,10 @@
             this.Text = "Polaris";
             this.Load += new System.EventHandler(this.Root_Load);
             this.sidebarPanel.ResumeLayout(false);
-            this.mainHeaderPanel.ResumeLayout(false);
-            this.mainHeaderPanel.PerformLayout();
             this.roundedPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mainHeaderPanel.ResumeLayout(false);
+            this.mainHeaderPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

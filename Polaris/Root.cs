@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Data.Odbc;
 using System.Drawing;
-using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -67,22 +66,6 @@ namespace Polaris
         }
 
         #endregion Open Form
-
-        #region Toggle Active Button Font & Icon Color
-
-        private void TasksMenu_Enter(object sender, EventArgs e)
-        {
-            All.taskMenuItem.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
-            All.taskMenuItem.IconColor = ColorTranslator.FromHtml("#FDFEFF");
-        }
-
-        private void TasksMenu_Leave(object sender, EventArgs e)
-        {
-            All.taskMenuItem.ForeColor = ColorTranslator.FromHtml("#6A6A73");
-            All.taskMenuItem.IconColor = ColorTranslator.FromHtml("#6A6A73");
-        }
-
-        #endregion Toggle Active Button Font & Icon Color
 
         #region ButtonClick Events
 

@@ -110,7 +110,7 @@
         }
 
         #endregion
-        private RoundedButton badge;
         public RoundedButton taskMenuItem;
+        public RoundedButton badge;
     }
 }

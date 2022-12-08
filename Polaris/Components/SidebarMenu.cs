@@ -67,6 +67,7 @@ namespace Polaris.Components
 
             if (ButtonText == "  Tasks")
             {
+                root.All.Focus();
                 root.MenuLabel.Text = "Tasks";
                 Tasks tasks = new Tasks();
                 tasks.sectionLabel.Text = "All Section";
@@ -120,7 +121,7 @@ namespace Polaris.Components
                 root.subjectsFLP.Height += 56;
             }
             else if (ButtonText == "  Finance Tracker")
-            {   
+            {
                 FTInput ftInput = new FTInput();
                 ftInput.Show();
             }
