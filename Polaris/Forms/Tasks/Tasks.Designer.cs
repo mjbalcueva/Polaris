@@ -190,11 +190,11 @@
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 23;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(887, 3);
+            this.iconButton5.Location = new System.Drawing.Point(885, 3);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Rotation = 90D;
-            this.iconButton5.Size = new System.Drawing.Size(147, 44);
+            this.iconButton5.Size = new System.Drawing.Size(146, 44);
             this.iconButton5.TabIndex = 8;
             this.iconButton5.Text = "Modified";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,11 +218,11 @@
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 23;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(734, 3);
+            this.iconButton4.Location = new System.Drawing.Point(733, 3);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Rotation = 90D;
-            this.iconButton4.Size = new System.Drawing.Size(147, 44);
+            this.iconButton4.Size = new System.Drawing.Size(146, 44);
             this.iconButton4.TabIndex = 7;
             this.iconButton4.Text = "Created";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,7 +250,7 @@
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Rotation = 90D;
-            this.iconButton3.Size = new System.Drawing.Size(147, 44);
+            this.iconButton3.Size = new System.Drawing.Size(146, 44);
             this.iconButton3.TabIndex = 6;
             this.iconButton3.Text = "Tags";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
