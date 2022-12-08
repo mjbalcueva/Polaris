@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Subjects
 {
     public partial class NVInput : Form
     {
-
         private bool mouseDown = false;
         private string subText;
         private int subID;
-        static NVInput note = new NVInput();
-        
+        private static NVInput note = new NVInput();
+
         public NVInput()
         {
             InitializeComponent();
@@ -31,10 +24,10 @@ namespace Polaris.Forms.Subjects
         }
 
         #region Events
-       
+
         public bool editing = false;
         public string recordID = "";
-  
+
         private void Header_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -43,8 +36,7 @@ namespace Polaris.Forms.Subjects
         private void Header_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
-            Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
-        
+                Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
         }
 
         private void Header_MouseUp(object sender, MouseEventArgs e)
@@ -73,8 +65,8 @@ namespace Polaris.Forms.Subjects
             {
                 string subjID = dataReader.GetString(0);
                 note.subID = Int32.Parse(subjID);
-            } 
-                if (editing)
+            }
+            if (editing)
             {
                 OdbcCommand cmd = new OdbcCommand($"UPDATE note SET note_title = '{titleLabel.Text}', note_description = '{descriptionLabel.Text}', modified = NOW() WHERE subject_id = {recordID}",
                         connection);
@@ -88,11 +80,13 @@ namespace Polaris.Forms.Subjects
             connection.Close();
             Close();
 
+            //NotesView nv = (NotesView)Application.OpenForms["NotesView"];
+            //nv.NotesView_Load(sender, e);
+
             Root root = (Root)Application.OpenForms["Root"];
             root.OpenChildForm(new Subjects(note.subText));
         }
     }
-            
-        #endregion Events
-    }
 
+    #endregion Events
+}

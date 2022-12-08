@@ -110,7 +110,7 @@ namespace Polaris.Forms.Tasks
             }
         }
 
-        private void Tasks_Load(object sender, EventArgs e)
+        public void Tasks_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             if (sectionLabel.Text == "Drafts Section")

@@ -1,7 +1,6 @@
 ﻿using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Windows.Media;
 
 namespace Polaris.Forms.FinanceTracker
 {
@@ -62,17 +61,8 @@ namespace Polaris.Forms.FinanceTracker
             connection.Close();
             Close();
 
-            Root root = (Root)Application.OpenForms["Root"];
-
-            if (root.MenuLabel.Text == "Extra")
-            {
-              root.OpenChildForm(new FinanceTracker());
-            }
-            else
-            {
-                MessageBox.Show("Saved");
-            }
-            
+            FinanceTracker financeTracker = (FinanceTracker)Application.OpenForms["FinanceTracker"];
+            financeTracker.FinanceTracker_Load(sender, e);
         }
 
         #endregion Events

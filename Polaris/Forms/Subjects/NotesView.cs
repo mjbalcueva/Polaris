@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Odbc;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Collections;
+using System.Data.Odbc;
+using System.Windows.Forms;
 
 namespace Polaris.Forms.Subjects
 {
     public partial class NotesView : Form
     {
         private string subText;
-        static NotesView note = new NotesView();
+        private static NotesView note = new NotesView();
 
         public NotesView()
         {
@@ -87,29 +80,29 @@ namespace Polaris.Forms.Subjects
             }
         }
 
-        private void NotesView_Load(object sender, EventArgs e)
+        public void NotesView_Load(object sender, EventArgs e)
         {
-                TableRecord.Clear();
-                string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
-                OdbcConnection connection = new OdbcConnection(connectionString);
-                OdbcDataReader dataReader;
+            TableRecord.Clear();
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
 
-                connection.Close();
-                connection.Open();
+            connection.Close();
+            connection.Open();
 
-                OdbcCommand cmd = new OdbcCommand("SELECT id FROM subject WHERE subject_title = '" + note.subText + "'", connection);
-                dataReader = cmd.ExecuteReader();
+            OdbcCommand cmd = new OdbcCommand("SELECT id FROM subject WHERE subject_title = '" + note.subText + "'", connection);
+            dataReader = cmd.ExecuteReader();
 
-                while (dataReader.Read())
-                {
-                    string subjID = dataReader.GetString(0);
-                    int subID = Int32.Parse(subjID);
+            while (dataReader.Read())
+            {
+                string subjID = dataReader.GetString(0);
+                int subID = Int32.Parse(subjID);
 
-                    GetData(subID);
-                }
-                connection.Close();
-                GenerateDynamicRecords();
+                GetData(subID);
             }
+            connection.Close();
+            GenerateDynamicRecords();
+        }
 
         private void tableBodyFLP_Resize(object sender, EventArgs e)
         {
@@ -120,4 +113,3 @@ namespace Polaris.Forms.Subjects
         }
     }
 }
-

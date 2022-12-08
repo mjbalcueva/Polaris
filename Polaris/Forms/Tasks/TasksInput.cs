@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
@@ -84,6 +85,8 @@ namespace Polaris.Forms.Tasks
 
             Root root = (Root)Application.OpenForms["Root"];
             root.UpdateTaskCount();
+            Tasks tasks = (Tasks)Application.OpenForms["Tasks"];
+            tasks.Tasks_Load(sender, e);
         }
 
         #endregion Events

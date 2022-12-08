@@ -113,7 +113,7 @@ namespace Polaris.Forms.FinanceTracker
 
         #endregion Hidden Scroll
 
-        private void FinanceTracker_Load(object sender, EventArgs e)
+        public void FinanceTracker_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             GetData();

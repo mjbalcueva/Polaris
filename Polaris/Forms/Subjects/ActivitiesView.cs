@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Odbc;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Polaris.Forms.Subjects
@@ -15,7 +8,7 @@ namespace Polaris.Forms.Subjects
     public partial class ActivitiesView : Form
     {
         private string subText;
-        static ActivitiesView activity = new ActivitiesView();
+        private static ActivitiesView activity = new ActivitiesView();
 
         public ActivitiesView()
         {
@@ -64,7 +57,7 @@ namespace Polaris.Forms.Subjects
 
             connection.Close();
         }
-        
+
         internal void AddRecord(string id, string score, string outOf, string description, string created, string modified)
         {
             TableRecord.Add(new tableAV
@@ -89,7 +82,7 @@ namespace Polaris.Forms.Subjects
             }
         }
 
-        private void ActivitiesView_Load(object sender, EventArgs e)
+        public void ActivitiesView_Load(object sender, EventArgs e)
         {
             TableRecord.Clear();
             string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
@@ -119,7 +112,6 @@ namespace Polaris.Forms.Subjects
             {
                 c.Width = tableBodyFLP.Width;
             }
-
         }
     }
 }

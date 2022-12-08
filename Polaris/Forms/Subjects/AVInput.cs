@@ -16,7 +16,8 @@ namespace Polaris.Forms.Subjects
         private bool mouseDown = false;
         private string subText;
         private int subID;
-        static AVInput act = new AVInput();
+        private static AVInput act = new AVInput();
+
         public AVInput()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Polaris.Forms.Subjects
         }
 
         #region Events
+
         private void Header_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;
@@ -37,7 +39,7 @@ namespace Polaris.Forms.Subjects
         private void Header_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
-            Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
+                Location = new Point(Cursor.Position.X - 300, Cursor.Position.Y - 15);
         }
 
         private void Header_MouseUp(object sender, MouseEventArgs e)
@@ -84,10 +86,10 @@ namespace Polaris.Forms.Subjects
             connection.Close();
             Close();
 
-            Root root = (Root)Application.OpenForms["Root"];
-            root.OpenChildForm(new Subjects(act.subText));
+            ActivitiesView av = (ActivitiesView)Application.OpenForms["ActivitiesView"];
+            av.ActivitiesView_Load(sender, e);
         }
-        
+
         #endregion Events
     }
 }
