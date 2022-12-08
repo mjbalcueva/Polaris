@@ -1,6 +1,11 @@
-﻿using System;
+﻿using Polaris.Components;
+using Polaris.Forms.Misc;
+using System;
+using System.Collections;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Polaris
@@ -10,224 +15,197 @@ namespace Polaris
         public Root()
         {
             InitializeComponent();
-            Load += new EventHandler(Root_Load);
-            HiddenScroll();
         }
 
-        #region CustomStyles
+        #region Change form color
 
-        private void TasksPanel_Paint(object sender, PaintEventArgs e)
+        private string ToBgr(Color c) => $"{c.B:X2}{c.G:X2}{c.R:X2}";
+
+        [DllImport("DwmApi")]
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, int[] attrValue, int attrSize);
+
+        private const int DWWMA_CAPTION_COLOR = 35;
+        private const int DWWMA_BORDER_COLOR = 34;
+        private const int DWMWA_TEXT_COLOR = 36;
+
+        public void CustomWindow(Color captionColor, Color fontColor, Color borderColor, IntPtr handle)
         {
-            AddBorder(e);
+            IntPtr hWnd = handle;
+            //Change caption color
+            int[] caption = new int[] { int.Parse(ToBgr(captionColor), System.Globalization.NumberStyles.HexNumber) };
+            DwmSetWindowAttribute(hWnd, DWWMA_CAPTION_COLOR, caption, 4);
+            //Change font color
+            int[] font = new int[] { int.Parse(ToBgr(fontColor), System.Globalization.NumberStyles.HexNumber) };
+            DwmSetWindowAttribute(hWnd, DWMWA_TEXT_COLOR, font, 4);
+            //Change border color
+            int[] border = new int[] { int.Parse(ToBgr(borderColor), System.Globalization.NumberStyles.HexNumber) };
+            DwmSetWindowAttribute(hWnd, DWWMA_BORDER_COLOR, border, 4);
         }
 
-        private void ClassesPanel_Paint(object sender, PaintEventArgs e)
-        {
-            AddBorder(e);
-        }
+        #endregion Change form color
 
-        private void FTPanel_Paint(object sender, PaintEventArgs e)
-        {
-            AddBorder(e);
-        }
+        #region Open Form
 
-        private static void AddBorder(PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle,
-                ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
-                ColorTranslator.FromHtml("#27282F"), 2, ButtonBorderStyle.Solid,
-                ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid,
-                ColorTranslator.FromHtml("#27282F"), 0, ButtonBorderStyle.Solid);
-        }
-
-        private void HiddenScroll()
-        {
-            // hide scroll bar in sidebar panel
-            SidePanel.VerticalScroll.Maximum = 0;
-            SidePanel.VerticalScroll.Visible = false;
-            SidePanel.HorizontalScroll.Maximum = 0;
-            SidePanel.HorizontalScroll.Visible = false;
-            SidePanel.AutoScroll = true;
-
-            // hide scroll bar in embedded panel
-            EmbedPanel.VerticalScroll.Maximum = 0;
-            EmbedPanel.VerticalScroll.Visible = false;
-            EmbedPanel.HorizontalScroll.Maximum = 0;
-            EmbedPanel.HorizontalScroll.Visible = false;
-            EmbedPanel.AutoScroll = true;
-        }
-
-        #endregion CustomStyles
-
-        #region Functions
-
-        // onclick set visibility of sidebar
-        private void TogglePanelBtn_Click(object sender, EventArgs e)
-        {
-            SidePanel.Visible = !SidePanel.Visible;
-        }
-
-        // onclick open certain forms
         private Form activeForm = null;
 
-        private void OpenChildForm(Form childForm)
+        public void OpenChildForm(Form childForm)
         {
             _ = typeof(Panel).InvokeMember("DoubleBuffered",
                BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
-               null, EmbedPanel, new object[] { true });
+               null, mainEmbedPanel, new object[] { true });
 
-            if (activeForm != null)
-            {
-                activeForm.Close();
-            }
+            activeForm?.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            EmbedPanel.Controls.Add(childForm);
-            EmbedPanel.Tag = childForm;
+            mainEmbedPanel.Controls.Add(childForm);
+            mainEmbedPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
-        // onclick set active button font and icon color
-        private FontAwesome.Sharp.IconButton activeIconButton = null;
+        #endregion Open Form
 
-        private void ToggleButtonFontColor(FontAwesome.Sharp.IconButton button)
+        #region ButtonClick Events
+
+        private void LogoButton_Click(object sender, EventArgs e)
         {
-            if (activeIconButton != null)
-            {
-                activeIconButton.ForeColor = ColorTranslator.FromHtml("#6A6A73");
-                activeIconButton.IconColor = ColorTranslator.FromHtml("#6A6A73");
-            }
-            activeIconButton = button;
-            activeIconButton.ForeColor = ColorTranslator.FromHtml("#FDFEFF");
-            activeIconButton.IconColor = ColorTranslator.FromHtml("#FDFEFF");
-        }
-
-        #endregion Functions
-
-        #region Click events for logo button
-
-        private void LogoBtn_Click(object sender, EventArgs e)
-        {
-            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
-            LabelText.Text = "Overview";
+            MenuLabel.Text = "Overview";
             OpenChildForm(new Overview());
         }
 
-        #endregion Click events for logo button
-
-        #region Click events for tasks section
-
-        private void TasksBtn_Click(object sender, EventArgs e)
+        private void toggleSidebarButton_Click(object sender, EventArgs e)
         {
-            ToggleButtonFontColor(AllBtn);
-            LabelText.Text = "Tasks";
-            OpenChildForm(new Tasks.All_Tasks());
+            sidebarPanel.Visible = !sidebarPanel.Visible;
         }
 
-        private void AllBtn_Click(object sender, EventArgs e)
+        #endregion ButtonClick Events
+
+        #region Colors
+
+        public readonly string[] randColors = { "#FF4D4D", "#F1904B", "#FFC548", "#E7E250", "#22C55E", "#99FF77", "#0EA5E9", "#72ECFF", "#AF70EB", "#FF5AB7" };
+
+        public Color Color { get; set; }
+
+        #endregion Colors
+
+        #region Dynamic Subjects
+
+        private static readonly ArrayList subjects = new ArrayList();
+        public ArrayList SubjectMenu { get; set; } = subjects;
+
+        private void GetSubject()
         {
-            ToggleButtonFontColor(AllBtn);
-            LabelText.Text = "Tasks";
-            OpenChildForm(new Tasks.All_Tasks());
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM subject", connection);
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                AddSubject(dataReader.GetString(1), ColorTranslator.FromHtml(randColors[new Random().Next(0, randColors.Length)]));
+            }
+
+            connection.Close();
         }
 
-        private void DraftsBtn_Click(object sender, EventArgs e)
+        internal void AddSubject(string text, Color color)
         {
-            ToggleButtonFontColor(DraftsBtn);
-            LabelText.Text = "Tasks";
-            OpenChildForm(new Tasks.Drafts_Tasks());
+            if (string.IsNullOrEmpty(text))
+                return;
+
+            SubjectMenu.Add(new SubjectMenu
+            {
+                ButtonText = "  " + text,
+                IconColor = color,
+            });
         }
 
-        private void ArchivesBtn_Click(object sender, EventArgs e)
+        public void GenerateDynamicSubjects()
         {
-            ToggleButtonFontColor(ArchivesBtn);
-            LabelText.Text = "Tasks";
-            OpenChildForm(new Tasks.Archive_Tasks());
-        }
+            subjectsFLP.Controls.Clear();
+            int subjectsCount = SubjectMenu.Count;
 
-        private void DeletedBtn_Click(object sender, EventArgs e)
-        {
-            ToggleButtonFontColor(DeletedBtn);
-            LabelText.Text = "Tasks";
-            OpenChildForm(new Tasks.Delete_Tasks());
-        }
-
-        #endregion Click events for tasks section
-
-        #region Click events for notes section
-
-        // on click, toggle ClassBtn IconChar with either ChevronUp or ChevronDown
-        private void ClassesBtn_Click(object sender, EventArgs e)
-        {
-            if (ClassesBtn.IconChar == FontAwesome.Sharp.IconChar.ChevronUp)
-                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            if (subjectsCount == 0)
+                subjectsFLP.Height = 0;
             else
-                ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-
-            ClassPanel.Visible = !ClassPanel.Visible;
+                for (int i = 0; i < subjectsCount; i++)
+                {
+                    subjectsFLP.Controls.Add((SubjectMenu)SubjectMenu[i]);
+                    subjectsFLP.Height = (((SubjectMenu)SubjectMenu[i]).Height + 7) * subjectsCount;
+                }
         }
 
-        // on ClassBtn_Click, set LabelText to ClassBtn text
-        private void ClassBtn_Click(object sender, EventArgs e)
+        #endregion Dynamic Subjects
+
+        #region Hidden Scroll
+
+        private void HiddenScroll()
         {
-            ToggleButtonFontColor((FontAwesome.Sharp.IconButton)sender);
-            LabelText.Text = ((FontAwesome.Sharp.IconButton)sender).Text;
-            OpenChildForm(new Classes.NotesView());
+            sidebarPanel.AutoScroll = false;
+            sidebarPanel.VerticalScroll.Visible = false;
+            sidebarPanel.VerticalScroll.Enabled = false;
+            sidebarPanel.VerticalScroll.Maximum = 0;
+            sidebarPanel.AutoScroll = true;
         }
 
-        #endregion Click events for notes section
+        #endregion Hidden Scroll
 
-        #region LoadClassOnClasses
+        #region Count Tasks
 
-        // sample data
-        private readonly string[] classes = { "SDF 104", "CC 104", "CC 105" };
+        public void UpdateTaskCount()
+        {
+            int allTasksCount = 0;
+            int draftsTaskCount = 0;
+            int archivesTasksCount = 0;
+            int deletedTasksCount = 0;
+
+            string connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;Database=polaris;User=root;Password=password;Option=3;";
+            OdbcConnection connection = new OdbcConnection(connectionString);
+            OdbcDataReader dataReader;
+
+            connection.Close();
+            connection.Open();
+
+            OdbcCommand cmd = new OdbcCommand("SELECT * FROM task", connection);
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                if (dataReader.GetString(5) == "3")
+                    deletedTasksCount++;
+                else if (dataReader.GetString(5) == "2")
+                    archivesTasksCount++;
+                else if (dataReader.GetString(5) == "1")
+                    draftsTaskCount++;
+                else
+                    allTasksCount++;
+            }
+
+            connection.Close();
+
+            All.BadgeText = allTasksCount.ToString();
+            Drafts.BadgeText = draftsTaskCount.ToString();
+            Archived.BadgeText = archivesTasksCount.ToString();
+            Deleted.BadgeText = deletedTasksCount.ToString();
+        }
+
+        #endregion Count Tasks
 
         private void Root_Load(object sender, EventArgs e)
         {
-            int buttonCount = classes.Length;
-            var buttons = new FontAwesome.Sharp.IconButton[buttonCount];
-
-            for (int i = 0; i < buttonCount; i++)
-            {
-                var button = new FontAwesome.Sharp.IconButton
-                {
-                    Text = "  " + classes[i],
-                    TextAlign = ContentAlignment.MiddleLeft,
-                    IconChar = FontAwesome.Sharp.IconChar.Stop,
-                    IconColor = ColorTranslator.FromHtml("#6A6A73"),
-                    IconSize = 25,
-                    ImageAlign = ContentAlignment.MiddleLeft,
-                    TextImageRelation = TextImageRelation.ImageBeforeText,
-                    FlatStyle = FlatStyle.Flat,
-                };
-                button.FlatAppearance.BorderSize = 0;
-                button.ForeColor = ColorTranslator.FromHtml("#6A6A73");
-                button.BackColor = ColorTranslator.FromHtml("#1B1C21");
-                button.Font = new Font("Nobile Medium", 14, GraphicsUnit.Pixel);
-                button.Height = 44;
-                button.Width = 264;
-                button.Padding = new Padding(15, 0, 0, 0);
-                button.Click += new EventHandler(ClassBtn_Click);
-                buttons[i] = button;
-            }
-
-            ClassPanel.Controls.AddRange(buttons);
+            UpdateTaskCount();
+            CustomWindow(ColorTranslator.FromHtml("#090a0b"), ColorTranslator.FromHtml("#fdfdff"), ColorTranslator.FromHtml("#27282f"), Handle);
+            OpenChildForm(new Overview());
+            GetSubject();
+            GenerateDynamicSubjects();
+            HiddenScroll();
         }
-
-        #endregion LoadClassOnClasses
-
-        #region Click events for financial tracker section
-
-        private void FTBtn_Click(object sender, EventArgs e)
-        {
-            ToggleButtonFontColor(new FontAwesome.Sharp.IconButton());
-            LabelText.Text = "Extra";
-            OpenChildForm(new FTS.FTSView());
-        }
-
-        #endregion Click events for financial tracker section
     }
 }

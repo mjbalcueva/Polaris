@@ -28,508 +28,422 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SidePanel = new System.Windows.Forms.Panel();
-            this.FTPanel = new System.Windows.Forms.Panel();
-            this.FTBtn = new FontAwesome.Sharp.IconButton();
-            this.ClassPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.ClassesPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ClassesBtn = new FontAwesome.Sharp.IconButton();
-            this.AddClassesBdg = new FontAwesome.Sharp.IconButton();
-            this.TasksPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.TasksBtn = new FontAwesome.Sharp.IconButton();
-            this.AllBtn = new FontAwesome.Sharp.IconButton();
-            this.DraftsBtn = new FontAwesome.Sharp.IconButton();
-            this.ArchivesBtn = new FontAwesome.Sharp.IconButton();
-            this.DeletedBtn = new FontAwesome.Sharp.IconButton();
-            this.AddNotesBdg = new FontAwesome.Sharp.IconButton();
-            this.AllCountBadge = new FontAwesome.Sharp.IconButton();
-            this.DraftsCountBadge = new FontAwesome.Sharp.IconButton();
-            this.ArchivesCountBadge = new FontAwesome.Sharp.IconButton();
-            this.DeletedCountBadge = new FontAwesome.Sharp.IconButton();
-            this.LogoBtn = new FontAwesome.Sharp.IconButton();
-            this.TitlePanel = new System.Windows.Forms.Panel();
-            this.TogglePanelBtn = new FontAwesome.Sharp.IconButton();
-            this.BorderMisc = new System.Windows.Forms.Panel();
-            this.LabelText = new System.Windows.Forms.Label();
-            this.EmbedPanel = new System.Windows.Forms.Panel();
-            this.SidePanel.SuspendLayout();
-            this.FTPanel.SuspendLayout();
-            this.ClassesPanel.SuspendLayout();
-            this.TasksPanel.SuspendLayout();
-            this.TitlePanel.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Root));
+            this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.roundedPanel1 = new Polaris.Components.RoundedPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FTMenu = new Polaris.Components.SidebarMenu();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.border4 = new System.Windows.Forms.Panel();
+            this.placeholder3 = new System.Windows.Forms.Panel();
+            this.subjectsFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.SubjectsMenu = new Polaris.Components.SidebarMenu();
+            this.placeholder2 = new System.Windows.Forms.Panel();
+            this.border3 = new System.Windows.Forms.Panel();
+            this.placeholder = new System.Windows.Forms.Panel();
+            this.Deleted = new Polaris.Components.TaskMenu();
+            this.Archived = new Polaris.Components.TaskMenu();
+            this.Drafts = new Polaris.Components.TaskMenu();
+            this.All = new Polaris.Components.TaskMenu();
+            this.TasksMenu = new Polaris.Components.SidebarMenu();
+            this.placeholder1 = new System.Windows.Forms.Panel();
+            this.border2 = new System.Windows.Forms.Panel();
+            this.LogoButton = new Polaris.Components.RoundedButton();
+            this.mainHeaderPanel = new System.Windows.Forms.Panel();
+            this.MenuLabel = new System.Windows.Forms.Label();
+            this.toggleSidebarButton = new Polaris.Components.RoundedButton();
+            this.border1 = new System.Windows.Forms.Panel();
+            this.mainEmbedPanel = new System.Windows.Forms.Panel();
+            this.sidebarPanel.SuspendLayout();
+            this.roundedPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.mainHeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SidePanel
+            // sidebarPanel
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
-            this.SidePanel.Controls.Add(this.FTPanel);
-            this.SidePanel.Controls.Add(this.ClassPanel);
-            this.SidePanel.Controls.Add(this.ClassesPanel);
-            this.SidePanel.Controls.Add(this.TasksPanel);
-            this.SidePanel.Controls.Add(this.LogoBtn);
-            this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.Location = new System.Drawing.Point(0, 0);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(300, 653);
-            this.SidePanel.TabIndex = 0;
+            this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.sidebarPanel.Controls.Add(this.roundedPanel1);
+            this.sidebarPanel.Controls.Add(this.FTMenu);
+            this.sidebarPanel.Controls.Add(this.panel1);
+            this.sidebarPanel.Controls.Add(this.border4);
+            this.sidebarPanel.Controls.Add(this.placeholder3);
+            this.sidebarPanel.Controls.Add(this.subjectsFLP);
+            this.sidebarPanel.Controls.Add(this.SubjectsMenu);
+            this.sidebarPanel.Controls.Add(this.placeholder2);
+            this.sidebarPanel.Controls.Add(this.border3);
+            this.sidebarPanel.Controls.Add(this.placeholder);
+            this.sidebarPanel.Controls.Add(this.Deleted);
+            this.sidebarPanel.Controls.Add(this.Archived);
+            this.sidebarPanel.Controls.Add(this.Drafts);
+            this.sidebarPanel.Controls.Add(this.All);
+            this.sidebarPanel.Controls.Add(this.TasksMenu);
+            this.sidebarPanel.Controls.Add(this.placeholder1);
+            this.sidebarPanel.Controls.Add(this.border2);
+            this.sidebarPanel.Controls.Add(this.LogoButton);
+            this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebarPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.sidebarPanel.Location = new System.Drawing.Point(0, 0);
+            this.sidebarPanel.Name = "sidebarPanel";
+            this.sidebarPanel.Size = new System.Drawing.Size(300, 853);
+            this.sidebarPanel.TabIndex = 1;
             // 
-            // FTPanel
+            // roundedPanel1
             // 
-            this.FTPanel.Controls.Add(this.FTBtn);
-            this.FTPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FTPanel.Location = new System.Drawing.Point(0, 476);
-            this.FTPanel.Name = "FTPanel";
-            this.FTPanel.Padding = new System.Windows.Forms.Padding(15, 15, 15, 0);
-            this.FTPanel.Size = new System.Drawing.Size(300, 65);
-            this.FTPanel.TabIndex = 4;
-            this.FTPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FTPanel_Paint);
+            this.roundedPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.BorderRadius = 15;
+            this.roundedPanel1.Controls.Add(this.pictureBox1);
+            this.roundedPanel1.ForeColor = System.Drawing.Color.Black;
+            this.roundedPanel1.GradientAngle = 90F;
+            this.roundedPanel1.GradientBottomColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.GradientTopColor = System.Drawing.Color.Transparent;
+            this.roundedPanel1.Location = new System.Drawing.Point(28, 22);
+            this.roundedPanel1.Name = "roundedPanel1";
+            this.roundedPanel1.Size = new System.Drawing.Size(58, 58);
+            this.roundedPanel1.TabIndex = 21;
             // 
-            // FTBtn
+            // pictureBox1
             // 
-            this.FTBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FTBtn.FlatAppearance.BorderSize = 0;
-            this.FTBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FTBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.FTBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.FTBtn.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
-            this.FTBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.FTBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.FTBtn.IconSize = 35;
-            this.FTBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FTBtn.Location = new System.Drawing.Point(15, 15);
-            this.FTBtn.Name = "FTBtn";
-            this.FTBtn.Size = new System.Drawing.Size(270, 50);
-            this.FTBtn.TabIndex = 0;
-            this.FTBtn.Text = "  Financial Tracker";
-            this.FTBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.FTBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.FTBtn.UseVisualStyleBackColor = true;
-            this.FTBtn.Click += new System.EventHandler(this.FTBtn_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Polaris.Properties.Resources.PolarisIcon2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
-            // ClassPanel
+            // FTMenu
             // 
-            this.ClassPanel.AutoSize = true;
-            this.ClassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(33)))));
-            this.ClassPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClassPanel.Location = new System.Drawing.Point(0, 461);
-            this.ClassPanel.Name = "ClassPanel";
-            this.ClassPanel.Padding = new System.Windows.Forms.Padding(15, 0, 15, 15);
-            this.ClassPanel.Size = new System.Drawing.Size(300, 15);
-            this.ClassPanel.TabIndex = 3;
+            this.FTMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.FTMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.ButtonText = "  Finance Tracker";
+            this.FTMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FTMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.FTMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.FTMenu.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.FTMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.FTMenu.Location = new System.Drawing.Point(0, 549);
+            this.FTMenu.Name = "FTMenu";
+            this.FTMenu.Size = new System.Drawing.Size(300, 60);
+            this.FTMenu.TabIndex = 20;
             // 
-            // ClassesPanel
+            // panel1
             // 
-            this.ClassesPanel.ColumnCount = 2;
-            this.ClassesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.ClassesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ClassesPanel.Controls.Add(this.ClassesBtn, 0, 0);
-            this.ClassesPanel.Controls.Add(this.AddClassesBdg, 1, 0);
-            this.ClassesPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ClassesPanel.Location = new System.Drawing.Point(0, 381);
-            this.ClassesPanel.Name = "ClassesPanel";
-            this.ClassesPanel.Padding = new System.Windows.Forms.Padding(15);
-            this.ClassesPanel.RowCount = 1;
-            this.ClassesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ClassesPanel.Size = new System.Drawing.Size(300, 80);
-            this.ClassesPanel.TabIndex = 2;
-            this.ClassesPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ClassesPanel_Paint);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 539);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 10);
+            this.panel1.TabIndex = 19;
             // 
-            // ClassesBtn
+            // border4
             // 
-            this.ClassesBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClassesBtn.FlatAppearance.BorderSize = 0;
-            this.ClassesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClassesBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.ClassesBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.ClassesBtn.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.ClassesBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.ClassesBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ClassesBtn.IconSize = 35;
-            this.ClassesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClassesBtn.Location = new System.Drawing.Point(18, 18);
-            this.ClassesBtn.Name = "ClassesBtn";
-            this.ClassesBtn.Size = new System.Drawing.Size(210, 44);
-            this.ClassesBtn.TabIndex = 0;
-            this.ClassesBtn.Text = "  Classes";
-            this.ClassesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClassesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ClassesBtn.UseVisualStyleBackColor = true;
-            this.ClassesBtn.Click += new System.EventHandler(this.ClassesBtn_Click);
+            this.border4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.border4.Location = new System.Drawing.Point(0, 536);
+            this.border4.Name = "border4";
+            this.border4.Size = new System.Drawing.Size(300, 3);
+            this.border4.TabIndex = 18;
             // 
-            // AddClassesBdg
+            // placeholder3
             // 
-            this.AddClassesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddClassesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(73)))));
-            this.AddClassesBdg.FlatAppearance.BorderSize = 0;
-            this.AddClassesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddClassesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.AddClassesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.AddClassesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AddClassesBdg.IconSize = 25;
-            this.AddClassesBdg.Location = new System.Drawing.Point(241, 23);
-            this.AddClassesBdg.Name = "AddClassesBdg";
-            this.AddClassesBdg.Size = new System.Drawing.Size(33, 33);
-            this.AddClassesBdg.TabIndex = 1;
-            this.AddClassesBdg.UseVisualStyleBackColor = false;
+            this.placeholder3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.placeholder3.Location = new System.Drawing.Point(0, 526);
+            this.placeholder3.Name = "placeholder3";
+            this.placeholder3.Size = new System.Drawing.Size(300, 10);
+            this.placeholder3.TabIndex = 17;
             // 
-            // TasksPanel
+            // subjectsFLP
             // 
-            this.TasksPanel.ColumnCount = 2;
-            this.TasksPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.TasksPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.Controls.Add(this.TasksBtn, 0, 0);
-            this.TasksPanel.Controls.Add(this.AllBtn, 0, 1);
-            this.TasksPanel.Controls.Add(this.DraftsBtn, 0, 2);
-            this.TasksPanel.Controls.Add(this.ArchivesBtn, 0, 3);
-            this.TasksPanel.Controls.Add(this.DeletedBtn, 0, 4);
-            this.TasksPanel.Controls.Add(this.AddNotesBdg, 1, 0);
-            this.TasksPanel.Controls.Add(this.AllCountBadge, 1, 1);
-            this.TasksPanel.Controls.Add(this.DraftsCountBadge, 1, 2);
-            this.TasksPanel.Controls.Add(this.ArchivesCountBadge, 1, 3);
-            this.TasksPanel.Controls.Add(this.DeletedCountBadge, 1, 4);
-            this.TasksPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TasksPanel.Location = new System.Drawing.Point(0, 101);
-            this.TasksPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TasksPanel.Name = "TasksPanel";
-            this.TasksPanel.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
-            this.TasksPanel.RowCount = 5;
-            this.TasksPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TasksPanel.Size = new System.Drawing.Size(300, 280);
-            this.TasksPanel.TabIndex = 1;
-            this.TasksPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TasksPanel_Paint);
+            this.subjectsFLP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.subjectsFLP.Location = new System.Drawing.Point(0, 476);
+            this.subjectsFLP.Name = "subjectsFLP";
+            this.subjectsFLP.Size = new System.Drawing.Size(300, 50);
+            this.subjectsFLP.TabIndex = 16;
             // 
-            // TasksBtn
+            // SubjectsMenu
             // 
-            this.TasksBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TasksBtn.FlatAppearance.BorderSize = 0;
-            this.TasksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TasksBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.TasksBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.TasksBtn.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
-            this.TasksBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.TasksBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.TasksBtn.IconSize = 35;
-            this.TasksBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TasksBtn.Location = new System.Drawing.Point(18, 17);
-            this.TasksBtn.Name = "TasksBtn";
-            this.TasksBtn.Size = new System.Drawing.Size(210, 44);
-            this.TasksBtn.TabIndex = 0;
-            this.TasksBtn.Text = "  Tasks";
-            this.TasksBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TasksBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.TasksBtn.Click += new System.EventHandler(this.TasksBtn_Click);
+            this.SubjectsMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.SubjectsMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.ButtonText = "  Subjects";
+            this.SubjectsMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubjectsMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubjectsMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.SubjectsMenu.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.SubjectsMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.SubjectsMenu.Location = new System.Drawing.Point(0, 416);
+            this.SubjectsMenu.Name = "SubjectsMenu";
+            this.SubjectsMenu.Size = new System.Drawing.Size(300, 60);
+            this.SubjectsMenu.TabIndex = 15;
             // 
-            // AllBtn
+            // placeholder2
             // 
-            this.AllBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AllBtn.FlatAppearance.BorderSize = 0;
-            this.AllBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AllBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.AllBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.AllBtn.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.AllBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.AllBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AllBtn.IconSize = 25;
-            this.AllBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AllBtn.Location = new System.Drawing.Point(18, 67);
-            this.AllBtn.Name = "AllBtn";
-            this.AllBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.AllBtn.Size = new System.Drawing.Size(210, 44);
-            this.AllBtn.TabIndex = 1;
-            this.AllBtn.Text = "  All";
-            this.AllBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AllBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AllBtn.Click += new System.EventHandler(this.AllBtn_Click);
+            this.placeholder2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.placeholder2.Location = new System.Drawing.Point(0, 406);
+            this.placeholder2.Name = "placeholder2";
+            this.placeholder2.Size = new System.Drawing.Size(300, 10);
+            this.placeholder2.TabIndex = 10;
             // 
-            // DraftsBtn
+            // border3
             // 
-            this.DraftsBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DraftsBtn.FlatAppearance.BorderSize = 0;
-            this.DraftsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftsBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.DraftsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DraftsBtn.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.DraftsBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DraftsBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DraftsBtn.IconSize = 25;
-            this.DraftsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DraftsBtn.Location = new System.Drawing.Point(18, 117);
-            this.DraftsBtn.Name = "DraftsBtn";
-            this.DraftsBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.DraftsBtn.Size = new System.Drawing.Size(210, 44);
-            this.DraftsBtn.TabIndex = 2;
-            this.DraftsBtn.Text = "  Drafts";
-            this.DraftsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DraftsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DraftsBtn.Click += new System.EventHandler(this.DraftsBtn_Click);
+            this.border3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.border3.Location = new System.Drawing.Point(0, 403);
+            this.border3.Name = "border3";
+            this.border3.Size = new System.Drawing.Size(300, 3);
+            this.border3.TabIndex = 9;
             // 
-            // ArchivesBtn
+            // placeholder
             // 
-            this.ArchivesBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ArchivesBtn.FlatAppearance.BorderSize = 0;
-            this.ArchivesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ArchivesBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.ArchivesBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.ArchivesBtn.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.ArchivesBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.ArchivesBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ArchivesBtn.IconSize = 25;
-            this.ArchivesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArchivesBtn.Location = new System.Drawing.Point(18, 167);
-            this.ArchivesBtn.Name = "ArchivesBtn";
-            this.ArchivesBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.ArchivesBtn.Size = new System.Drawing.Size(210, 44);
-            this.ArchivesBtn.TabIndex = 3;
-            this.ArchivesBtn.Text = "  Archived";
-            this.ArchivesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArchivesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ArchivesBtn.Click += new System.EventHandler(this.ArchivesBtn_Click);
+            this.placeholder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.placeholder.Location = new System.Drawing.Point(0, 383);
+            this.placeholder.Name = "placeholder";
+            this.placeholder.Size = new System.Drawing.Size(300, 20);
+            this.placeholder.TabIndex = 8;
             // 
-            // DeletedBtn
+            // Deleted
             // 
-            this.DeletedBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeletedBtn.FlatAppearance.BorderSize = 0;
-            this.DeletedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeletedBtn.Font = new System.Drawing.Font("Nobile Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.DeletedBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DeletedBtn.IconChar = FontAwesome.Sharp.IconChar.CaretRight;
-            this.DeletedBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DeletedBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletedBtn.IconSize = 25;
-            this.DeletedBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeletedBtn.Location = new System.Drawing.Point(18, 217);
-            this.DeletedBtn.Name = "DeletedBtn";
-            this.DeletedBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.DeletedBtn.Size = new System.Drawing.Size(210, 46);
-            this.DeletedBtn.TabIndex = 4;
-            this.DeletedBtn.Text = "  Deleted";
-            this.DeletedBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeletedBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DeletedBtn.Click += new System.EventHandler(this.DeletedBtn_Click);
+            this.Deleted.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.Deleted.BadgeText = "0";
+            this.Deleted.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Deleted.ButtonText = "  Deleted";
+            this.Deleted.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Deleted.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Deleted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Deleted.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Deleted.Location = new System.Drawing.Point(0, 333);
+            this.Deleted.Name = "Deleted";
+            this.Deleted.Size = new System.Drawing.Size(300, 50);
+            this.Deleted.TabIndex = 7;
             // 
-            // AddNotesBdg
+            // Archived
             // 
-            this.AddNotesBdg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddNotesBdg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AddNotesBdg.FlatAppearance.BorderSize = 0;
-            this.AddNotesBdg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNotesBdg.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.AddNotesBdg.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.AddNotesBdg.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AddNotesBdg.IconSize = 25;
-            this.AddNotesBdg.Location = new System.Drawing.Point(240, 21);
-            this.AddNotesBdg.Name = "AddNotesBdg";
-            this.AddNotesBdg.Size = new System.Drawing.Size(35, 35);
-            this.AddNotesBdg.TabIndex = 5;
-            this.AddNotesBdg.UseVisualStyleBackColor = false;
+            this.Archived.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.Archived.BadgeText = "0";
+            this.Archived.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Archived.ButtonText = "  Archived";
+            this.Archived.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Archived.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Archived.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Archived.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Archived.Location = new System.Drawing.Point(0, 283);
+            this.Archived.Name = "Archived";
+            this.Archived.Size = new System.Drawing.Size(300, 50);
+            this.Archived.TabIndex = 6;
             // 
-            // AllCountBadge
+            // Drafts
             // 
-            this.AllCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AllCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.AllCountBadge.FlatAppearance.BorderSize = 0;
-            this.AllCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AllCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllCountBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.AllCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.AllCountBadge.IconColor = System.Drawing.Color.Black;
-            this.AllCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.AllCountBadge.Location = new System.Drawing.Point(240, 71);
-            this.AllCountBadge.Name = "AllCountBadge";
-            this.AllCountBadge.Size = new System.Drawing.Size(35, 35);
-            this.AllCountBadge.TabIndex = 6;
-            this.AllCountBadge.Text = "0";
-            this.AllCountBadge.UseVisualStyleBackColor = false;
+            this.Drafts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.Drafts.BadgeText = "0";
+            this.Drafts.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Drafts.ButtonText = "  Drafts";
+            this.Drafts.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Drafts.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Drafts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Drafts.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.Drafts.Location = new System.Drawing.Point(0, 233);
+            this.Drafts.Name = "Drafts";
+            this.Drafts.Size = new System.Drawing.Size(300, 50);
+            this.Drafts.TabIndex = 5;
             // 
-            // DraftsCountBadge
+            // All
             // 
-            this.DraftsCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DraftsCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DraftsCountBadge.FlatAppearance.BorderSize = 0;
-            this.DraftsCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DraftsCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DraftsCountBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DraftsCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.DraftsCountBadge.IconColor = System.Drawing.Color.Black;
-            this.DraftsCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DraftsCountBadge.Location = new System.Drawing.Point(240, 121);
-            this.DraftsCountBadge.Name = "DraftsCountBadge";
-            this.DraftsCountBadge.Size = new System.Drawing.Size(35, 35);
-            this.DraftsCountBadge.TabIndex = 7;
-            this.DraftsCountBadge.Text = "0";
-            this.DraftsCountBadge.UseVisualStyleBackColor = false;
+            this.All.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.All.BadgeText = "0";
+            this.All.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.All.ButtonText = "  All";
+            this.All.Dock = System.Windows.Forms.DockStyle.Top;
+            this.All.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.All.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.All.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.All.Location = new System.Drawing.Point(0, 183);
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(300, 50);
+            this.All.TabIndex = 4;
             // 
-            // ArchivesCountBadge
+            // TasksMenu
             // 
-            this.ArchivesCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ArchivesCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.ArchivesCountBadge.FlatAppearance.BorderSize = 0;
-            this.ArchivesCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ArchivesCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArchivesCountBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.ArchivesCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ArchivesCountBadge.IconColor = System.Drawing.Color.Black;
-            this.ArchivesCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ArchivesCountBadge.Location = new System.Drawing.Point(240, 171);
-            this.ArchivesCountBadge.Name = "ArchivesCountBadge";
-            this.ArchivesCountBadge.Size = new System.Drawing.Size(35, 35);
-            this.ArchivesCountBadge.TabIndex = 8;
-            this.ArchivesCountBadge.Text = "0";
-            this.ArchivesCountBadge.UseVisualStyleBackColor = false;
+            this.TasksMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.TasksMenu.BadgeIconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.TasksMenu.ButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.TasksMenu.ButtonText = "  Tasks";
+            this.TasksMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TasksMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.TasksMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
+            this.TasksMenu.IconChar = FontAwesome.Sharp.IconChar.ListCheck;
+            this.TasksMenu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.TasksMenu.Location = new System.Drawing.Point(0, 123);
+            this.TasksMenu.Name = "TasksMenu";
+            this.TasksMenu.Size = new System.Drawing.Size(300, 60);
+            this.TasksMenu.TabIndex = 3;
             // 
-            // DeletedCountBadge
+            // placeholder1
             // 
-            this.DeletedCountBadge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DeletedCountBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(52)))));
-            this.DeletedCountBadge.FlatAppearance.BorderSize = 0;
-            this.DeletedCountBadge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeletedCountBadge.Font = new System.Drawing.Font("Oxygen", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeletedCountBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(115)))));
-            this.DeletedCountBadge.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.DeletedCountBadge.IconColor = System.Drawing.Color.Black;
-            this.DeletedCountBadge.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DeletedCountBadge.Location = new System.Drawing.Point(240, 222);
-            this.DeletedCountBadge.Name = "DeletedCountBadge";
-            this.DeletedCountBadge.Size = new System.Drawing.Size(35, 35);
-            this.DeletedCountBadge.TabIndex = 9;
-            this.DeletedCountBadge.Text = "0";
-            this.DeletedCountBadge.UseVisualStyleBackColor = false;
+            this.placeholder1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.placeholder1.Location = new System.Drawing.Point(0, 113);
+            this.placeholder1.Name = "placeholder1";
+            this.placeholder1.Size = new System.Drawing.Size(300, 10);
+            this.placeholder1.TabIndex = 2;
             // 
-            // LogoBtn
+            // border2
             // 
-            this.LogoBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LogoBtn.FlatAppearance.BorderSize = 0;
-            this.LogoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LogoBtn.Font = new System.Drawing.Font("Nobile Medium", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.LogoBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.LogoBtn.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.LogoBtn.IconColor = System.Drawing.Color.Black;
-            this.LogoBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.LogoBtn.Location = new System.Drawing.Point(0, 0);
-            this.LogoBtn.Name = "LogoBtn";
-            this.LogoBtn.Padding = new System.Windows.Forms.Padding(15, 11, 0, 0);
-            this.LogoBtn.Size = new System.Drawing.Size(300, 101);
-            this.LogoBtn.TabIndex = 0;
-            this.LogoBtn.Text = "Polaris";
-            this.LogoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LogoBtn.UseVisualStyleBackColor = true;
-            this.LogoBtn.Click += new System.EventHandler(this.LogoBtn_Click);
+            this.border2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.border2.Location = new System.Drawing.Point(0, 110);
+            this.border2.Name = "border2";
+            this.border2.Size = new System.Drawing.Size(300, 3);
+            this.border2.TabIndex = 1;
             // 
-            // TitlePanel
+            // LogoButton
             // 
-            this.TitlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(24)))));
-            this.TitlePanel.Controls.Add(this.TogglePanelBtn);
-            this.TitlePanel.Controls.Add(this.BorderMisc);
-            this.TitlePanel.Controls.Add(this.LabelText);
-            this.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TitlePanel.Location = new System.Drawing.Point(300, 0);
-            this.TitlePanel.Name = "TitlePanel";
-            this.TitlePanel.Size = new System.Drawing.Size(882, 80);
-            this.TitlePanel.TabIndex = 1;
+            this.LogoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.LogoButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(28)))), ((int)(((byte)(34)))));
+            this.LogoButton.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.LogoButton.BorderRadius = 0;
+            this.LogoButton.BorderSize = 0;
+            this.LogoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LogoButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogoButton.FlatAppearance.BorderSize = 0;
+            this.LogoButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(43)))));
+            this.LogoButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(31)))), ((int)(((byte)(38)))));
+            this.LogoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoButton.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.LogoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.LogoButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.LogoButton.IconColor = System.Drawing.Color.Black;
+            this.LogoButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.LogoButton.Location = new System.Drawing.Point(0, 0);
+            this.LogoButton.Margin = new System.Windows.Forms.Padding(0);
+            this.LogoButton.Name = "LogoButton";
+            this.LogoButton.Padding = new System.Windows.Forms.Padding(72, 0, 0, 0);
+            this.LogoButton.Size = new System.Drawing.Size(300, 110);
+            this.LogoButton.TabIndex = 0;
+            this.LogoButton.Text = "olaris";
+            this.LogoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoButton.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.LogoButton.UseVisualStyleBackColor = false;
+            this.LogoButton.Click += new System.EventHandler(this.LogoButton_Click);
             // 
-            // TogglePanelBtn
+            // mainHeaderPanel
             // 
-            this.TogglePanelBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TogglePanelBtn.FlatAppearance.BorderSize = 0;
-            this.TogglePanelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TogglePanelBtn.IconChar = FontAwesome.Sharp.IconChar.Reorder;
-            this.TogglePanelBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.TogglePanelBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.TogglePanelBtn.IconSize = 40;
-            this.TogglePanelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TogglePanelBtn.Location = new System.Drawing.Point(0, 0);
-            this.TogglePanelBtn.Name = "TogglePanelBtn";
-            this.TogglePanelBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.TogglePanelBtn.Size = new System.Drawing.Size(78, 78);
-            this.TogglePanelBtn.TabIndex = 3;
-            this.TogglePanelBtn.UseVisualStyleBackColor = true;
-            this.TogglePanelBtn.Click += new System.EventHandler(this.TogglePanelBtn_Click);
+            this.mainHeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.mainHeaderPanel.Controls.Add(this.MenuLabel);
+            this.mainHeaderPanel.Controls.Add(this.toggleSidebarButton);
+            this.mainHeaderPanel.Controls.Add(this.border1);
+            this.mainHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mainHeaderPanel.Location = new System.Drawing.Point(300, 0);
+            this.mainHeaderPanel.Name = "mainHeaderPanel";
+            this.mainHeaderPanel.Size = new System.Drawing.Size(1232, 80);
+            this.mainHeaderPanel.TabIndex = 3;
             // 
-            // BorderMisc
+            // MenuLabel
             // 
-            this.BorderMisc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
-            this.BorderMisc.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BorderMisc.Location = new System.Drawing.Point(0, 78);
-            this.BorderMisc.Name = "BorderMisc";
-            this.BorderMisc.Size = new System.Drawing.Size(882, 2);
-            this.BorderMisc.TabIndex = 2;
+            this.MenuLabel.AutoSize = true;
+            this.MenuLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.MenuLabel.Location = new System.Drawing.Point(81, 21);
+            this.MenuLabel.Name = "MenuLabel";
+            this.MenuLabel.Size = new System.Drawing.Size(93, 28);
+            this.MenuLabel.TabIndex = 3;
+            this.MenuLabel.Text = "Overview";
             // 
-            // LabelText
+            // toggleSidebarButton
             // 
-            this.LabelText.AutoSize = true;
-            this.LabelText.Font = new System.Drawing.Font("Nobile Medium", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.LabelText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
-            this.LabelText.Location = new System.Drawing.Point(85, 30);
-            this.LabelText.Name = "LabelText";
-            this.LabelText.Size = new System.Drawing.Size(103, 23);
-            this.LabelText.TabIndex = 1;
-            this.LabelText.Text = "Overview";
+            this.toggleSidebarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.toggleSidebarButton.BorderRadius = 15;
+            this.toggleSidebarButton.BorderSize = 0;
+            this.toggleSidebarButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggleSidebarButton.FlatAppearance.BorderSize = 0;
+            this.toggleSidebarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.toggleSidebarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.toggleSidebarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleSidebarButton.ForeColor = System.Drawing.Color.White;
+            this.toggleSidebarButton.IconChar = FontAwesome.Sharp.IconChar.Reorder;
+            this.toggleSidebarButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.toggleSidebarButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.toggleSidebarButton.IconSize = 30;
+            this.toggleSidebarButton.Location = new System.Drawing.Point(25, 15);
+            this.toggleSidebarButton.Name = "toggleSidebarButton";
+            this.toggleSidebarButton.Padding = new System.Windows.Forms.Padding(2, 4, 0, 0);
+            this.toggleSidebarButton.Size = new System.Drawing.Size(50, 50);
+            this.toggleSidebarButton.TabIndex = 2;
+            this.toggleSidebarButton.TextColor = System.Drawing.Color.White;
+            this.toggleSidebarButton.UseVisualStyleBackColor = false;
+            this.toggleSidebarButton.Click += new System.EventHandler(this.toggleSidebarButton_Click);
             // 
-            // EmbedPanel
+            // border1
             // 
-            this.EmbedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(24)))));
-            this.EmbedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EmbedPanel.Location = new System.Drawing.Point(300, 80);
-            this.EmbedPanel.Name = "EmbedPanel";
-            this.EmbedPanel.Size = new System.Drawing.Size(882, 573);
-            this.EmbedPanel.TabIndex = 2;
+            this.border1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(47)))));
+            this.border1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.border1.Location = new System.Drawing.Point(0, 78);
+            this.border1.Name = "border1";
+            this.border1.Size = new System.Drawing.Size(1232, 2);
+            this.border1.TabIndex = 0;
+            // 
+            // mainEmbedPanel
+            // 
+            this.mainEmbedPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(21)))), ((int)(((byte)(25)))));
+            this.mainEmbedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainEmbedPanel.Location = new System.Drawing.Point(300, 80);
+            this.mainEmbedPanel.Name = "mainEmbedPanel";
+            this.mainEmbedPanel.Size = new System.Drawing.Size(1232, 773);
+            this.mainEmbedPanel.TabIndex = 4;
             // 
             // Root
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1182, 653);
-            this.Controls.Add(this.EmbedPanel);
-            this.Controls.Add(this.TitlePanel);
-            this.Controls.Add(this.SidePanel);
-            this.Font = new System.Drawing.Font("Nobile", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientSize = new System.Drawing.Size(1532, 853);
+            this.Controls.Add(this.mainEmbedPanel);
+            this.Controls.Add(this.mainHeaderPanel);
+            this.Controls.Add(this.sidebarPanel);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(254)))), ((int)(((byte)(255)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(850, 500);
+            this.MinimumSize = new System.Drawing.Size(1140, 725);
             this.Name = "Root";
-            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Polaris";
-            this.SidePanel.ResumeLayout(false);
-            this.SidePanel.PerformLayout();
-            this.FTPanel.ResumeLayout(false);
-            this.ClassesPanel.ResumeLayout(false);
-            this.TasksPanel.ResumeLayout(false);
-            this.TitlePanel.ResumeLayout(false);
-            this.TitlePanel.PerformLayout();
+            this.Load += new System.EventHandler(this.Root_Load);
+            this.sidebarPanel.ResumeLayout(false);
+            this.roundedPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.mainHeaderPanel.ResumeLayout(false);
+            this.mainHeaderPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Panel TitlePanel;
-        private System.Windows.Forms.Panel EmbedPanel;
-        private System.Windows.Forms.Label LabelText;
-        private FontAwesome.Sharp.IconButton LogoBtn;
-        private System.Windows.Forms.TableLayoutPanel TasksPanel;
-        private FontAwesome.Sharp.IconButton TasksBtn;
-        private FontAwesome.Sharp.IconButton AllBtn;
-        private FontAwesome.Sharp.IconButton DraftsBtn;
-        private FontAwesome.Sharp.IconButton ArchivesBtn;
-        private FontAwesome.Sharp.IconButton DeletedBtn;
-        private FontAwesome.Sharp.IconButton AddNotesBdg;
-        private FontAwesome.Sharp.IconButton AllCountBadge;
-        private FontAwesome.Sharp.IconButton DraftsCountBadge;
-        private FontAwesome.Sharp.IconButton ArchivesCountBadge;
-        private FontAwesome.Sharp.IconButton DeletedCountBadge;
-        private System.Windows.Forms.TableLayoutPanel ClassesPanel;
-        private FontAwesome.Sharp.IconButton ClassesBtn;
-        private FontAwesome.Sharp.IconButton AddClassesBdg;
-        private System.Windows.Forms.FlowLayoutPanel ClassPanel;
-        private System.Windows.Forms.Panel FTPanel;
-        private FontAwesome.Sharp.IconButton FTBtn;
-        private FontAwesome.Sharp.IconButton TogglePanelBtn;
-        private System.Windows.Forms.Panel BorderMisc;
+        private System.Windows.Forms.Panel sidebarPanel;
+        private System.Windows.Forms.Panel mainHeaderPanel;
+        private System.Windows.Forms.Panel border1;
+        private Components.RoundedButton toggleSidebarButton;
+        private System.Windows.Forms.Panel border2;
+        private Components.RoundedButton LogoButton;
+        private System.Windows.Forms.Panel placeholder1;
+        private Components.SidebarMenu TasksMenu;
+        private Components.TaskMenu Deleted;
+        private Components.TaskMenu Archived;
+        private Components.TaskMenu Drafts;
+        private System.Windows.Forms.Panel border3;
+        private System.Windows.Forms.Panel placeholder;
+        private System.Windows.Forms.Panel placeholder2;
+        public System.Windows.Forms.Label MenuLabel;
+        private Components.SidebarMenu SubjectsMenu;
+        private System.Windows.Forms.Panel border4;
+        private System.Windows.Forms.Panel placeholder3;
+        public System.Windows.Forms.FlowLayoutPanel subjectsFLP;
+        private System.Windows.Forms.Panel panel1;
+        private Components.SidebarMenu FTMenu;
+        public Components.TaskMenu All;
+        public System.Windows.Forms.Panel mainEmbedPanel;
+        private Components.RoundedPanel roundedPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
-
