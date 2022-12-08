@@ -62,16 +62,6 @@ namespace Polaris.Forms.Tasks
             }
             connection.Close();
             Close();
-
-            if (root.MenuLabel.Text == "Tasks")
-            {
-                root.OpenChildForm(new Tasks());
-            }
-            else
-            {
-                MessageBox.Show("Saved");
-            }
-            
         }
 
         #endregion Events
