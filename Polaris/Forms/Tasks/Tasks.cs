@@ -136,6 +136,7 @@ namespace Polaris.Forms.Tasks
                 GetData(0);
             }
             GenerateDynamicRecords();
+            tableBodyFLP_Resize(sender, e);
         }
     }
 }
